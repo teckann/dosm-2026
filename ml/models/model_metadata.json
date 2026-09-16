@@ -1,0 +1,53 @@
+{
+  "target": "poverty_rate",
+  "features": [
+    "median_income",
+    "unemployment_rate",
+    "cpi",
+    "gini_coefficient",
+    "digital_adoption_index"
+  ],
+  "metrics": {
+    "r2_score": 0.9857,
+    "mae": 0.4646,
+    "mse": 0.5562,
+    "sample_size": 45
+  },
+  "feature_importances": [
+    {
+      "feature": "gini_coefficient",
+      "importance": 0.5263,
+      "percentage": 52.63
+    },
+    {
+      "feature": "unemployment_rate",
+      "importance": 0.2503,
+      "percentage": 25.03
+    },
+    {
+      "feature": "median_income",
+      "importance": 0.127,
+      "percentage": 12.7
+    },
+    {
+      "feature": "digital_adoption_index",
+      "importance": 0.0887,
+      "percentage": 8.87
+    },
+    {
+      "feature": "cpi",
+      "importance": 0.0077,
+      "percentage": 0.77
+    }
+  ],
+  "simulator_weights": {
+    "intercept": -77.286,
+    "coefficients": {
+      "median_income": 0.000751,
+      "unemployment_rate": 2.922905,
+      "cpi": 0.749828,
+      "gini_coefficient": 39.881672,
+      "digital_adoption_index": -0.52426
+    }
+  }
+}

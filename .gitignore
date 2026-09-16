@@ -1,0 +1,46 @@
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env*.local
+
+# Python / Virtual Environment
+ml/venv/
+ml/.venv/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+ml/dist/
+ml/build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ML Artifacts / Large Model Weights (Keep lightweight JSON in frontend)
+ml/models/*.pkl
+ml/models/*.joblib
+ml/models/*.h5
+ml/models/*.pt
+ml/models/*.onnx
+!ml/models/.gitkeep
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large Datasets (Track sample data or schema, keep multi-GB raw dumps ignored)
+data/raw/*.zip
+data/raw/*.tar.gz
+data/raw/*.parquet
+!data/raw/sample_dataset.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/spatial/.gitkeep

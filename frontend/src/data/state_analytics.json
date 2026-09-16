@@ -1,0 +1,110 @@
+[
+  {
+    "state": "WP Kuala Lumpur",
+    "year": 2023,
+    "median_income": 11750,
+    "unemployment_rate": 2.7,
+    "cpi": 131.2,
+    "poverty_rate": 0.2,
+    "gini_coefficient": 0.35,
+    "digital_adoption_index": 98.2,
+    "population_millions": 1.82,
+    "resilience_index": 99.63
+  },
+  {
+    "state": "Selangor",
+    "year": 2023,
+    "median_income": 9120,
+    "unemployment_rate": 2.8,
+    "cpi": 129.5,
+    "poverty_rate": 0.3,
+    "gini_coefficient": 0.355,
+    "digital_adoption_index": 92.0,
+    "population_millions": 6.71,
+    "resilience_index": 84.58
+  },
+  {
+    "state": "Johor",
+    "year": 2023,
+    "median_income": 7210,
+    "unemployment_rate": 3.0,
+    "cpi": 128.9,
+    "poverty_rate": 1.1,
+    "gini_coefficient": 0.367,
+    "digital_adoption_index": 86.2,
+    "population_millions": 3.89,
+    "resilience_index": 71.77
+  },
+  {
+    "state": "Penang",
+    "year": 2023,
+    "median_income": 7150,
+    "unemployment_rate": 2.6,
+    "cpi": 130.1,
+    "poverty_rate": 0.5,
+    "gini_coefficient": 0.342,
+    "digital_adoption_index": 91.0,
+    "population_millions": 1.8,
+    "resilience_index": 76.32
+  },
+  {
+    "state": "Sarawak",
+    "year": 2023,
+    "median_income": 5200,
+    "unemployment_rate": 3.1,
+    "cpi": 127.4,
+    "poverty_rate": 7.4,
+    "gini_coefficient": 0.385,
+    "digital_adoption_index": 78.0,
+    "population_millions": 2.51,
+    "resilience_index": 52.49
+  },
+  {
+    "state": "Kedah",
+    "year": 2023,
+    "median_income": 4920,
+    "unemployment_rate": 3.1,
+    "cpi": 127.8,
+    "poverty_rate": 4.5,
+    "gini_coefficient": 0.374,
+    "digital_adoption_index": 78.2,
+    "population_millions": 2.22,
+    "resilience_index": 54.09
+  },
+  {
+    "state": "Perak",
+    "year": 2023,
+    "median_income": 4850,
+    "unemployment_rate": 3.2,
+    "cpi": 128.2,
+    "poverty_rate": 3.2,
+    "gini_coefficient": 0.38,
+    "digital_adoption_index": 79.5,
+    "population_millions": 2.56,
+    "resilience_index": 55.36
+  },
+  {
+    "state": "Sabah",
+    "year": 2023,
+    "median_income": 4780,
+    "unemployment_rate": 5.6,
+    "cpi": 126.8,
+    "poverty_rate": 16.4,
+    "gini_coefficient": 0.401,
+    "digital_adoption_index": 71.0,
+    "population_millions": 3.47,
+    "resilience_index": 29.21
+  },
+  {
+    "state": "Kelantan",
+    "year": 2023,
+    "median_income": 4120,
+    "unemployment_rate": 3.7,
+    "cpi": 127.0,
+    "poverty_rate": 10.1,
+    "gini_coefficient": 0.384,
+    "digital_adoption_index": 73.4,
+    "population_millions": 1.93,
+    "resilience_index": 40.63
+  }
+]

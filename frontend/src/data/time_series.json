@@ -1,0 +1,42 @@
+[
+  {
+    "year": "2019",
+    "median_income": 5810.0,
+    "poverty_rate": 5.96,
+    "unemployment_rate": 3.46,
+    "digital_adoption_index": 68.57,
+    "cpi": 119.73
+  },
+  {
+    "year": "2020",
+    "median_income": 5537.78,
+    "poverty_rate": 7.1,
+    "unemployment_rate": 4.79,
+    "digital_adoption_index": 72.29,
+    "cpi": 118.58
+  },
+  {
+    "year": "2021",
+    "median_income": 5721.11,
+    "poverty_rate": 6.48,
+    "unemployment_rate": 4.41,
+    "digital_adoption_index": 76.4,
+    "cpi": 121.41
+  },
+  {
+    "year": "2022",
+    "median_income": 6157.78,
+    "poverty_rate": 5.57,
+    "unemployment_rate": 3.77,
+    "digital_adoption_index": 79.9,
+    "cpi": 125.33
+  },
+  {
+    "year": "2023",
+    "median_income": 6566.67,
+    "poverty_rate": 4.86,
+    "unemployment_rate": 3.31,
+    "digital_adoption_index": 83.06,
+    "cpi": 128.54
+  }
+]

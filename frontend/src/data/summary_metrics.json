@@ -1,0 +1,51 @@
+{
+  "latest_year": 2023,
+  "total_states": 9,
+  "kpis": [
+    {
+      "id": "median_income",
+      "title": "National Median Income",
+      "value": "RM 6,566",
+      "raw_value": 6566.67,
+      "change": "+6.6% YoY",
+      "isPositive": true,
+      "description": "Average monthly household income across states"
+    },
+    {
+      "id": "poverty_rate",
+      "title": "Absolute Poverty Rate",
+      "value": "4.9%",
+      "raw_value": 4.86,
+      "change": "-0.71%",
+      "isPositive": true,
+      "description": "Percentage of households below poverty threshold"
+    },
+    {
+      "id": "unemployment_rate",
+      "title": "Unemployment Rate",
+      "value": "3.3%",
+      "raw_value": 3.31,
+      "change": "-0.46%",
+      "isPositive": true,
+      "description": "Active labor force looking for employment"
+    },
+    {
+      "id": "digital_adoption",
+      "title": "Digital Adoption Index",
+      "value": "83.1/100",
+      "raw_value": 83.06,
+      "change": "+3.2 pts",
+      "isPositive": true,
+      "description": "State digital infrastructure and adoption composite"
+    },
+    {
+      "id": "economic_resilience",
+      "title": "Socio-Economic Resilience",
+      "value": "62.7/100",
+      "raw_value": 62.68,
+      "change": "Composite Index",
+      "isPositive": true,
+      "description": "Multi-dimensional resilience benchmark"
+    }
+  ]
+}
