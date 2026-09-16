@@ -1,36 +1,41 @@
 {
-  "title": "TOTAL MARINE HARVEST",
-  "period": "Month to Date (Feb 1 - 5)",
-  "value": 281,
-  "value_formatted": "281",
-  "unit": "k MT",
-  "change_percentage": "\u25b2 125%",
-  "compare_text": "Compare: 128",
+  "title": "TOTAL COASTAL TOURIST ARRIVALS",
+  "period": "Annual Benchmark (2024 vs 2023)",
+  "value": "86.8M",
+  "value_formatted": "86.8M",
+  "unit": "Million Visitors",
+  "change_percentage": "\u25b2 +7.7%",
+  "compare_text": "2023: 80.6M",
   "time_series": [
     {
-      "date": "Feb 1",
-      "current": 80,
-      "compare": 0
+      "date": "2019",
+      "current": 86.9,
+      "compare": 73.9
     },
     {
-      "date": "Feb 2",
-      "current": 75,
-      "compare": 15
+      "date": "2020",
+      "current": 28.3,
+      "compare": 73.9
     },
     {
-      "date": "Feb 3",
-      "current": 66,
-      "compare": 35
+      "date": "2021",
+      "current": 40.5,
+      "compare": 73.9
     },
     {
-      "date": "Feb 4",
-      "current": 46,
-      "compare": 72
+      "date": "2022",
+      "current": 68.5,
+      "compare": 82.6
     },
     {
-      "date": "Feb 5",
-      "current": 18,
-      "compare": 12
+      "date": "2023",
+      "current": 80.6,
+      "compare": 82.6
+    },
+    {
+      "date": "2024",
+      "current": 86.8,
+      "compare": 82.6
     }
   ]
 }

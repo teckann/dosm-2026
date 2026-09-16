@@ -1,36 +1,61 @@
 {
-  "model_name": "Schaefer Bioeconomic Maximum Sustainable Yield (MSY) + XGBoost Regressor",
-  "r2_score": 0.968,
-  "mae": 3.42,
+  "model_name": "Random Forest Regressor + Linear Explainability",
+  "target": "carrying_capacity_stress",
   "features": [
+    "hotel_occupancy_rate",
+    "marine_park_visitors",
+    "avg_expenditure_myr",
+    "fish_landings_mt",
+    "is_monsoon_season",
+    "marine_water_quality_index"
+  ],
+  "metrics": {
+    "r2_score": 0.9994,
+    "mae": 0.4171,
+    "mse": 0.4426,
+    "sample_size": 240
+  },
+  "feature_importances": [
     {
-      "feature": "Active Fleet Capacity",
-      "importance": 0.42,
-      "percentage": 42.0
+      "feature": "marine_park_visitors",
+      "importance": 0.7127,
+      "percentage": 71.27
     },
     {
-      "feature": "Fuel Subsidy Allocation",
-      "importance": 0.28,
-      "percentage": 28.0
+      "feature": "marine_water_quality_index",
+      "importance": 0.2506,
+      "percentage": 25.06
     },
     {
-      "feature": "Sea Surface Temperature",
-      "importance": 0.16,
-      "percentage": 16.0
+      "feature": "hotel_occupancy_rate",
+      "importance": 0.0337,
+      "percentage": 3.37
     },
     {
-      "feature": "Enforcement Patrol Hours",
-      "importance": 0.14,
-      "percentage": 14.0
+      "feature": "avg_expenditure_myr",
+      "importance": 0.0018,
+      "percentage": 0.18
+    },
+    {
+      "feature": "fish_landings_mt",
+      "importance": 0.0011,
+      "percentage": 0.11
+    },
+    {
+      "feature": "is_monsoon_season",
+      "importance": 0.0001,
+      "percentage": 0.01
     }
   ],
   "simulator_weights": {
-    "intercept": 45.2,
+    "intercept": 228.445,
     "coefficients": {
-      "fleet_size": 0.082,
-      "fuel_subsidy": 4.5e-05,
-      "patrol_hours": -0.054,
-      "sst_anomaly": 2.15
+      "hotel_occupancy_rate": 0.405465,
+      "marine_park_visitors": 4e-06,
+      "avg_expenditure_myr": -0.00642,
+      "fish_landings_mt": 6e-06,
+      "is_monsoon_season": -4.001934,
+      "marine_water_quality_index": -2.548739
     }
   }
 }

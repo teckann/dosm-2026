@@ -1,0 +1,4305 @@
+{
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "regions": [
+    "All Regions",
+    "East Coast",
+    "Borneo",
+    "West Coast"
+  ],
+  "trajectories": {
+    "total_tourists": [
+      {
+        "date": "2019",
+        "current": 86.9,
+        "compare": 73.9
+      },
+      {
+        "date": "2020",
+        "current": 28.3,
+        "compare": 73.9
+      },
+      {
+        "date": "2021",
+        "current": 40.5,
+        "compare": 73.9
+      },
+      {
+        "date": "2022",
+        "current": 68.5,
+        "compare": 82.6
+      },
+      {
+        "date": "2023",
+        "current": 80.6,
+        "compare": 82.6
+      },
+      {
+        "date": "2024",
+        "current": 86.8,
+        "compare": 82.6
+      }
+    ],
+    "marine_park_visitors": [
+      {
+        "date": "2019",
+        "current": 24.5,
+        "compare": 20.8
+      },
+      {
+        "date": "2020",
+        "current": 7.9,
+        "compare": 20.8
+      },
+      {
+        "date": "2021",
+        "current": 11.4,
+        "compare": 20.8
+      },
+      {
+        "date": "2022",
+        "current": 19.3,
+        "compare": 23.3
+      },
+      {
+        "date": "2023",
+        "current": 22.7,
+        "compare": 23.3
+      },
+      {
+        "date": "2024",
+        "current": 24.4,
+        "compare": 23.3
+      }
+    ],
+    "seafood_landings": [
+      {
+        "date": "2019",
+        "current": 382.9,
+        "compare": 165.0
+      },
+      {
+        "date": "2020",
+        "current": 391.0,
+        "compare": 165.0
+      },
+      {
+        "date": "2021",
+        "current": 385.7,
+        "compare": 165.0
+      },
+      {
+        "date": "2022",
+        "current": 386.6,
+        "compare": 165.0
+      },
+      {
+        "date": "2023",
+        "current": 385.4,
+        "compare": 165.0
+      },
+      {
+        "date": "2024",
+        "current": 382.3,
+        "compare": 165.0
+      }
+    ]
+  },
+  "matrix": {
+    "2019_All Regions": {
+      "year": 2019,
+      "region": "All Regions",
+      "total_tourists_m": 86.9,
+      "total_tourists_raw": 86885960,
+      "growth_yoy": "+0.0%",
+      "compare_year": 2018,
+      "compare_val_m": 86.9,
+      "total_spend_b": 68.1,
+      "visitor_nights_m": 217.2,
+      "mp_total_m": 24.5,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 13.8,
+          "color": "#22d3ee",
+          "count": 3395487
+        },
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 22.3,
+          "color": "#e879f9",
+          "count": 5471377
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 12.6,
+          "color": "#fb923c",
+          "count": 3097132
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 10.4,
+          "color": "#facc15",
+          "count": 2545243
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.8,
+          "color": "#f43f5e",
+          "count": 2399929
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 4.7,
+          "color": "#22d3ee",
+          "count": 1155420
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 15.5,
+          "color": "#38bdf8",
+          "count": 3796537
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 2.2,
+          "color": "#4ade80",
+          "count": 543194
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 22.08
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 16.9
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 14.72
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 7.63
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 5.11
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 1.7
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 3.53
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Port Dickson Marine Coast",
+          "value": 5.03
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Besar",
+          "value": 5.33
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Pulau Langkawi & Payar",
+          "value": 7.58
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Damai & Talang-Satang",
+          "value": 7.71
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 8.13
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 15.24,
+          "arrivals_formatted": "15.2M",
+          "mp_visitors_k": 3395.5,
+          "stress_score": 100,
+          "hotel_occ": 64.1,
+          "mwqi": 60.0,
+          "avg_spend": 771.0
+        },
+        {
+          "rank": 2,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 12.77,
+          "arrivals_formatted": "12.8M",
+          "mp_visitors_k": 5471.4,
+          "stress_score": 100,
+          "hotel_occ": 64.5,
+          "mwqi": 60.0,
+          "avg_spend": 788.0
+        },
+        {
+          "rank": 3,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 12.47,
+          "arrivals_formatted": "12.5M",
+          "mp_visitors_k": 3097.1,
+          "stress_score": 100,
+          "hotel_occ": 64.5,
+          "mwqi": 60.0,
+          "avg_spend": 771.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 9.1,
+          "arrivals_formatted": "9.1M",
+          "mp_visitors_k": 2545.2,
+          "stress_score": 82,
+          "hotel_occ": 51.9,
+          "mwqi": 63.4,
+          "avg_spend": 624.0
+        },
+        {
+          "rank": 5,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 8.13,
+          "arrivals_formatted": "8.1M",
+          "mp_visitors_k": 2399.9,
+          "stress_score": 97,
+          "hotel_occ": 63.6,
+          "mwqi": 60.0,
+          "avg_spend": 777.0
+        },
+        {
+          "rank": 6,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 7.71,
+          "arrivals_formatted": "7.7M",
+          "mp_visitors_k": 1155.4,
+          "stress_score": 68,
+          "hotel_occ": 64.8,
+          "mwqi": 71.7,
+          "avg_spend": 791.0
+        },
+        {
+          "rank": 7,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 7.58,
+          "arrivals_formatted": "7.6M",
+          "mp_visitors_k": 3796.5,
+          "stress_score": 100,
+          "hotel_occ": 63.9,
+          "mwqi": 60.0,
+          "avg_spend": 781.0
+        },
+        {
+          "rank": 8,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 5.33,
+          "arrivals_formatted": "5.3M",
+          "mp_visitors_k": 543.2,
+          "stress_score": 49,
+          "hotel_occ": 63.6,
+          "mwqi": 78.8,
+          "avg_spend": 783.0
+        },
+        {
+          "rank": 9,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 5.03,
+          "arrivals_formatted": "5.0M",
+          "mp_visitors_k": 907.8,
+          "stress_score": 60,
+          "hotel_occ": 63.9,
+          "mwqi": 73.8,
+          "avg_spend": 792.0
+        },
+        {
+          "rank": 10,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 3.53,
+          "arrivals_formatted": "3.5M",
+          "mp_visitors_k": 1228.2,
+          "stress_score": 65,
+          "hotel_occ": 52.2,
+          "mwqi": 70.0,
+          "avg_spend": 627.0
+        }
+      ]
+    },
+    "2019_East Coast": {
+      "year": 2019,
+      "region": "East Coast",
+      "total_tourists_m": 12.6,
+      "total_tourists_raw": 12626144,
+      "growth_yoy": "+0.0%",
+      "compare_year": 2018,
+      "compare_val_m": 12.6,
+      "total_spend_b": 9.2,
+      "visitor_nights_m": 31.6,
+      "mp_total_m": 3.8,
+      "dest_slices": [
+        {
+          "name": "Pulau Tioman",
+          "percentage": 67.5,
+          "color": "#22d3ee",
+          "count": 2545243
+        },
+        {
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 32.5,
+          "color": "#38bdf8",
+          "count": 1228162
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 2.99
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 2.28
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 1.99
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 1.03
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.69
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.23
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 3.53
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Tioman",
+          "value": 9.1
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 9.1,
+          "arrivals_formatted": "9.1M",
+          "mp_visitors_k": 2545.2,
+          "stress_score": 82,
+          "hotel_occ": 51.9,
+          "mwqi": 63.4,
+          "avg_spend": 624.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 3.53,
+          "arrivals_formatted": "3.5M",
+          "mp_visitors_k": 1228.2,
+          "stress_score": 65,
+          "hotel_occ": 52.2,
+          "mwqi": 70.0,
+          "avg_spend": 627.0
+        }
+      ]
+    },
+    "2019_Borneo": {
+      "year": 2019,
+      "region": "Borneo",
+      "total_tourists_m": 20.5,
+      "total_tourists_raw": 20480019,
+      "growth_yoy": "+0.0%",
+      "compare_year": 2018,
+      "compare_val_m": 20.5,
+      "total_spend_b": 16.4,
+      "visitor_nights_m": 51.2,
+      "mp_total_m": 6.6,
+      "dest_slices": [
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 82.6,
+          "color": "#22d3ee",
+          "count": 5471377
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 17.4,
+          "color": "#38bdf8",
+          "count": 1155420
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 5.32
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 4.07
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 3.55
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 1.84
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 1.23
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.41
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Damai & Talang-Satang",
+          "value": 7.71
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Semporna & Sipadan",
+          "value": 12.77
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 12.77,
+          "arrivals_formatted": "12.8M",
+          "mp_visitors_k": 5471.4,
+          "stress_score": 100,
+          "hotel_occ": 64.5,
+          "mwqi": 60.0,
+          "avg_spend": 788.0
+        },
+        {
+          "rank": 2,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 7.71,
+          "arrivals_formatted": "7.7M",
+          "mp_visitors_k": 1155.4,
+          "stress_score": 68,
+          "hotel_occ": 64.8,
+          "mwqi": 71.7,
+          "avg_spend": 791.0
+        }
+      ]
+    },
+    "2019_West Coast": {
+      "year": 2019,
+      "region": "West Coast",
+      "total_tourists_m": 53.8,
+      "total_tourists_raw": 53779797,
+      "growth_yoy": "+0.0%",
+      "compare_year": 2018,
+      "compare_val_m": 53.8,
+      "total_spend_b": 42.5,
+      "visitor_nights_m": 134.4,
+      "mp_total_m": 14.1,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 24.0,
+          "color": "#22d3ee",
+          "count": 3395487
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 21.9,
+          "color": "#facc15",
+          "count": 3097132
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 17.0,
+          "color": "#fb923c",
+          "count": 2399929
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 26.8,
+          "color": "#38bdf8",
+          "count": 3796537
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 3.8,
+          "color": "#4ade80",
+          "count": 543194
+        },
+        {
+          "name": "Port Dickson Marine Coast",
+          "percentage": 6.4,
+          "color": "#a3e635",
+          "count": 907845
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 13.77
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 10.54
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 9.18
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 4.76
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 3.19
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 1.06
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Port Dickson Marine Coast",
+          "value": 5.03
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Besar",
+          "value": 5.33
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Langkawi & Payar",
+          "value": 7.58
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 8.13
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Pulau Pangkor & Sembilan",
+          "value": 12.47
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Mersing Islands",
+          "value": 15.24
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 15.24,
+          "arrivals_formatted": "15.2M",
+          "mp_visitors_k": 3395.5,
+          "stress_score": 100,
+          "hotel_occ": 64.1,
+          "mwqi": 60.0,
+          "avg_spend": 771.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 12.47,
+          "arrivals_formatted": "12.5M",
+          "mp_visitors_k": 3097.1,
+          "stress_score": 100,
+          "hotel_occ": 64.5,
+          "mwqi": 60.0,
+          "avg_spend": 771.0
+        },
+        {
+          "rank": 3,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 8.13,
+          "arrivals_formatted": "8.1M",
+          "mp_visitors_k": 2399.9,
+          "stress_score": 97,
+          "hotel_occ": 63.6,
+          "mwqi": 60.0,
+          "avg_spend": 777.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 7.58,
+          "arrivals_formatted": "7.6M",
+          "mp_visitors_k": 3796.5,
+          "stress_score": 100,
+          "hotel_occ": 63.9,
+          "mwqi": 60.0,
+          "avg_spend": 781.0
+        },
+        {
+          "rank": 5,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 5.33,
+          "arrivals_formatted": "5.3M",
+          "mp_visitors_k": 543.2,
+          "stress_score": 49,
+          "hotel_occ": 63.6,
+          "mwqi": 78.8,
+          "avg_spend": 783.0
+        },
+        {
+          "rank": 6,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 5.03,
+          "arrivals_formatted": "5.0M",
+          "mp_visitors_k": 907.8,
+          "stress_score": 60,
+          "hotel_occ": 63.9,
+          "mwqi": 73.8,
+          "avg_spend": 792.0
+        }
+      ]
+    },
+    "2020_All Regions": {
+      "year": 2020,
+      "region": "All Regions",
+      "total_tourists_m": 28.3,
+      "total_tourists_raw": 28347190,
+      "growth_yoy": "-67.4%",
+      "compare_year": 2019,
+      "compare_val_m": 86.9,
+      "total_spend_b": 23.2,
+      "visitor_nights_m": 70.9,
+      "mp_total_m": 7.9,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 13.4,
+          "color": "#22d3ee",
+          "count": 1065066
+        },
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 22.0,
+          "color": "#e879f9",
+          "count": 1743332
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 12.7,
+          "color": "#fb923c",
+          "count": 1005064
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 10.4,
+          "color": "#facc15",
+          "count": 825912
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 10.2,
+          "color": "#f43f5e",
+          "count": 807357
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 4.8,
+          "color": "#22d3ee",
+          "count": 384689
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 15.5,
+          "color": "#38bdf8",
+          "count": 1231659
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 2.2,
+          "color": "#4ade80",
+          "count": 175027
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 7.52
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 5.76
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 5.02
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 2.6
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 1.74
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.58
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 1.15
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Port Dickson Marine Coast",
+          "value": 1.62
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Besar",
+          "value": 1.76
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Pulau Langkawi & Payar",
+          "value": 2.49
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Damai & Talang-Satang",
+          "value": 2.57
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 2.7
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 4.88,
+          "arrivals_formatted": "4.9M",
+          "mp_visitors_k": 1065.1,
+          "stress_score": 48,
+          "hotel_occ": 25.5,
+          "mwqi": 72.2,
+          "avg_spend": 817.0
+        },
+        {
+          "rank": 2,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 4.21,
+          "arrivals_formatted": "4.2M",
+          "mp_visitors_k": 1743.3,
+          "stress_score": 69,
+          "hotel_occ": 25.1,
+          "mwqi": 64.2,
+          "avg_spend": 812.0
+        },
+        {
+          "rank": 3,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 4.03,
+          "arrivals_formatted": "4.0M",
+          "mp_visitors_k": 1005.1,
+          "stress_score": 46,
+          "hotel_occ": 25.4,
+          "mwqi": 72.7,
+          "avg_spend": 815.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 2.93,
+          "arrivals_formatted": "2.9M",
+          "mp_visitors_k": 825.9,
+          "stress_score": 40,
+          "hotel_occ": 25.5,
+          "mwqi": 75.6,
+          "avg_spend": 660.0
+        },
+        {
+          "rank": 5,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 2.7,
+          "arrivals_formatted": "2.7M",
+          "mp_visitors_k": 807.4,
+          "stress_score": 40,
+          "hotel_occ": 25.0,
+          "mwqi": 75.4,
+          "avg_spend": 816.0
+        },
+        {
+          "rank": 6,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 2.57,
+          "arrivals_formatted": "2.6M",
+          "mp_visitors_k": 384.7,
+          "stress_score": 26,
+          "hotel_occ": 25.0,
+          "mwqi": 82.0,
+          "avg_spend": 821.0
+        },
+        {
+          "rank": 7,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 2.49,
+          "arrivals_formatted": "2.5M",
+          "mp_visitors_k": 1231.7,
+          "stress_score": 53,
+          "hotel_occ": 25.5,
+          "mwqi": 69.9,
+          "avg_spend": 811.0
+        },
+        {
+          "rank": 8,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 1.76,
+          "arrivals_formatted": "1.8M",
+          "mp_visitors_k": 175.0,
+          "stress_score": 19,
+          "hotel_occ": 25.0,
+          "mwqi": 84.7,
+          "avg_spend": 816.0
+        },
+        {
+          "rank": 9,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 1.62,
+          "arrivals_formatted": "1.6M",
+          "mp_visitors_k": 294.8,
+          "stress_score": 23,
+          "hotel_occ": 25.0,
+          "mwqi": 83.2,
+          "avg_spend": 818.0
+        },
+        {
+          "rank": 10,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 1.15,
+          "arrivals_formatted": "1.1M",
+          "mp_visitors_k": 407.1,
+          "stress_score": 27,
+          "hotel_occ": 25.0,
+          "mwqi": 80.7,
+          "avg_spend": 657.0
+        }
+      ]
+    },
+    "2020_East Coast": {
+      "year": 2020,
+      "region": "East Coast",
+      "total_tourists_m": 4.1,
+      "total_tourists_raw": 4077348,
+      "growth_yoy": "-67.7%",
+      "compare_year": 2019,
+      "compare_val_m": 12.6,
+      "total_spend_b": 3.1,
+      "visitor_nights_m": 10.2,
+      "mp_total_m": 1.2,
+      "dest_slices": [
+        {
+          "name": "Pulau Tioman",
+          "percentage": 67.0,
+          "color": "#22d3ee",
+          "count": 825912
+        },
+        {
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 33.0,
+          "color": "#38bdf8",
+          "count": 407057
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 1.01
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 0.77
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 0.67
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 0.35
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.23
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.08
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 1.15
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Tioman",
+          "value": 2.93
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 2.93,
+          "arrivals_formatted": "2.9M",
+          "mp_visitors_k": 825.9,
+          "stress_score": 40,
+          "hotel_occ": 25.5,
+          "mwqi": 75.6,
+          "avg_spend": 660.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 1.15,
+          "arrivals_formatted": "1.1M",
+          "mp_visitors_k": 407.1,
+          "stress_score": 27,
+          "hotel_occ": 25.0,
+          "mwqi": 80.7,
+          "avg_spend": 657.0
+        }
+      ]
+    },
+    "2020_Borneo": {
+      "year": 2020,
+      "region": "Borneo",
+      "total_tourists_m": 6.8,
+      "total_tourists_raw": 6779003,
+      "growth_yoy": "-66.9%",
+      "compare_year": 2019,
+      "compare_val_m": 20.5,
+      "total_spend_b": 5.6,
+      "visitor_nights_m": 16.9,
+      "mp_total_m": 2.1,
+      "dest_slices": [
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 81.9,
+          "color": "#22d3ee",
+          "count": 1743332
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 18.1,
+          "color": "#38bdf8",
+          "count": 384689
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 1.82
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 1.39
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 1.21
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 0.63
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.42
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.14
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Damai & Talang-Satang",
+          "value": 2.57
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Semporna & Sipadan",
+          "value": 4.21
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 4.21,
+          "arrivals_formatted": "4.2M",
+          "mp_visitors_k": 1743.3,
+          "stress_score": 69,
+          "hotel_occ": 25.1,
+          "mwqi": 64.2,
+          "avg_spend": 812.0
+        },
+        {
+          "rank": 2,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 2.57,
+          "arrivals_formatted": "2.6M",
+          "mp_visitors_k": 384.7,
+          "stress_score": 26,
+          "hotel_occ": 25.0,
+          "mwqi": 82.0,
+          "avg_spend": 821.0
+        }
+      ]
+    },
+    "2020_West Coast": {
+      "year": 2020,
+      "region": "West Coast",
+      "total_tourists_m": 17.5,
+      "total_tourists_raw": 17490839,
+      "growth_yoy": "-67.5%",
+      "compare_year": 2019,
+      "compare_val_m": 53.8,
+      "total_spend_b": 14.5,
+      "visitor_nights_m": 43.7,
+      "mp_total_m": 4.6,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 23.3,
+          "color": "#22d3ee",
+          "count": 1065066
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 21.9,
+          "color": "#facc15",
+          "count": 1005064
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 17.6,
+          "color": "#fb923c",
+          "count": 807357
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 26.9,
+          "color": "#38bdf8",
+          "count": 1231659
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 3.8,
+          "color": "#4ade80",
+          "count": 175027
+        },
+        {
+          "name": "Port Dickson Marine Coast",
+          "percentage": 6.4,
+          "color": "#a3e635",
+          "count": 294834
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 4.7
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 3.6
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 3.13
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 1.62
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 1.09
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.36
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Port Dickson Marine Coast",
+          "value": 1.62
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Besar",
+          "value": 1.76
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Langkawi & Payar",
+          "value": 2.49
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 2.7
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Pulau Pangkor & Sembilan",
+          "value": 4.03
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Mersing Islands",
+          "value": 4.88
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 4.88,
+          "arrivals_formatted": "4.9M",
+          "mp_visitors_k": 1065.1,
+          "stress_score": 48,
+          "hotel_occ": 25.5,
+          "mwqi": 72.2,
+          "avg_spend": 817.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 4.03,
+          "arrivals_formatted": "4.0M",
+          "mp_visitors_k": 1005.1,
+          "stress_score": 46,
+          "hotel_occ": 25.4,
+          "mwqi": 72.7,
+          "avg_spend": 815.0
+        },
+        {
+          "rank": 3,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 2.7,
+          "arrivals_formatted": "2.7M",
+          "mp_visitors_k": 807.4,
+          "stress_score": 40,
+          "hotel_occ": 25.0,
+          "mwqi": 75.4,
+          "avg_spend": 816.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 2.49,
+          "arrivals_formatted": "2.5M",
+          "mp_visitors_k": 1231.7,
+          "stress_score": 53,
+          "hotel_occ": 25.5,
+          "mwqi": 69.9,
+          "avg_spend": 811.0
+        },
+        {
+          "rank": 5,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 1.76,
+          "arrivals_formatted": "1.8M",
+          "mp_visitors_k": 175.0,
+          "stress_score": 19,
+          "hotel_occ": 25.0,
+          "mwqi": 84.7,
+          "avg_spend": 816.0
+        },
+        {
+          "rank": 6,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 1.62,
+          "arrivals_formatted": "1.6M",
+          "mp_visitors_k": 294.8,
+          "stress_score": 23,
+          "hotel_occ": 25.0,
+          "mwqi": 83.2,
+          "avg_spend": 818.0
+        }
+      ]
+    },
+    "2021_All Regions": {
+      "year": 2021,
+      "region": "All Regions",
+      "total_tourists_m": 40.5,
+      "total_tourists_raw": 40458845,
+      "growth_yoy": "+42.7%",
+      "compare_year": 2020,
+      "compare_val_m": 28.3,
+      "total_spend_b": 34.4,
+      "visitor_nights_m": 101.1,
+      "mp_total_m": 11.4,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 13.7,
+          "color": "#22d3ee",
+          "count": 1556888
+        },
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 22.7,
+          "color": "#e879f9",
+          "count": 2585033
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 12.6,
+          "color": "#fb923c",
+          "count": 1431946
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 9.9,
+          "color": "#facc15",
+          "count": 1134585
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 10.1,
+          "color": "#f43f5e",
+          "count": 1153595
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 15.5,
+          "color": "#38bdf8",
+          "count": 1764488
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 4.6,
+          "color": "#22d3ee",
+          "count": 519680
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 2.2,
+          "color": "#4ade80",
+          "count": 249108
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 11.14
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 8.53
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 7.43
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 3.85
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 2.58
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.86
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 1.7
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Port Dickson Marine Coast",
+          "value": 2.33
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Besar",
+          "value": 2.48
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Pulau Langkawi & Payar",
+          "value": 3.55
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Damai & Talang-Satang",
+          "value": 3.55
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 3.84
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 7.06,
+          "arrivals_formatted": "7.1M",
+          "mp_visitors_k": 1556.9,
+          "stress_score": 66,
+          "hotel_occ": 30.3,
+          "mwqi": 66.3,
+          "avg_spend": 842.0
+        },
+        {
+          "rank": 2,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 6.11,
+          "arrivals_formatted": "6.1M",
+          "mp_visitors_k": 2585.0,
+          "stress_score": 93,
+          "hotel_occ": 30.1,
+          "mwqi": 60.0,
+          "avg_spend": 834.0
+        },
+        {
+          "rank": 3,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 5.71,
+          "arrivals_formatted": "5.7M",
+          "mp_visitors_k": 1431.9,
+          "stress_score": 62,
+          "hotel_occ": 31.4,
+          "mwqi": 67.5,
+          "avg_spend": 855.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 4.14,
+          "arrivals_formatted": "4.1M",
+          "mp_visitors_k": 1134.6,
+          "stress_score": 52,
+          "hotel_occ": 30.0,
+          "mwqi": 71.8,
+          "avg_spend": 679.0
+        },
+        {
+          "rank": 5,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 3.84,
+          "arrivals_formatted": "3.8M",
+          "mp_visitors_k": 1153.6,
+          "stress_score": 52,
+          "hotel_occ": 29.0,
+          "mwqi": 71.0,
+          "avg_spend": 849.0
+        },
+        {
+          "rank": 6,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 3.55,
+          "arrivals_formatted": "3.6M",
+          "mp_visitors_k": 1764.5,
+          "stress_score": 72,
+          "hotel_occ": 29.9,
+          "mwqi": 63.1,
+          "avg_spend": 853.0
+        },
+        {
+          "rank": 7,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 3.55,
+          "arrivals_formatted": "3.5M",
+          "mp_visitors_k": 519.7,
+          "stress_score": 32,
+          "hotel_occ": 29.6,
+          "mwqi": 80.3,
+          "avg_spend": 840.0
+        },
+        {
+          "rank": 8,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 2.48,
+          "arrivals_formatted": "2.5M",
+          "mp_visitors_k": 249.1,
+          "stress_score": 25,
+          "hotel_occ": 31.9,
+          "mwqi": 83.7,
+          "avg_spend": 842.0
+        },
+        {
+          "rank": 9,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 2.33,
+          "arrivals_formatted": "2.3M",
+          "mp_visitors_k": 414.8,
+          "stress_score": 30,
+          "hotel_occ": 30.2,
+          "mwqi": 80.3,
+          "avg_spend": 843.0
+        },
+        {
+          "rank": 10,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 1.7,
+          "arrivals_formatted": "1.7M",
+          "mp_visitors_k": 593.5,
+          "stress_score": 35,
+          "hotel_occ": 29.6,
+          "mwqi": 78.1,
+          "avg_spend": 677.0
+        }
+      ]
+    },
+    "2021_East Coast": {
+      "year": 2021,
+      "region": "East Coast",
+      "total_tourists_m": 5.8,
+      "total_tourists_raw": 5834045,
+      "growth_yoy": "+43.1%",
+      "compare_year": 2020,
+      "compare_val_m": 4.1,
+      "total_spend_b": 4.6,
+      "visitor_nights_m": 14.6,
+      "mp_total_m": 1.7,
+      "dest_slices": [
+        {
+          "name": "Pulau Tioman",
+          "percentage": 65.7,
+          "color": "#22d3ee",
+          "count": 1134585
+        },
+        {
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 34.3,
+          "color": "#38bdf8",
+          "count": 593460
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 1.5
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 1.15
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 1.0
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 0.52
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.35
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.12
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 1.7
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Tioman",
+          "value": 4.14
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 4.14,
+          "arrivals_formatted": "4.1M",
+          "mp_visitors_k": 1134.6,
+          "stress_score": 52,
+          "hotel_occ": 30.0,
+          "mwqi": 71.8,
+          "avg_spend": 679.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 1.7,
+          "arrivals_formatted": "1.7M",
+          "mp_visitors_k": 593.5,
+          "stress_score": 35,
+          "hotel_occ": 29.6,
+          "mwqi": 78.1,
+          "avg_spend": 677.0
+        }
+      ]
+    },
+    "2021_Borneo": {
+      "year": 2021,
+      "region": "Borneo",
+      "total_tourists_m": 9.7,
+      "total_tourists_raw": 9652166,
+      "growth_yoy": "+42.4%",
+      "compare_year": 2020,
+      "compare_val_m": 6.8,
+      "total_spend_b": 8.2,
+      "visitor_nights_m": 24.1,
+      "mp_total_m": 3.1,
+      "dest_slices": [
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 83.3,
+          "color": "#22d3ee",
+          "count": 2585033
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 16.7,
+          "color": "#38bdf8",
+          "count": 519680
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 2.66
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 2.04
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 1.77
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 0.92
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.62
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.21
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Damai & Talang-Satang",
+          "value": 3.55
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Semporna & Sipadan",
+          "value": 6.11
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 6.11,
+          "arrivals_formatted": "6.1M",
+          "mp_visitors_k": 2585.0,
+          "stress_score": 93,
+          "hotel_occ": 30.1,
+          "mwqi": 60.0,
+          "avg_spend": 834.0
+        },
+        {
+          "rank": 2,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 3.55,
+          "arrivals_formatted": "3.5M",
+          "mp_visitors_k": 519.7,
+          "stress_score": 32,
+          "hotel_occ": 29.6,
+          "mwqi": 80.3,
+          "avg_spend": 840.0
+        }
+      ]
+    },
+    "2021_West Coast": {
+      "year": 2021,
+      "region": "West Coast",
+      "total_tourists_m": 25.0,
+      "total_tourists_raw": 24972634,
+      "growth_yoy": "+42.8%",
+      "compare_year": 2020,
+      "compare_val_m": 17.5,
+      "total_spend_b": 21.5,
+      "visitor_nights_m": 62.4,
+      "mp_total_m": 6.6,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 23.7,
+          "color": "#22d3ee",
+          "count": 1556888
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 21.8,
+          "color": "#facc15",
+          "count": 1431946
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 17.6,
+          "color": "#fb923c",
+          "count": 1153595
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 26.9,
+          "color": "#38bdf8",
+          "count": 1764488
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 3.8,
+          "color": "#4ade80",
+          "count": 249108
+        },
+        {
+          "name": "Port Dickson Marine Coast",
+          "percentage": 6.3,
+          "color": "#a3e635",
+          "count": 414783
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 6.98
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 5.34
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 4.65
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 2.41
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 1.62
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.54
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Port Dickson Marine Coast",
+          "value": 2.33
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Besar",
+          "value": 2.48
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Langkawi & Payar",
+          "value": 3.55
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 3.84
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Pulau Pangkor & Sembilan",
+          "value": 5.71
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Mersing Islands",
+          "value": 7.06
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 7.06,
+          "arrivals_formatted": "7.1M",
+          "mp_visitors_k": 1556.9,
+          "stress_score": 66,
+          "hotel_occ": 30.3,
+          "mwqi": 66.3,
+          "avg_spend": 842.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 5.71,
+          "arrivals_formatted": "5.7M",
+          "mp_visitors_k": 1431.9,
+          "stress_score": 62,
+          "hotel_occ": 31.4,
+          "mwqi": 67.5,
+          "avg_spend": 855.0
+        },
+        {
+          "rank": 3,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 3.84,
+          "arrivals_formatted": "3.8M",
+          "mp_visitors_k": 1153.6,
+          "stress_score": 52,
+          "hotel_occ": 29.0,
+          "mwqi": 71.0,
+          "avg_spend": 849.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 3.55,
+          "arrivals_formatted": "3.6M",
+          "mp_visitors_k": 1764.5,
+          "stress_score": 72,
+          "hotel_occ": 29.9,
+          "mwqi": 63.1,
+          "avg_spend": 853.0
+        },
+        {
+          "rank": 5,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 2.48,
+          "arrivals_formatted": "2.5M",
+          "mp_visitors_k": 249.1,
+          "stress_score": 25,
+          "hotel_occ": 31.9,
+          "mwqi": 83.7,
+          "avg_spend": 842.0
+        },
+        {
+          "rank": 6,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 2.33,
+          "arrivals_formatted": "2.3M",
+          "mp_visitors_k": 414.8,
+          "stress_score": 30,
+          "hotel_occ": 30.2,
+          "mwqi": 80.3,
+          "avg_spend": 843.0
+        }
+      ]
+    },
+    "2022_All Regions": {
+      "year": 2022,
+      "region": "All Regions",
+      "total_tourists_m": 68.5,
+      "total_tourists_raw": 68496470,
+      "growth_yoy": "+69.3%",
+      "compare_year": 2021,
+      "compare_val_m": 40.5,
+      "total_spend_b": 60.5,
+      "visitor_nights_m": 171.2,
+      "mp_total_m": 19.3,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 13.4,
+          "color": "#22d3ee",
+          "count": 2579059
+        },
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 22.4,
+          "color": "#e879f9",
+          "count": 4323867
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 12.6,
+          "color": "#fb923c",
+          "count": 2432109
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 10.5,
+          "color": "#facc15",
+          "count": 2035240
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 10.3,
+          "color": "#f43f5e",
+          "count": 1981455
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 4.8,
+          "color": "#22d3ee",
+          "count": 919165
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 15.3,
+          "color": "#38bdf8",
+          "count": 2947973
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 2.2,
+          "color": "#4ade80",
+          "count": 418560
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 19.59
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 15.0
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 13.06
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 6.77
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 4.54
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 1.51
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 2.78
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Port Dickson Marine Coast",
+          "value": 3.87
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Besar",
+          "value": 4.2
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Pulau Langkawi & Payar",
+          "value": 5.99
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Damai & Talang-Satang",
+          "value": 6.17
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 6.53
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 11.73,
+          "arrivals_formatted": "11.7M",
+          "mp_visitors_k": 2579.1,
+          "stress_score": 97,
+          "hotel_occ": 49.3,
+          "mwqi": 60.0,
+          "avg_spend": 870.0
+        },
+        {
+          "rank": 2,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 10.32,
+          "arrivals_formatted": "10.3M",
+          "mp_visitors_k": 4323.9,
+          "stress_score": 100,
+          "hotel_occ": 52.7,
+          "mwqi": 60.0,
+          "avg_spend": 882.0
+        },
+        {
+          "rank": 3,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 9.72,
+          "arrivals_formatted": "9.7M",
+          "mp_visitors_k": 2432.1,
+          "stress_score": 95,
+          "hotel_occ": 51.1,
+          "mwqi": 60.0,
+          "avg_spend": 890.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 7.19,
+          "arrivals_formatted": "7.2M",
+          "mp_visitors_k": 2035.2,
+          "stress_score": 77,
+          "hotel_occ": 41.9,
+          "mwqi": 64.5,
+          "avg_spend": 711.0
+        },
+        {
+          "rank": 5,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 6.53,
+          "arrivals_formatted": "6.5M",
+          "mp_visitors_k": 1981.5,
+          "stress_score": 88,
+          "hotel_occ": 51.1,
+          "mwqi": 61.5,
+          "avg_spend": 873.0
+        },
+        {
+          "rank": 6,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 6.17,
+          "arrivals_formatted": "6.2M",
+          "mp_visitors_k": 919.2,
+          "stress_score": 54,
+          "hotel_occ": 49.3,
+          "mwqi": 74.4,
+          "avg_spend": 879.0
+        },
+        {
+          "rank": 7,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 5.99,
+          "arrivals_formatted": "6.0M",
+          "mp_visitors_k": 2948.0,
+          "stress_score": 100,
+          "hotel_occ": 49.4,
+          "mwqi": 60.0,
+          "avg_spend": 875.0
+        },
+        {
+          "rank": 8,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 4.2,
+          "arrivals_formatted": "4.2M",
+          "mp_visitors_k": 418.6,
+          "stress_score": 39,
+          "hotel_occ": 50.4,
+          "mwqi": 80.8,
+          "avg_spend": 875.0
+        },
+        {
+          "rank": 9,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 3.87,
+          "arrivals_formatted": "3.9M",
+          "mp_visitors_k": 696.2,
+          "stress_score": 49,
+          "hotel_occ": 52.9,
+          "mwqi": 77.3,
+          "avg_spend": 870.0
+        },
+        {
+          "rank": 10,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 2.78,
+          "arrivals_formatted": "2.8M",
+          "mp_visitors_k": 976.6,
+          "stress_score": 53,
+          "hotel_occ": 42.5,
+          "mwqi": 73.8,
+          "avg_spend": 695.0
+        }
+      ]
+    },
+    "2022_East Coast": {
+      "year": 2022,
+      "region": "East Coast",
+      "total_tourists_m": 10.0,
+      "total_tourists_raw": 9962694,
+      "growth_yoy": "+70.8%",
+      "compare_year": 2021,
+      "compare_val_m": 5.8,
+      "total_spend_b": 8.2,
+      "visitor_nights_m": 24.9,
+      "mp_total_m": 3.0,
+      "dest_slices": [
+        {
+          "name": "Pulau Tioman",
+          "percentage": 67.6,
+          "color": "#22d3ee",
+          "count": 2035240
+        },
+        {
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 32.4,
+          "color": "#38bdf8",
+          "count": 976587
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 2.66
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 2.04
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 1.78
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 0.92
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.62
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.21
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 2.78
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Tioman",
+          "value": 7.19
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 7.19,
+          "arrivals_formatted": "7.2M",
+          "mp_visitors_k": 2035.2,
+          "stress_score": 77,
+          "hotel_occ": 41.9,
+          "mwqi": 64.5,
+          "avg_spend": 711.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 2.78,
+          "arrivals_formatted": "2.8M",
+          "mp_visitors_k": 976.6,
+          "stress_score": 53,
+          "hotel_occ": 42.5,
+          "mwqi": 73.8,
+          "avg_spend": 695.0
+        }
+      ]
+    },
+    "2022_Borneo": {
+      "year": 2022,
+      "region": "Borneo",
+      "total_tourists_m": 16.5,
+      "total_tourists_raw": 16489521,
+      "growth_yoy": "+70.8%",
+      "compare_year": 2021,
+      "compare_val_m": 9.7,
+      "total_spend_b": 14.8,
+      "visitor_nights_m": 41.2,
+      "mp_total_m": 5.2,
+      "dest_slices": [
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 82.5,
+          "color": "#22d3ee",
+          "count": 4323867
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 17.5,
+          "color": "#38bdf8",
+          "count": 919165
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 4.79
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 3.66
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 3.19
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 1.65
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 1.11
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.37
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Damai & Talang-Satang",
+          "value": 6.17
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Semporna & Sipadan",
+          "value": 10.32
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 10.32,
+          "arrivals_formatted": "10.3M",
+          "mp_visitors_k": 4323.9,
+          "stress_score": 100,
+          "hotel_occ": 52.7,
+          "mwqi": 60.0,
+          "avg_spend": 882.0
+        },
+        {
+          "rank": 2,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 6.17,
+          "arrivals_formatted": "6.2M",
+          "mp_visitors_k": 919.2,
+          "stress_score": 54,
+          "hotel_occ": 49.3,
+          "mwqi": 74.4,
+          "avg_spend": 879.0
+        }
+      ]
+    },
+    "2022_West Coast": {
+      "year": 2022,
+      "region": "West Coast",
+      "total_tourists_m": 42.0,
+      "total_tourists_raw": 42044255,
+      "growth_yoy": "+68.4%",
+      "compare_year": 2021,
+      "compare_val_m": 25.0,
+      "total_spend_b": 37.5,
+      "visitor_nights_m": 105.1,
+      "mp_total_m": 11.1,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 23.3,
+          "color": "#22d3ee",
+          "count": 2579059
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 22.0,
+          "color": "#facc15",
+          "count": 2432109
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 17.9,
+          "color": "#fb923c",
+          "count": 1981455
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 26.7,
+          "color": "#38bdf8",
+          "count": 2947973
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 3.8,
+          "color": "#4ade80",
+          "count": 418560
+        },
+        {
+          "name": "Port Dickson Marine Coast",
+          "percentage": 6.3,
+          "color": "#a3e635",
+          "count": 696192
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 12.14
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 9.29
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 8.1
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 4.2
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 2.81
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.94
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Port Dickson Marine Coast",
+          "value": 3.87
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Besar",
+          "value": 4.2
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Langkawi & Payar",
+          "value": 5.99
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 6.53
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Pulau Pangkor & Sembilan",
+          "value": 9.72
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Mersing Islands",
+          "value": 11.73
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 11.73,
+          "arrivals_formatted": "11.7M",
+          "mp_visitors_k": 2579.1,
+          "stress_score": 97,
+          "hotel_occ": 49.3,
+          "mwqi": 60.0,
+          "avg_spend": 870.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 9.72,
+          "arrivals_formatted": "9.7M",
+          "mp_visitors_k": 2432.1,
+          "stress_score": 95,
+          "hotel_occ": 51.1,
+          "mwqi": 60.0,
+          "avg_spend": 890.0
+        },
+        {
+          "rank": 3,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 6.53,
+          "arrivals_formatted": "6.5M",
+          "mp_visitors_k": 1981.5,
+          "stress_score": 88,
+          "hotel_occ": 51.1,
+          "mwqi": 61.5,
+          "avg_spend": 873.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 5.99,
+          "arrivals_formatted": "6.0M",
+          "mp_visitors_k": 2948.0,
+          "stress_score": 100,
+          "hotel_occ": 49.4,
+          "mwqi": 60.0,
+          "avg_spend": 875.0
+        },
+        {
+          "rank": 5,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 4.2,
+          "arrivals_formatted": "4.2M",
+          "mp_visitors_k": 418.6,
+          "stress_score": 39,
+          "hotel_occ": 50.4,
+          "mwqi": 80.8,
+          "avg_spend": 875.0
+        },
+        {
+          "rank": 6,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 3.87,
+          "arrivals_formatted": "3.9M",
+          "mp_visitors_k": 696.2,
+          "stress_score": 49,
+          "hotel_occ": 52.9,
+          "mwqi": 77.3,
+          "avg_spend": 870.0
+        }
+      ]
+    },
+    "2023_All Regions": {
+      "year": 2023,
+      "region": "All Regions",
+      "total_tourists_m": 80.6,
+      "total_tourists_raw": 80585708,
+      "growth_yoy": "+17.6%",
+      "compare_year": 2022,
+      "compare_val_m": 68.5,
+      "total_spend_b": 73.6,
+      "visitor_nights_m": 201.5,
+      "mp_total_m": 22.7,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 13.5,
+          "color": "#22d3ee",
+          "count": 3069607
+        },
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 22.5,
+          "color": "#e879f9",
+          "count": 5096616
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 12.8,
+          "color": "#fb923c",
+          "count": 2895058
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 10.1,
+          "color": "#facc15",
+          "count": 2287693
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 10.0,
+          "color": "#f43f5e",
+          "count": 2267875
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 4.7,
+          "color": "#22d3ee",
+          "count": 1072389
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 15.5,
+          "color": "#38bdf8",
+          "count": 3529011
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 2.2,
+          "color": "#4ade80",
+          "count": 498342
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 23.85
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 18.25
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 15.9
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 8.24
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 5.52
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 1.84
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 3.32
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Port Dickson Marine Coast",
+          "value": 4.55
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Besar",
+          "value": 5.0
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Pulau Langkawi & Payar",
+          "value": 7.12
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Damai & Talang-Satang",
+          "value": 7.17
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 7.64
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 13.86,
+          "arrivals_formatted": "13.9M",
+          "mp_visitors_k": 3069.6,
+          "stress_score": 100,
+          "hotel_occ": 63.2,
+          "mwqi": 60.0,
+          "avg_spend": 912.0
+        },
+        {
+          "rank": 2,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 12.12,
+          "arrivals_formatted": "12.1M",
+          "mp_visitors_k": 5096.6,
+          "stress_score": 100,
+          "hotel_occ": 59.8,
+          "mwqi": 60.0,
+          "avg_spend": 902.0
+        },
+        {
+          "rank": 3,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 11.56,
+          "arrivals_formatted": "11.6M",
+          "mp_visitors_k": 2895.1,
+          "stress_score": 100,
+          "hotel_occ": 58.4,
+          "mwqi": 60.0,
+          "avg_spend": 914.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 8.25,
+          "arrivals_formatted": "8.3M",
+          "mp_visitors_k": 2287.7,
+          "stress_score": 79,
+          "hotel_occ": 46.5,
+          "mwqi": 64.3,
+          "avg_spend": 733.0
+        },
+        {
+          "rank": 5,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 7.64,
+          "arrivals_formatted": "7.6M",
+          "mp_visitors_k": 2267.9,
+          "stress_score": 94,
+          "hotel_occ": 58.5,
+          "mwqi": 60.1,
+          "avg_spend": 908.0
+        },
+        {
+          "rank": 6,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 7.17,
+          "arrivals_formatted": "7.2M",
+          "mp_visitors_k": 1072.4,
+          "stress_score": 63,
+          "hotel_occ": 58.6,
+          "mwqi": 72.1,
+          "avg_spend": 905.0
+        },
+        {
+          "rank": 7,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 7.12,
+          "arrivals_formatted": "7.1M",
+          "mp_visitors_k": 3529.0,
+          "stress_score": 100,
+          "hotel_occ": 60.1,
+          "mwqi": 60.0,
+          "avg_spend": 911.0
+        },
+        {
+          "rank": 8,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 5.0,
+          "arrivals_formatted": "5.0M",
+          "mp_visitors_k": 498.3,
+          "stress_score": 46,
+          "hotel_occ": 61.1,
+          "mwqi": 79.9,
+          "avg_spend": 897.0
+        },
+        {
+          "rank": 9,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 4.55,
+          "arrivals_formatted": "4.5M",
+          "mp_visitors_k": 813.8,
+          "stress_score": 56,
+          "hotel_occ": 60.5,
+          "mwqi": 75.7,
+          "avg_spend": 916.0
+        },
+        {
+          "rank": 10,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 3.32,
+          "arrivals_formatted": "3.3M",
+          "mp_visitors_k": 1169.8,
+          "stress_score": 62,
+          "hotel_occ": 48.6,
+          "mwqi": 71.0,
+          "avg_spend": 725.0
+        }
+      ]
+    },
+    "2023_East Coast": {
+      "year": 2023,
+      "region": "East Coast",
+      "total_tourists_m": 11.6,
+      "total_tourists_raw": 11568220,
+      "growth_yoy": "+16.1%",
+      "compare_year": 2022,
+      "compare_val_m": 10.0,
+      "total_spend_b": 9.8,
+      "visitor_nights_m": 28.9,
+      "mp_total_m": 3.5,
+      "dest_slices": [
+        {
+          "name": "Pulau Tioman",
+          "percentage": 66.2,
+          "color": "#22d3ee",
+          "count": 2287693
+        },
+        {
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 33.8,
+          "color": "#38bdf8",
+          "count": 1169785
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 3.19
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 2.44
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 2.12
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 1.1
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.74
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.25
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 3.32
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Tioman",
+          "value": 8.25
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 8.25,
+          "arrivals_formatted": "8.3M",
+          "mp_visitors_k": 2287.7,
+          "stress_score": 79,
+          "hotel_occ": 46.5,
+          "mwqi": 64.3,
+          "avg_spend": 733.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 3.32,
+          "arrivals_formatted": "3.3M",
+          "mp_visitors_k": 1169.8,
+          "stress_score": 62,
+          "hotel_occ": 48.6,
+          "mwqi": 71.0,
+          "avg_spend": 725.0
+        }
+      ]
+    },
+    "2023_Borneo": {
+      "year": 2023,
+      "region": "Borneo",
+      "total_tourists_m": 19.3,
+      "total_tourists_raw": 19291802,
+      "growth_yoy": "+17.0%",
+      "compare_year": 2022,
+      "compare_val_m": 16.5,
+      "total_spend_b": 17.7,
+      "visitor_nights_m": 48.2,
+      "mp_total_m": 6.2,
+      "dest_slices": [
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 82.6,
+          "color": "#22d3ee",
+          "count": 5096616
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 17.4,
+          "color": "#38bdf8",
+          "count": 1072389
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 5.74
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 4.39
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 3.83
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 1.98
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 1.33
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.44
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Damai & Talang-Satang",
+          "value": 7.17
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Semporna & Sipadan",
+          "value": 12.12
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 12.12,
+          "arrivals_formatted": "12.1M",
+          "mp_visitors_k": 5096.6,
+          "stress_score": 100,
+          "hotel_occ": 59.8,
+          "mwqi": 60.0,
+          "avg_spend": 902.0
+        },
+        {
+          "rank": 2,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 7.17,
+          "arrivals_formatted": "7.2M",
+          "mp_visitors_k": 1072.4,
+          "stress_score": 63,
+          "hotel_occ": 58.6,
+          "mwqi": 72.1,
+          "avg_spend": 905.0
+        }
+      ]
+    },
+    "2023_West Coast": {
+      "year": 2023,
+      "region": "West Coast",
+      "total_tourists_m": 49.7,
+      "total_tourists_raw": 49725686,
+      "growth_yoy": "+18.3%",
+      "compare_year": 2022,
+      "compare_val_m": 42.0,
+      "total_spend_b": 46.0,
+      "visitor_nights_m": 124.3,
+      "mp_total_m": 13.1,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 23.5,
+          "color": "#22d3ee",
+          "count": 3069607
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 22.1,
+          "color": "#facc15",
+          "count": 2895058
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 17.3,
+          "color": "#fb923c",
+          "count": 2267875
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 27.0,
+          "color": "#38bdf8",
+          "count": 3529011
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 3.8,
+          "color": "#4ade80",
+          "count": 498342
+        },
+        {
+          "name": "Port Dickson Marine Coast",
+          "percentage": 6.2,
+          "color": "#a3e635",
+          "count": 813829
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 14.92
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 11.42
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 9.95
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 5.16
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 3.45
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 1.15
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Port Dickson Marine Coast",
+          "value": 4.55
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Besar",
+          "value": 5.0
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Langkawi & Payar",
+          "value": 7.12
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 7.64
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Pulau Pangkor & Sembilan",
+          "value": 11.56
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Mersing Islands",
+          "value": 13.86
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 13.86,
+          "arrivals_formatted": "13.9M",
+          "mp_visitors_k": 3069.6,
+          "stress_score": 100,
+          "hotel_occ": 63.2,
+          "mwqi": 60.0,
+          "avg_spend": 912.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 11.56,
+          "arrivals_formatted": "11.6M",
+          "mp_visitors_k": 2895.1,
+          "stress_score": 100,
+          "hotel_occ": 58.4,
+          "mwqi": 60.0,
+          "avg_spend": 914.0
+        },
+        {
+          "rank": 3,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 7.64,
+          "arrivals_formatted": "7.6M",
+          "mp_visitors_k": 2267.9,
+          "stress_score": 94,
+          "hotel_occ": 58.5,
+          "mwqi": 60.1,
+          "avg_spend": 908.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 7.12,
+          "arrivals_formatted": "7.1M",
+          "mp_visitors_k": 3529.0,
+          "stress_score": 100,
+          "hotel_occ": 60.1,
+          "mwqi": 60.0,
+          "avg_spend": 911.0
+        },
+        {
+          "rank": 5,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 5.0,
+          "arrivals_formatted": "5.0M",
+          "mp_visitors_k": 498.3,
+          "stress_score": 46,
+          "hotel_occ": 61.1,
+          "mwqi": 79.9,
+          "avg_spend": 897.0
+        },
+        {
+          "rank": 6,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 4.55,
+          "arrivals_formatted": "4.5M",
+          "mp_visitors_k": 813.8,
+          "stress_score": 56,
+          "hotel_occ": 60.5,
+          "mwqi": 75.7,
+          "avg_spend": 916.0
+        }
+      ]
+    },
+    "2024_All Regions": {
+      "year": 2024,
+      "region": "All Regions",
+      "total_tourists_m": 86.8,
+      "total_tourists_raw": 86789572,
+      "growth_yoy": "+7.7%",
+      "compare_year": 2023,
+      "compare_val_m": 80.6,
+      "total_spend_b": 82.1,
+      "visitor_nights_m": 217.0,
+      "mp_total_m": 24.4,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 13.6,
+          "color": "#22d3ee",
+          "count": 3334088
+        },
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 21.9,
+          "color": "#e879f9",
+          "count": 5348311
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 12.5,
+          "color": "#fb923c",
+          "count": 3050006
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 10.4,
+          "color": "#facc15",
+          "count": 2552117
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.8,
+          "color": "#f43f5e",
+          "count": 2394678
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 16.1,
+          "color": "#38bdf8",
+          "count": 3921441
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 4.8,
+          "color": "#22d3ee",
+          "count": 1176011
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 2.2,
+          "color": "#4ade80",
+          "count": 541076
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 26.59
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 20.35
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 17.73
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 9.19
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 6.16
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 2.05
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 3.52
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Port Dickson Marine Coast",
+          "value": 5.06
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Besar",
+          "value": 5.4
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Damai & Talang-Satang",
+          "value": 7.78
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Pulau Langkawi & Payar",
+          "value": 7.88
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 8.07
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 15.14,
+          "arrivals_formatted": "15.1M",
+          "mp_visitors_k": 3334.1,
+          "stress_score": 100,
+          "hotel_occ": 64.0,
+          "mwqi": 60.0,
+          "avg_spend": 945.0
+        },
+        {
+          "rank": 2,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 12.66,
+          "arrivals_formatted": "12.7M",
+          "mp_visitors_k": 5348.3,
+          "stress_score": 100,
+          "hotel_occ": 65.3,
+          "mwqi": 60.0,
+          "avg_spend": 936.0
+        },
+        {
+          "rank": 3,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 12.3,
+          "arrivals_formatted": "12.3M",
+          "mp_visitors_k": 3050.0,
+          "stress_score": 100,
+          "hotel_occ": 65.0,
+          "mwqi": 60.0,
+          "avg_spend": 937.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 8.99,
+          "arrivals_formatted": "9.0M",
+          "mp_visitors_k": 2552.1,
+          "stress_score": 81,
+          "hotel_occ": 49.7,
+          "mwqi": 63.6,
+          "avg_spend": 751.0
+        },
+        {
+          "rank": 5,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 8.07,
+          "arrivals_formatted": "8.1M",
+          "mp_visitors_k": 2394.7,
+          "stress_score": 97,
+          "hotel_occ": 64.7,
+          "mwqi": 60.0,
+          "avg_spend": 943.0
+        },
+        {
+          "rank": 6,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 7.88,
+          "arrivals_formatted": "7.9M",
+          "mp_visitors_k": 3921.4,
+          "stress_score": 100,
+          "hotel_occ": 64.5,
+          "mwqi": 60.0,
+          "avg_spend": 943.0
+        },
+        {
+          "rank": 7,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 7.78,
+          "arrivals_formatted": "7.8M",
+          "mp_visitors_k": 1176.0,
+          "stress_score": 69,
+          "hotel_occ": 64.2,
+          "mwqi": 70.0,
+          "avg_spend": 943.0
+        },
+        {
+          "rank": 8,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 5.4,
+          "arrivals_formatted": "5.4M",
+          "mp_visitors_k": 541.1,
+          "stress_score": 49,
+          "hotel_occ": 64.0,
+          "mwqi": 79.5,
+          "avg_spend": 942.0
+        },
+        {
+          "rank": 9,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 5.06,
+          "arrivals_formatted": "5.1M",
+          "mp_visitors_k": 897.0,
+          "stress_score": 61,
+          "hotel_occ": 65.2,
+          "mwqi": 74.7,
+          "avg_spend": 940.0
+        },
+        {
+          "rank": 10,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 3.52,
+          "arrivals_formatted": "3.5M",
+          "mp_visitors_k": 1214.2,
+          "stress_score": 65,
+          "hotel_occ": 52.8,
+          "mwqi": 69.9,
+          "avg_spend": 757.0
+        }
+      ]
+    },
+    "2024_East Coast": {
+      "year": 2024,
+      "region": "East Coast",
+      "total_tourists_m": 12.5,
+      "total_tourists_raw": 12507952,
+      "growth_yoy": "+8.1%",
+      "compare_year": 2023,
+      "compare_val_m": 11.6,
+      "total_spend_b": 11.0,
+      "visitor_nights_m": 31.3,
+      "mp_total_m": 3.8,
+      "dest_slices": [
+        {
+          "name": "Pulau Tioman",
+          "percentage": 67.8,
+          "color": "#22d3ee",
+          "count": 2552117
+        },
+        {
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 32.2,
+          "color": "#38bdf8",
+          "count": 1214159
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 3.58
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 2.74
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 2.38
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 1.24
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 0.83
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.28
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Pulau Redang & Perhentian",
+          "value": 3.52
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Tioman",
+          "value": 8.99
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Pulau Tioman (Pahang)",
+          "state": "Pahang",
+          "island": "Pulau Tioman",
+          "arrivals_m": 8.99,
+          "arrivals_formatted": "9.0M",
+          "mp_visitors_k": 2552.1,
+          "stress_score": 81,
+          "hotel_occ": 49.7,
+          "mwqi": 63.6,
+          "avg_spend": 751.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Redang & Perhentian (Terengganu)",
+          "state": "Terengganu",
+          "island": "Pulau Redang & Perhentian",
+          "arrivals_m": 3.52,
+          "arrivals_formatted": "3.5M",
+          "mp_visitors_k": 1214.2,
+          "stress_score": 65,
+          "hotel_occ": 52.8,
+          "mwqi": 69.9,
+          "avg_spend": 757.0
+        }
+      ]
+    },
+    "2024_Borneo": {
+      "year": 2024,
+      "region": "Borneo",
+      "total_tourists_m": 20.4,
+      "total_tourists_raw": 20438582,
+      "growth_yoy": "+5.9%",
+      "compare_year": 2023,
+      "compare_val_m": 19.3,
+      "total_spend_b": 19.5,
+      "visitor_nights_m": 51.1,
+      "mp_total_m": 6.5,
+      "dest_slices": [
+        {
+          "name": "Semporna/Sipadan",
+          "percentage": 82.0,
+          "color": "#22d3ee",
+          "count": 5348311
+        },
+        {
+          "name": "Damai/Talang-Satang",
+          "percentage": 18.0,
+          "color": "#38bdf8",
+          "count": 1176011
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 6.31
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 4.83
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 4.21
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 2.18
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 1.46
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 0.49
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Damai & Talang-Satang",
+          "value": 7.78
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Semporna & Sipadan",
+          "value": 12.66
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Semporna & Sipadan (Sabah)",
+          "state": "Sabah",
+          "island": "Semporna & Sipadan",
+          "arrivals_m": 12.66,
+          "arrivals_formatted": "12.7M",
+          "mp_visitors_k": 5348.3,
+          "stress_score": 100,
+          "hotel_occ": 65.3,
+          "mwqi": 60.0,
+          "avg_spend": 936.0
+        },
+        {
+          "rank": 2,
+          "name": "Damai & Talang-Satang (Sarawak)",
+          "state": "Sarawak",
+          "island": "Damai & Talang-Satang",
+          "arrivals_m": 7.78,
+          "arrivals_formatted": "7.8M",
+          "mp_visitors_k": 1176.0,
+          "stress_score": 69,
+          "hotel_occ": 64.2,
+          "mwqi": 70.0,
+          "avg_spend": 943.0
+        }
+      ]
+    },
+    "2024_West Coast": {
+      "year": 2024,
+      "region": "West Coast",
+      "total_tourists_m": 53.8,
+      "total_tourists_raw": 53843038,
+      "growth_yoy": "+8.3%",
+      "compare_year": 2023,
+      "compare_val_m": 49.7,
+      "total_spend_b": 51.6,
+      "visitor_nights_m": 134.6,
+      "mp_total_m": 14.1,
+      "dest_slices": [
+        {
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 23.6,
+          "color": "#22d3ee",
+          "count": 3334088
+        },
+        {
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 21.6,
+          "color": "#facc15",
+          "count": 3050006
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 16.9,
+          "color": "#fb923c",
+          "count": 2394678
+        },
+        {
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 27.7,
+          "color": "#38bdf8",
+          "count": 3921441
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 3.8,
+          "color": "#4ade80",
+          "count": 541076
+        },
+        {
+          "name": "Port Dickson Marine Coast",
+          "percentage": 6.3,
+          "color": "#a3e635",
+          "count": 897003
+        }
+      ],
+      "spend_cats": [
+        {
+          "name": "Eco-Resort Accommodation",
+          "percentage": 32.4,
+          "color": "#00d2ff",
+          "amount_b": 16.7
+        },
+        {
+          "name": "Seafood Dining & Restaurants",
+          "percentage": 24.8,
+          "color": "#00a8ff",
+          "amount_b": 12.79
+        },
+        {
+          "name": "Water Sports & Boat Tours",
+          "percentage": 21.6,
+          "color": "#34d399",
+          "amount_b": 11.14
+        },
+        {
+          "name": "Local Island Shopping",
+          "percentage": 11.2,
+          "color": "#facc15",
+          "amount_b": 5.77
+        },
+        {
+          "name": "Ferry & Island Transport",
+          "percentage": 7.5,
+          "color": "#fb923c",
+          "amount_b": 3.87
+        },
+        {
+          "name": "Marine Conservation Fees",
+          "percentage": 2.5,
+          "color": "#f43f5e",
+          "amount_b": 1.29
+        }
+      ],
+      "spec_bins": [
+        {
+          "id": 1,
+          "color": "#cbf1f5",
+          "label": "Port Dickson Marine Coast",
+          "value": 5.06
+        },
+        {
+          "id": 2,
+          "color": "#9be3ed",
+          "label": "Pulau Besar",
+          "value": 5.4
+        },
+        {
+          "id": 3,
+          "color": "#63d1e3",
+          "label": "Pulau Langkawi & Payar",
+          "value": 7.88
+        },
+        {
+          "id": 4,
+          "color": "#30b6d4",
+          "label": "Batu Ferringhi & Teluk Bahang",
+          "value": 8.07
+        },
+        {
+          "id": 5,
+          "color": "#168eae",
+          "label": "Pulau Pangkor & Sembilan",
+          "value": 12.3
+        },
+        {
+          "id": 6,
+          "color": "#0d5578",
+          "label": "Mersing Islands",
+          "value": 15.14
+        }
+      ],
+      "leaderboard": [
+        {
+          "rank": 1,
+          "name": "Mersing Islands (Rawa/Aur) (Johor)",
+          "state": "Johor",
+          "island": "Mersing Islands (Rawa/Aur)",
+          "arrivals_m": 15.14,
+          "arrivals_formatted": "15.1M",
+          "mp_visitors_k": 3334.1,
+          "stress_score": 100,
+          "hotel_occ": 64.0,
+          "mwqi": 60.0,
+          "avg_spend": 945.0
+        },
+        {
+          "rank": 2,
+          "name": "Pulau Pangkor & Sembilan (Perak)",
+          "state": "Perak",
+          "island": "Pulau Pangkor & Sembilan",
+          "arrivals_m": 12.3,
+          "arrivals_formatted": "12.3M",
+          "mp_visitors_k": 3050.0,
+          "stress_score": 100,
+          "hotel_occ": 65.0,
+          "mwqi": 60.0,
+          "avg_spend": 937.0
+        },
+        {
+          "rank": 3,
+          "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+          "state": "Pulau Pinang",
+          "island": "Batu Ferringhi & Teluk Bahang",
+          "arrivals_m": 8.07,
+          "arrivals_formatted": "8.1M",
+          "mp_visitors_k": 2394.7,
+          "stress_score": 97,
+          "hotel_occ": 64.7,
+          "mwqi": 60.0,
+          "avg_spend": 943.0
+        },
+        {
+          "rank": 4,
+          "name": "Pulau Langkawi & Payar (Kedah)",
+          "state": "Kedah",
+          "island": "Pulau Langkawi & Payar",
+          "arrivals_m": 7.88,
+          "arrivals_formatted": "7.9M",
+          "mp_visitors_k": 3921.4,
+          "stress_score": 100,
+          "hotel_occ": 64.5,
+          "mwqi": 60.0,
+          "avg_spend": 943.0
+        },
+        {
+          "rank": 5,
+          "name": "Pulau Besar (Melaka)",
+          "state": "Melaka",
+          "island": "Pulau Besar",
+          "arrivals_m": 5.4,
+          "arrivals_formatted": "5.4M",
+          "mp_visitors_k": 541.1,
+          "stress_score": 49,
+          "hotel_occ": 64.0,
+          "mwqi": 79.5,
+          "avg_spend": 942.0
+        },
+        {
+          "rank": 6,
+          "name": "Port Dickson Marine Coast (Negeri Sembilan)",
+          "state": "Negeri Sembilan",
+          "island": "Port Dickson Marine Coast",
+          "arrivals_m": 5.06,
+          "arrivals_formatted": "5.1M",
+          "mp_visitors_k": 897.0,
+          "stress_score": 61,
+          "hotel_occ": 65.2,
+          "mwqi": 74.7,
+          "avg_spend": 940.0
+        }
+      ]
+    }
+  },
+  "model": {
+    "model_name": "Random Forest Regressor + Linear Explainability",
+    "target": "carrying_capacity_stress",
+    "features": [
+      "hotel_occupancy_rate",
+      "marine_park_visitors",
+      "avg_expenditure_myr",
+      "fish_landings_mt",
+      "is_monsoon_season",
+      "marine_water_quality_index"
+    ],
+    "metrics": {
+      "r2_score": 0.9994,
+      "mae": 0.4171,
+      "mse": 0.4426,
+      "sample_size": 240
+    },
+    "feature_importances": [
+      {
+        "feature": "marine_park_visitors",
+        "importance": 0.7127,
+        "percentage": 71.27
+      },
+      {
+        "feature": "marine_water_quality_index",
+        "importance": 0.2506,
+        "percentage": 25.06
+      },
+      {
+        "feature": "hotel_occupancy_rate",
+        "importance": 0.0337,
+        "percentage": 3.37
+      },
+      {
+        "feature": "avg_expenditure_myr",
+        "importance": 0.0018,
+        "percentage": 0.18
+      },
+      {
+        "feature": "fish_landings_mt",
+        "importance": 0.0011,
+        "percentage": 0.11
+      },
+      {
+        "feature": "is_monsoon_season",
+        "importance": 0.0001,
+        "percentage": 0.01
+      }
+    ],
+    "simulator_weights": {
+      "intercept": 228.445,
+      "coefficients": {
+        "hotel_occupancy_rate": 0.405465,
+        "marine_park_visitors": 4e-06,
+        "avg_expenditure_myr": -0.00642,
+        "fish_landings_mt": 6e-06,
+        "is_monsoon_season": -4.001934,
+        "marine_water_quality_index": -2.548739
+      }
+    }
+  }
+}

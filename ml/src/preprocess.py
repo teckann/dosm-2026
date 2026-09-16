@@ -1,6 +1,6 @@
 """
 Data Preprocessing Module for Marine Tourism Datathon Pipeline
-Loads raw CSV data from structured folders, performs validation, feature engineering, and exports cleaned data.
+Loads raw marine tourism data, performs validation, feature engineering, and exports cleaned data.
 """
 
 from pathlib import Path
@@ -15,17 +15,7 @@ PROCESSED_DATA_PATH = BASE_DIR / "data" / "processed" / "cleaned_dataset.csv"
 def load_raw_data(filepath: Path = RAW_DATA_PATH) -> pd.DataFrame:
     """Loads raw dataset from CSV."""
     if not filepath.exists():
-        # Fallback to older or alternative raw files if needed
-        alt_paths = [
-            BASE_DIR / "data" / "raw" / "marine" / "fish_landings.csv",
-            BASE_DIR / "data" / "raw" / "tourism" / "dosm_domestic_tourism_by_state.csv",
-        ]
-        for alt in alt_paths:
-            if alt.exists():
-                filepath = alt
-                break
-        else:
-            raise FileNotFoundError(f"Raw data file not found at: {filepath}")
+        raise FileNotFoundError(f"Raw data file not found at: {filepath}")
 
     df = pd.read_csv(filepath)
     print(f" Loaded {len(df)} rows from {filepath.name}")
@@ -38,15 +28,19 @@ def clean_and_engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     """
     df = df.copy()
 
-    # Sort by state and date if present
-    sort_cols = [c for c in ["state", "year", "quarter"] if c in df.columns]
-    if sort_cols:
-        df = df.sort_values(by=sort_cols).reset_index(drop=True)
+    # Sort by state, year, and quarter
+    if "state" in df.columns and "year" in df.columns and "quarter" in df.columns:
+        df = df.sort_values(by=["state", "year", "quarter"]).reset_index(drop=True)
 
-    # Compute year-over-year tourist growth if historical data exists
-    if "total_tourists" in df.columns and "state" in df.columns:
+        # Calculate QoQ Tourist Growth (%)
         df["tourist_growth_qoq"] = df.groupby("state")["total_tourists"].pct_change() * 100
         df["tourist_growth_qoq"] = df["tourist_growth_qoq"].fillna(0.0).round(2)
+
+        # Calculate Marine Footfall Ratio (Marine Park Visitors / Total Tourists)
+        df["marine_footfall_ratio"] = (df["marine_park_visitors"] / df["total_tourists"]).round(4)
+
+        # Calculate Spend per Visitor Night
+        df["spend_intensity"] = (df["avg_expenditure_myr"] * (df["hotel_occupancy_rate"] / 100)).round(2)
 
     return df
 

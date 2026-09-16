@@ -20,9 +20,19 @@ interface DonutBreakdownCardProps {
     total_label?: string;
     segments: DonutSegment[];
   };
+  years?: number[];
+  selectedYear?: number;
+  onSelectYear?: (year: number) => void;
+  dropdownSuffix?: string;
 }
 
-export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({ data }) => {
+export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
+  data,
+  years,
+  selectedYear,
+  onSelectYear,
+  dropdownSuffix,
+}) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const displayTotal = data.total_formatted || String(data.total);
@@ -34,17 +44,30 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({ data }) 
 
   return (
     <div className="bg-ocean-850 border border-ocean-700/60 rounded-lg p-5 flex flex-col justify-between shadow-ocean-glow relative">
-      {/* Header with Dropdown */}
+      {/* Header with Interactive Dropdown */}
       <div className="flex items-center justify-between pb-2">
-        <div className="flex items-center space-x-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-ocean-200">
-            {data.title}
-          </span>
-          <button className="flex items-center space-x-1 text-xs text-ocean-400 hover:text-white transition-colors">
-            <span>{data.period}</span>
-            <ChevronDown className="w-3.5 h-3.5" />
-          </button>
-        </div>
+        <span className="text-xs font-bold uppercase tracking-wider text-ocean-200">
+          {data.title}
+        </span>
+
+        {years && onSelectYear && selectedYear ? (
+          <div className="relative flex items-center">
+            <select
+              value={selectedYear}
+              onChange={(e) => onSelectYear(Number(e.target.value))}
+              className="appearance-none bg-ocean-800/90 hover:bg-ocean-750 text-cyan-300 hover:text-white font-semibold text-[11px] sm:text-xs py-1 pl-2.5 pr-6 rounded border border-ocean-700/80 hover:border-cyan-500/50 focus:outline-none cursor-pointer transition-all shadow-sm"
+            >
+              {years.map((y) => (
+                <option key={y} value={y} className="bg-ocean-900 text-white">
+                  {y} {dropdownSuffix || data.period}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="w-3 h-3 text-cyan-400 absolute right-1.5 pointer-events-none" />
+          </div>
+        ) : (
+          <span className="text-xs text-ocean-400 font-semibold">{data.period}</span>
+        )}
       </div>
 
       {/* Donut Chart & Callout Breakdown Grid (Matching Reference Screenshot) */}

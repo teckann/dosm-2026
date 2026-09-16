@@ -1,16 +1,16 @@
 {
   "total_volume": {
-    "title": "TOTAL HARVEST TONNAGE",
-    "period": "Month to Date (Feb 1 - 5)",
-    "value": "39,542",
-    "change": "\u25b2 5%",
-    "compare_value": "37,615",
+    "title": "TOTAL TOURIST EXPENDITURE",
+    "period": "Annual Marine Economy",
+    "value": "RM 82.1B",
+    "change": "\u25b2 +7.7%",
+    "compare_value": "RM 80.6B",
     "is_positive": true
   },
   "active_fleet": {
-    "title": "ACTIVE REGISTERED FLEET",
-    "period": "Month to Date (Feb 1 - 5)",
-    "value": "660",
-    "unit": "Vessels"
+    "title": "TOTAL COASTAL VISITOR NIGHTS",
+    "period": "Cumulative Stays (2024)",
+    "value": "217.0M",
+    "unit": "Nights"
   }
 }

@@ -1,54 +1,90 @@
 {
-  "title": "MARITIME PORT & BASE LEADERBOARD",
-  "period": "Month to Date (Feb 1 - 5)",
+  "title": "TOP DESTINATIONS CARRYING CAPACITY LEADERBOARD",
+  "period": "2024 Actual Surveillance",
   "headers": {
     "rank": "#",
-    "name": "PORT / COMPLEX NAME",
-    "open_ops": "OPEN OPERATIONS",
-    "closed_ops": "CLOSED / TONNAGE (MT)"
+    "name": "DESTINATION & COASTAL STATE",
+    "open_ops": "ANNUAL ARRIVALS",
+    "closed_ops": "STRESS SCORE"
   },
   "rows": [
     {
       "rank": 1,
-      "name": "Port Klang Deep Sea Complex",
-      "open_ops": 364,
-      "closed_ops": 74,
-      "status": "active"
+      "name": "Mersing Islands (Rawa/Aur) (Johor)",
+      "state": "Johor",
+      "island": "Mersing Islands (Rawa/Aur)",
+      "arrivals_m": 15.14,
+      "arrivals_formatted": "15.1M",
+      "mp_visitors_k": 3334.1,
+      "stress_score": 100,
+      "hotel_occ": 64.0,
+      "mwqi": 60.0,
+      "avg_spend": 945.0
     },
     {
       "rank": 2,
-      "name": "Tanjung Pelepas Maritime Hub",
-      "open_ops": 211,
-      "closed_ops": 73,
-      "status": "active"
+      "name": "Semporna & Sipadan (Sabah)",
+      "state": "Sabah",
+      "island": "Semporna & Sipadan",
+      "arrivals_m": 12.66,
+      "arrivals_formatted": "12.7M",
+      "mp_visitors_k": 5348.3,
+      "stress_score": 100,
+      "hotel_occ": 65.3,
+      "mwqi": 60.0,
+      "avg_spend": 936.0
     },
     {
       "rank": 3,
-      "name": "Kuantan Ocean Fisheries Base",
-      "open_ops": 481,
-      "closed_ops": 66,
-      "status": "active"
+      "name": "Pulau Pangkor & Sembilan (Perak)",
+      "state": "Perak",
+      "island": "Pulau Pangkor & Sembilan",
+      "arrivals_m": 12.3,
+      "arrivals_formatted": "12.3M",
+      "mp_visitors_k": 3050.0,
+      "stress_score": 100,
+      "hotel_occ": 65.0,
+      "mwqi": 60.0,
+      "avg_spend": 937.0
     },
     {
       "rank": 4,
-      "name": "Kemaman Marine Logistics Base",
-      "open_ops": 706,
-      "closed_ops": 52,
-      "status": "active"
+      "name": "Pulau Tioman (Pahang)",
+      "state": "Pahang",
+      "island": "Pulau Tioman",
+      "arrivals_m": 8.99,
+      "arrivals_formatted": "9.0M",
+      "mp_visitors_k": 2552.1,
+      "stress_score": 81,
+      "hotel_occ": 49.7,
+      "mwqi": 63.6,
+      "avg_spend": 751.0
     },
     {
       "rank": 5,
-      "name": "Penang Inshore Fisheries Center",
-      "open_ops": 263,
-      "closed_ops": 46,
-      "status": "active"
+      "name": "Batu Ferringhi & Teluk Bahang (Pulau Pinang)",
+      "state": "Pulau Pinang",
+      "island": "Batu Ferringhi & Teluk Bahang",
+      "arrivals_m": 8.07,
+      "arrivals_formatted": "8.1M",
+      "mp_visitors_k": 2394.7,
+      "stress_score": 97,
+      "hotel_occ": 64.7,
+      "mwqi": 60.0,
+      "avg_spend": 943.0
     },
     {
       "rank": 6,
-      "name": "Sandakan Marine Resources Hub",
-      "open_ops": 266,
-      "closed_ops": 40,
-      "status": "active"
+      "name": "Pulau Langkawi & Payar (Kedah)",
+      "state": "Kedah",
+      "island": "Pulau Langkawi & Payar",
+      "arrivals_m": 7.88,
+      "arrivals_formatted": "7.9M",
+      "mp_visitors_k": 3921.4,
+      "stress_score": 100,
+      "hotel_occ": 64.5,
+      "mwqi": 60.0,
+      "avg_spend": 943.0
     }
   ]
 }
