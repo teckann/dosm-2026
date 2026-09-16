@@ -118,14 +118,23 @@ dosm-2026/
 
 ---
 
-### 3. Frontend Web Dashboard
+### 3. Running the Dashboard (For Teammates / Collaborators)
 
-From the project root:
+Teammates who clone this repository **do NOT need to install Python** just to run the dashboard! All data contracts and model outputs are already pre-generated in `frontend/src/data/`.
+
+**Option 1: From the `frontend` folder (Standard)**
 ```bash
-# Install frontend dependencies
-npm install --prefix frontend
+git clone <repo-url>
+cd dosm-2026/frontend
+npm install
+npm run dev
+```
 
-# Start the local development server
+**Option 2: From the root folder**
+```bash
+git clone <repo-url>
+cd dosm-2026
+npm run install:all
 npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser.
