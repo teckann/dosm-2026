@@ -4,7 +4,6 @@ frontend/.next/
 frontend/out/
 frontend/build/
 frontend/.env*.local
-docs
 
 # Python / Virtual Environment
 ml/venv/
