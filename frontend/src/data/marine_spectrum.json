@@ -1,0 +1,44 @@
+{
+  "title": "HARVEST VOLUME SPECTRUM",
+  "period": "Month to Date (Feb 1 - 5)",
+  "bins": [
+    {
+      "id": 1,
+      "color": "#cbf1f5",
+      "label": "Coastal Inshore",
+      "value": 15
+    },
+    {
+      "id": 2,
+      "color": "#9be3ed",
+      "label": "Zone A Fleet",
+      "value": 32
+    },
+    {
+      "id": 3,
+      "color": "#63d1e3",
+      "label": "Zone B Fleet",
+      "value": 48
+    },
+    {
+      "id": 4,
+      "color": "#30b6d4",
+      "label": "Zone C Commercial",
+      "value": 64
+    },
+    {
+      "id": 5,
+      "color": "#168eae",
+      "label": "Zone C2 Offshore",
+      "value": 78
+    },
+    {
+      "id": 6,
+      "color": "#0d5578",
+      "label": "Deep Sea / EEZ",
+      "value": 95
+    }
+  ],
+  "legend_min": "No activity",
+  "legend_max": "75+ MT/day"
+}

@@ -1,0 +1,16 @@
+{
+  "total_volume": {
+    "title": "TOTAL HARVEST TONNAGE",
+    "period": "Month to Date (Feb 1 - 5)",
+    "value": "39,542",
+    "change": "\u25b2 5%",
+    "compare_value": "37,615",
+    "is_positive": true
+  },
+  "active_fleet": {
+    "title": "ACTIVE REGISTERED FLEET",
+    "period": "Month to Date (Feb 1 - 5)",
+    "value": "660",
+    "unit": "Vessels"
+  }
+}

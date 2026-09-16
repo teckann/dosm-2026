@@ -1,0 +1,36 @@
+{
+  "model_name": "Schaefer Bioeconomic Maximum Sustainable Yield (MSY) + XGBoost Regressor",
+  "r2_score": 0.968,
+  "mae": 3.42,
+  "features": [
+    {
+      "feature": "Active Fleet Capacity",
+      "importance": 0.42,
+      "percentage": 42.0
+    },
+    {
+      "feature": "Fuel Subsidy Allocation",
+      "importance": 0.28,
+      "percentage": 28.0
+    },
+    {
+      "feature": "Sea Surface Temperature",
+      "importance": 0.16,
+      "percentage": 16.0
+    },
+    {
+      "feature": "Enforcement Patrol Hours",
+      "importance": 0.14,
+      "percentage": 14.0
+    }
+  ],
+  "simulator_weights": {
+    "intercept": 45.2,
+    "coefficients": {
+      "fleet_size": 0.082,
+      "fuel_subsidy": 4.5e-05,
+      "patrol_hours": -0.054,
+      "sst_anomaly": 2.15
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "fleet_donut": {
+    "title": "ACTIVE OPERATIONS BY FLEET",
+    "period": "Today (Feb 5)",
+    "total": 243,
+    "total_label": "Total Ops",
+    "segments": [
+      {
+        "name": "Deep Sea Fleet",
+        "percentage": 32.5,
+        "color": "#22d3ee",
+        "count": 79
+      },
+      {
+        "name": "Zone C Commercial",
+        "percentage": 21.0,
+        "color": "#4ade80",
+        "count": 51
+      },
+      {
+        "name": "Zone C2 Offshore",
+        "percentage": 17.3,
+        "color": "#38bdf8",
+        "count": 42
+      },
+      {
+        "name": "Zone B Artisanal",
+        "percentage": 11.1,
+        "color": "#a3e635",
+        "count": 27
+      },
+      {
+        "name": "Zone A Inshore",
+        "percentage": 9.1,
+        "color": "#facc15",
+        "count": 22
+      },
+      {
+        "name": "Aquaculture",
+        "percentage": 5.3,
+        "color": "#fb923c",
+        "count": 13
+      },
+      {
+        "name": "Marine Research",
+        "percentage": 2.1,
+        "color": "#f43f5e",
+        "count": 5
+      },
+      {
+        "name": "Other Vessels",
+        "percentage": 1.6,
+        "color": "#e879f9",
+        "count": 4
+      }
+    ]
+  },
+  "species_donut": {
+    "title": "HARVEST BY SPECIES CLASSIFICATION",
+    "period": "Month to Date (Feb 1 - 5)",
+    "total": 79141,
+    "total_formatted": "79,141",
+    "total_label": "Total MT",
+    "segments": [
+      {
+        "name": "Pelagic (Tuna, Mackerel)",
+        "percentage": 46.6,
+        "color": "#00d2ff",
+        "count": 36879
+      },
+      {
+        "name": "Demersal (Snapper, Grouper)",
+        "percentage": 31.0,
+        "color": "#00a8ff",
+        "count": 24533
+      },
+      {
+        "name": "Crustaceans (Tiger Prawn, Crab)",
+        "percentage": 17.1,
+        "color": "#34d399",
+        "count": 13533
+      },
+      {
+        "name": "Cephalopods (Squid, Cuttlefish)",
+        "percentage": 3.4,
+        "color": "#facc15",
+        "count": 2690
+      },
+      {
+        "name": "Molluscs & Shellfish",
+        "percentage": 1.3,
+        "color": "#fb923c",
+        "count": 1028
+      },
+      {
+        "name": "Live Reef Marine Catch",
+        "percentage": 0.3,
+        "color": "#f43f5e",
+        "count": 237
+      },
+      {
+        "name": "Other Coastal Catch",
+        "percentage": 0.3,
+        "color": "#c084fc",
+        "count": 241
+      }
+    ]
+  }
+}

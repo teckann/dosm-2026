@@ -1,0 +1,54 @@
+{
+  "title": "MARITIME PORT & BASE LEADERBOARD",
+  "period": "Month to Date (Feb 1 - 5)",
+  "headers": {
+    "rank": "#",
+    "name": "PORT / COMPLEX NAME",
+    "open_ops": "OPEN OPERATIONS",
+    "closed_ops": "CLOSED / TONNAGE (MT)"
+  },
+  "rows": [
+    {
+      "rank": 1,
+      "name": "Port Klang Deep Sea Complex",
+      "open_ops": 364,
+      "closed_ops": 74,
+      "status": "active"
+    },
+    {
+      "rank": 2,
+      "name": "Tanjung Pelepas Maritime Hub",
+      "open_ops": 211,
+      "closed_ops": 73,
+      "status": "active"
+    },
+    {
+      "rank": 3,
+      "name": "Kuantan Ocean Fisheries Base",
+      "open_ops": 481,
+      "closed_ops": 66,
+      "status": "active"
+    },
+    {
+      "rank": 4,
+      "name": "Kemaman Marine Logistics Base",
+      "open_ops": 706,
+      "closed_ops": 52,
+      "status": "active"
+    },
+    {
+      "rank": 5,
+      "name": "Penang Inshore Fisheries Center",
+      "open_ops": 263,
+      "closed_ops": 46,
+      "status": "active"
+    },
+    {
+      "rank": 6,
+      "name": "Sandakan Marine Resources Hub",
+      "open_ops": 266,
+      "closed_ops": 40,
+      "status": "active"
+    }
+  ]
+}

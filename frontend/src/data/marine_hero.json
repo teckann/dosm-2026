@@ -1,0 +1,36 @@
+{
+  "title": "TOTAL MARINE HARVEST",
+  "period": "Month to Date (Feb 1 - 5)",
+  "value": 281,
+  "value_formatted": "281",
+  "unit": "k MT",
+  "change_percentage": "\u25b2 125%",
+  "compare_text": "Compare: 128",
+  "time_series": [
+    {
+      "date": "Feb 1",
+      "current": 80,
+      "compare": 0
+    },
+    {
+      "date": "Feb 2",
+      "current": 75,
+      "compare": 15
+    },
+    {
+      "date": "Feb 3",
+      "current": 66,
+      "compare": 35
+    },
+    {
+      "date": "Feb 4",
+      "current": 46,
+      "compare": 72
+    },
+    {
+      "date": "Feb 5",
+      "current": 18,
+      "compare": 12
+    }
+  ]
+}
