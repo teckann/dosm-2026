@@ -44,3 +44,6 @@ data/raw/*.parquet
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/spatial/.gitkeep
+
+# Local Dev Log Files
+artifacts/
