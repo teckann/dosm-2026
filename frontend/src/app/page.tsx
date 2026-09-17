@@ -3,9 +3,7 @@
 import React, { useState } from "react";
 import { MarineHeader } from "@/components/marine/marine-header";
 import { HeroKPIChart } from "@/components/marine/hero-kpi-chart";
-import { VolumeSpectrumCard } from "@/components/marine/volume-spectrum-card";
 import { DonutBreakdownCard } from "@/components/marine/donut-breakdown-card";
-import { StackedKPICard } from "@/components/marine/stacked-kpi-card";
 import { MaritimeLeaderboardCard, DestinationRow } from "@/components/marine/maritime-leaderboard-card";
 import { CoralHeatmapCard } from "@/components/marine/coral-heatmap-card";
 import { MarineSimulatorModal } from "@/components/marine/marine-simulator-modal";
@@ -46,9 +44,7 @@ export default function MarineDashboardPage() {
   };
 
   // Safe range helpers for spectrum min/max
-  const specBinValues = slice.spec_bins.map((b: any) => b.value);
-  const minBin = specBinValues.length > 0 ? Math.min(...specBinValues).toFixed(1) : "3.5";
-  const maxBin = specBinValues.length > 0 ? Math.max(...specBinValues).toFixed(1) : "8.5";
+  const specBinValues = slice.spec_bins?.map((b: any) => b.value) || [];
 
   // Sum seafood landings for current slice
   const seafoodSum = (
@@ -71,7 +67,7 @@ export default function MarineDashboardPage() {
         setActiveView={setActiveView}
       />
 
-      {/* Main Marine Dashboard Grid */}
+      {/* Main Marine Dashboard Content */}
       <main className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 py-5 space-y-5">
         {/* Active Filter Indicator Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs px-1 text-ocean-300 gap-2">
@@ -98,10 +94,10 @@ export default function MarineDashboardPage() {
 
         {activeView === "overview" ? (
           <>
-            {/* ROW 1: Hero KPI Area Chart | Volume Spectrum | Fleet Donut */}
+            {/* ROW 1: Hero Trajectory Area Chart (7 cols) | Marine Park Visitors Allocation Donut (5 cols) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-              {/* Top-Left: Hero Metric with Area Chart */}
-              <div className="lg:col-span-4">
+              {/* Left Column: Hero Metric with Area Chart & Metric Switcher */}
+              <div className="lg:col-span-7">
                 <HeroKPIChart
                   data={{
                     title:
@@ -124,25 +120,8 @@ export default function MarineDashboardPage() {
                 />
               </div>
 
-              {/* Top-Center: Volume Spectrum Bins */}
-              <div className="lg:col-span-4">
-                <VolumeSpectrumCard
-                  data={{
-                    title: "COASTAL FISH LANDINGS SPECTRUM",
-                    period: `${selectedYear} ${selectedRegion} (k MT)`,
-                    bins: slice.spec_bins,
-                    legend_min: `${minBin}k MT`,
-                    legend_max: `${maxBin}k MT`,
-                  }}
-                  years={years}
-                  selectedYear={selectedYear}
-                  onSelectYear={setSelectedYear}
-                  selectedRegion={selectedRegion}
-                />
-              </div>
-
-              {/* Top-Right: Marine Park Visitors Donut Breakdown */}
-              <div className="lg:col-span-4">
+              {/* Right Column: Marine Park Visitors Donut Breakdown */}
+              <div className="lg:col-span-5">
                 <DonutBreakdownCard
                   data={{
                     title: "MARINE PARK VISITOR ALLOCATION",
@@ -160,56 +139,15 @@ export default function MarineDashboardPage() {
               </div>
             </div>
 
-            {/* ROW 2: INTERACTIVE CORAL HEATMAP & SURVEILLANCE */}
+            {/* ROW 2: INTERACTIVE CORAL BLEACHING & REEF SURVEILLANCE MAP (Full Width) */}
             <div>
               <CoralHeatmapCard onOpenSimulator={handleOpenSimulator} />
             </div>
 
-            {/* ROW 3: Stacked KPIs | Spend Donut Breakdown | Regional Leaderboard */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
-              {/* Bottom-Left: Stacked Metric Cards (Tourist Spend & Visitor Nights) */}
-              <div className="lg:col-span-3">
-                <StackedKPICard
-                  data={{
-                    total_volume: {
-                      title: "COASTAL TOURISM SPEND",
-                      period: `${selectedYear} DOSM DTS Data`,
-                      value: `RM ${slice.total_spend_b}B`,
-                      change: slice.growth_yoy,
-                      compare_value: `RM ${(slice.total_spend_b * 0.93).toFixed(1)}B`,
-                    },
-                    active_fleet: {
-                      title: "TOTAL VISITOR NIGHTS",
-                      period: `${selectedYear} Island & Coastal Stays`,
-                      value: `${slice.visitor_nights_m}M`,
-                    },
-                  }}
-                  years={years}
-                  selectedYear={selectedYear}
-                  onSelectYear={setSelectedYear}
-                />
-              </div>
-
-              {/* Bottom-Center: Coastal Tourist Spending Breakdown */}
-              <div className="lg:col-span-4">
-                <DonutBreakdownCard
-                  data={{
-                    title: "COASTAL EXPENDITURE BY CATEGORY",
-                    period: `${selectedYear} DTS Survey`,
-                    total: `RM ${slice.total_spend_b}B`,
-                    total_formatted: `RM ${slice.total_spend_b}B`,
-                    total_label: "Total Spend",
-                    segments: slice.spend_cats,
-                  }}
-                  years={years}
-                  selectedYear={selectedYear}
-                  onSelectYear={setSelectedYear}
-                  dropdownSuffix="DTS Survey"
-                />
-              </div>
-
-              {/* Bottom-Right: Regional Maritime Destinations Leaderboard */}
-              <div className="lg:col-span-5">
+            {/* ROW 3: Regional Marine Destinations Leaderboard (7 cols) | Coastal Expenditure Breakdown (5 cols) */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+              {/* Left Column: Regional Maritime Destinations Carrying Capacity Leaderboard */}
+              <div className="lg:col-span-7">
                 <MaritimeLeaderboardCard
                   data={{
                     title:
@@ -230,6 +168,25 @@ export default function MarineDashboardPage() {
                     })),
                   }}
                   onSimulateDestination={handleSimulateDestination}
+                />
+              </div>
+
+              {/* Right Column: Coastal Tourist Spending Breakdown with Detailed Progress Bars */}
+              <div className="lg:col-span-5">
+                <DonutBreakdownCard
+                  variant="detailed"
+                  data={{
+                    title: "COASTAL EXPENDITURE BY CATEGORY",
+                    period: `${selectedYear} DTS Survey`,
+                    total: `RM ${slice.total_spend_b}B`,
+                    total_formatted: `RM ${slice.total_spend_b}B`,
+                    total_label: "Total Spend",
+                    segments: slice.spend_cats,
+                  }}
+                  years={years}
+                  selectedYear={selectedYear}
+                  onSelectYear={setSelectedYear}
+                  dropdownSuffix="DTS Survey"
                 />
               </div>
             </div>

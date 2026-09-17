@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import {
   Flame,
   ShieldAlert,
@@ -16,6 +16,7 @@ import {
   Waves,
   Eye,
   Sliders,
+  X,
 } from "lucide-react";
 import coralBleachingData from "@/data/coral_bleaching.json";
 import mapPathsData from "@/data/malaysia_map_paths.json";
@@ -292,10 +293,26 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
   const [selectedRegion, setSelectedRegion] = useState<string>("all");
   const [severityFilter, setSeverityFilter] = useState<string>("all");
   const [showHeatmapHalos, setShowHeatmapHalos] = useState<boolean>(true);
-  const [selectedSite, setSelectedSite] = useState<ReefSite | null>(DEFAULT_SITES[4]); // Default to Tioman
+  const [selectedSite, setSelectedSite] = useState<ReefSite | null>(null);
   const [hoveredSite, setHoveredSite] = useState<ReefSite | null>(null);
   const [hoveredState, setHoveredState] = useState<string | null>(null);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+  // Click on a reef node to zoom into it and show fixed telemetry card
+  const handleSiteClick = (site: ReefSite, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedSite?.id === site.id) {
+      // clicking already selected site toggles zoom out
+      setSelectedSite(null);
+    } else {
+      setSelectedSite(site);
+    }
+  };
+
+  // Reset selected card on filter switch
+  useEffect(() => {
+    setSelectedSite(null);
+  }, [selectedRegion, severityFilter]);
 
   // Exact geographic projection matching official Malaysia GeoJSON boundaries:
   // Lng: 99.2 to 119.6, Lat: 0.6 to 7.6
@@ -314,8 +331,18 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
     return { x, y };
   };
 
-  // Dynamic viewport camera zoom based on region
+  // Dynamic viewport camera zoom: focuses & zooms on selected reef point if clicked, otherwise region
   const currentViewBox = useMemo(() => {
+    if (selectedSite) {
+      const { x, y } = projectCoordinates(selectedSite.lat, selectedSite.lng);
+      // Zoomed viewport window (centered on the node, framed so fixed top-right card doesn't occlude it)
+      const zoomW = 340;
+      const zoomH = 190;
+      const targetX = Math.max(0, Math.min(960 - zoomW, x - zoomW * 0.38));
+      const targetY = Math.max(0, Math.min(420 - zoomH, y - zoomH * 0.5));
+      return `${Math.round(targetX)} ${Math.round(targetY)} ${zoomW} ${zoomH}`;
+    }
+
     switch (selectedRegion) {
       case "peninsular":
         return "35 50 320 330";
@@ -326,7 +353,7 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
       default:
         return "0 0 960 420";
     }
-  }, [selectedRegion]);
+  }, [selectedSite, selectedRegion]);
 
   const filteredSites = useMemo(() => {
     return DEFAULT_SITES.filter((site) => {
@@ -444,10 +471,8 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
         </div>
       </div>
 
-      {/* Main Interactive Map & Inspection Workspace */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 items-stretch mt-2.5">
-        {/* SVG Interactive Geospatial Canvas (Expansive 8/9 Cols for Maximum Readability) */}
-        <div className="lg:col-span-8 xl:col-span-9 bg-ocean-950 border border-ocean-700/60 rounded-xl p-3 relative overflow-hidden shadow-inner flex flex-col justify-between">
+      {/* Main Interactive Map Canvas with Floating Telemetry Overlay */}
+      <div className="w-full bg-ocean-950 border border-ocean-700/60 rounded-xl p-3 relative overflow-hidden shadow-inner flex flex-col justify-between mt-2.5">
           {/* Watermark / Coordinates */}
           <div className="absolute top-3 left-3 z-10 pointer-events-none flex items-center space-x-1.5 text-[10px] font-mono text-ocean-400/80">
             <Compass className="w-3.5 h-3.5 text-cyan-400 animate-spin-slow" />
@@ -460,7 +485,9 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
           </div>
 
           {/* SVG Map Container (Enlarged Height for Crisp Legibility) */}
-          <div className={`w-full relative mt-5 ${isExpanded ? "h-[70vh]" : "h-[360px] sm:h-[400px] md:h-[450px] lg:h-[480px]"}`}>
+          <div
+            className={`w-full relative mt-5 ${isExpanded ? "h-[70vh]" : "h-[360px] sm:h-[400px] md:h-[450px] lg:h-[480px]"}`}
+          >
             <svg
               viewBox={currentViewBox}
               className="w-full h-full select-none transition-all duration-700 ease-out"
@@ -506,8 +533,20 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
               </defs>
 
               {/* Background Ocean & Coordinates Grid */}
-              <rect width="960" height="420" fill="#091f35" />
-              <rect width="960" height="420" fill="url(#oceanGrid)" />
+              <rect
+                width="960"
+                height="420"
+                fill="#091f35"
+                onClick={() => setSelectedSite(null)}
+                className="cursor-pointer"
+              />
+              <rect
+                width="960"
+                height="420"
+                fill="url(#oceanGrid)"
+                onClick={() => setSelectedSite(null)}
+                className="cursor-pointer pointer-events-none"
+              />
 
               {/* Bathymetry Shelf Contours */}
               <path
@@ -647,7 +686,7 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
                   <g
                     key={site.id}
                     className="cursor-pointer group"
-                    onClick={() => setSelectedSite(site)}
+                    onClick={(e) => handleSiteClick(site, e)}
                     onMouseEnter={() => setHoveredSite(site)}
                     onMouseLeave={() => setHoveredSite(null)}
                   >
@@ -748,6 +787,125 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
                 );
               })}
             </svg>
+
+            {/* Floating Site Inspection & Bioeconomic Telemetry Card (Fixed at Top-Right HUD Position) */}
+            {selectedSite && (
+              <div className="absolute top-2 sm:top-3 right-2 sm:right-3 z-30 w-72 sm:w-[320px] max-w-[calc(100%-1rem)] bg-ocean-950/95 backdrop-blur-md border border-cyan-500/60 rounded-xl p-3.5 shadow-2xl shadow-ocean-950/95 transition-all duration-300 animate-in fade-in zoom-in-95 pointer-events-auto">
+                {/* Site Header */}
+                <div className="pb-2 border-b border-ocean-700/60 flex justify-between items-start">
+                  <div className="min-w-0 pr-2">
+                    <div className="flex items-center space-x-1 text-cyan-400 text-[9.5px] font-bold uppercase tracking-wider">
+                      <MapPin className="w-3 h-3 shrink-0" />
+                      <span className="truncate">
+                        {selectedSite.state} • {selectedSite.region.replace("_", " ").toUpperCase()}
+                      </span>
+                    </div>
+                    <h3 className="text-sm font-extrabold text-white mt-0.5 truncate">{selectedSite.name}</h3>
+                  </div>
+                  <div className="flex items-center space-x-1.5 shrink-0">
+                    <span
+                      className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider ${
+                        selectedSite.dhw >= 8.0
+                          ? "bg-rose-500/20 text-rose-300 border border-rose-500/40"
+                          : "bg-amber-500/20 text-amber-300 border border-amber-500/40"
+                      }`}
+                    >
+                      {selectedSite.alert_level}
+                    </span>
+                    <button
+                      onClick={() => setSelectedSite(null)}
+                      className="p-1 text-ocean-400 hover:text-white rounded-lg hover:bg-ocean-800 transition-colors"
+                      title="Close telemetry card"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Environmental Indicators Grid */}
+                <div className="grid grid-cols-2 gap-2 my-2">
+                  <div className="bg-ocean-900/90 p-2 rounded-lg border border-ocean-700/50">
+                    <span className="text-[9px] text-ocean-400 uppercase font-semibold">Bleached Colonies</span>
+                    <div className="text-base font-extrabold font-mono text-rose-400 mt-0.5">
+                      {selectedSite.bleached_pct}%
+                    </div>
+                    <div className="w-full bg-ocean-800 h-1 rounded-full mt-1 overflow-hidden">
+                      <div className="bg-rose-500 h-full" style={{ width: `${selectedSite.bleached_pct}%` }} />
+                    </div>
+                  </div>
+
+                  <div className="bg-ocean-900/90 p-2 rounded-lg border border-ocean-700/50">
+                    <span className="text-[9px] text-ocean-400 uppercase font-semibold">Degree Heating Wks</span>
+                    <div className="text-base font-extrabold font-mono text-amber-300 mt-0.5">
+                      {selectedSite.dhw} <span className="text-[10px] font-normal text-ocean-400">°C-wks</span>
+                    </div>
+                    <div className="w-full bg-ocean-800 h-1 rounded-full mt-1 overflow-hidden">
+                      <div
+                        className="bg-amber-400 h-full"
+                        style={{ width: `${Math.min(100, (selectedSite.dhw / 12) * 100)}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="bg-ocean-900/90 p-2 rounded-lg border border-ocean-700/50">
+                    <span className="text-[9px] text-ocean-400 uppercase font-semibold">SST Anomaly</span>
+                    <div className="text-sm font-bold font-mono text-white mt-0.5">
+                      +{selectedSite.sst_anomaly.toFixed(1)} °C
+                    </div>
+                    <span className="text-[9px] text-ocean-400">Above baseline</span>
+                  </div>
+
+                  <div className="bg-ocean-900/90 p-2 rounded-lg border border-ocean-700/50">
+                    <span className="text-[9px] text-ocean-400 uppercase font-semibold">Live Coral Cover</span>
+                    <div className="text-sm font-bold font-mono text-emerald-400 mt-0.5">
+                      {selectedSite.live_coral_cover}%
+                    </div>
+                    <span className="text-[9px] text-ocean-400">Nursery cover</span>
+                  </div>
+                </div>
+
+                {/* Compact Management Action & Nursery Impact */}
+                <div className="bg-ocean-900/90 p-2 rounded-lg border border-ocean-700/50 text-[10.5px] leading-tight space-y-1 mb-2">
+                  <div className="flex items-center space-x-1.5 text-rose-300 font-semibold text-[10px]">
+                    <ShieldAlert className="w-3 h-3 text-rose-400 shrink-0" />
+                    <span>Est. Mortality: {selectedSite.mortality_rate}% • Demersal Risk</span>
+                  </div>
+                  <div className="text-cyan-300 text-[10px] truncate">
+                    Action: {selectedSite.management_action}
+                  </div>
+                </div>
+
+                {/* Direct Simulator Link Button */}
+                {onOpenSimulator && (
+                  <button
+                    onClick={onOpenSimulator}
+                    className="w-full flex items-center justify-center space-x-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-ocean-950 font-bold py-1.5 px-3 rounded-lg text-[11px] transition-all shadow-cyan-glow cursor-pointer"
+                  >
+                    <Sliders className="w-3 h-3 text-ocean-950" />
+                    <span>Simulate Quota for {selectedSite.short_name}</span>
+                  </button>
+                )}
+
+                {/* Source attribution */}
+                <div className="pt-2 border-t border-ocean-700/50 text-[9px] text-ocean-400 flex items-center justify-between mt-2">
+                  <span>Source: 2024BleachingReport</span>
+                  <span className="text-cyan-400 font-mono">Reef Check / DoF</span>
+                </div>
+              </div>
+            )}
+
+            {/* Zoom Focus Indicator & Reset Button */}
+            {selectedSite && (
+              <button
+                onClick={() => setSelectedSite(null)}
+                className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 z-20 flex items-center space-x-1.5 bg-ocean-900/90 hover:bg-ocean-800 text-cyan-300 hover:text-white text-[11px] font-semibold px-2.5 py-1 rounded-full border border-cyan-500/40 shadow-lg transition-all cursor-pointer group"
+                title="Click to zoom back out to full view"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
+                <span>Focused: <strong className="text-white">{selectedSite.short_name}</strong></span>
+                <span className="text-ocean-400 group-hover:text-cyan-200 pl-1">✕ Zoom Out</span>
+              </button>
+            )}
           </div>
 
           {/* Map Footer Legend & Controls Help */}
@@ -773,115 +931,7 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
             </div>
           </div>
         </div>
-
-        {/* Site Inspection & Bioeconomic Telemetry Panel (Adaptive 4/3 Cols) */}
-        <div className="lg:col-span-4 xl:col-span-3 bg-ocean-950 border border-ocean-700/60 rounded-xl p-3 flex flex-col justify-between shadow-lg">
-          {selectedSite ? (
-            <div className="space-y-2.5 flex flex-col justify-between h-full">
-              {/* Site Header */}
-              <div className="pb-2 border-b border-ocean-700/60 flex justify-between items-start">
-                <div className="min-w-0 pr-2">
-                  <div className="flex items-center space-x-1 text-cyan-400 text-[9.5px] font-bold uppercase tracking-wider">
-                    <MapPin className="w-3 h-3 shrink-0" />
-                    <span className="truncate">{selectedSite.state} • {selectedSite.region.replace("_", " ").toUpperCase()}</span>
-                  </div>
-                  <h3 className="text-sm font-extrabold text-white mt-0.5 truncate">{selectedSite.name}</h3>
-                </div>
-                <span
-                  className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider shrink-0 ${
-                    selectedSite.dhw >= 8.0
-                      ? "bg-rose-500/20 text-rose-300 border border-rose-500/40"
-                      : "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                  }`}
-                >
-                  {selectedSite.alert_level}
-                </span>
-              </div>
-
-              {/* Environmental Indicators Grid */}
-              <div className="grid grid-cols-2 gap-2">
-                <div className="bg-ocean-900 p-2 rounded-lg border border-ocean-700/50">
-                  <span className="text-[9px] text-ocean-400 uppercase font-semibold">Bleached Colonies</span>
-                  <div className="text-base font-extrabold font-mono text-rose-400 mt-0.5">
-                    {selectedSite.bleached_pct}%
-                  </div>
-                  <div className="w-full bg-ocean-800 h-1 rounded-full mt-1 overflow-hidden">
-                    <div className="bg-rose-500 h-full" style={{ width: `${selectedSite.bleached_pct}%` }} />
-                  </div>
-                </div>
-
-                <div className="bg-ocean-900 p-2 rounded-lg border border-ocean-700/50">
-                  <span className="text-[9px] text-ocean-400 uppercase font-semibold">Degree Heating Wks</span>
-                  <div className="text-base font-extrabold font-mono text-amber-300 mt-0.5">
-                    {selectedSite.dhw} <span className="text-[10px] font-normal text-ocean-400">°C-wks</span>
-                  </div>
-                  <div className="w-full bg-ocean-800 h-1 rounded-full mt-1 overflow-hidden">
-                    <div
-                      className="bg-amber-400 h-full"
-                      style={{ width: `${Math.min(100, (selectedSite.dhw / 12) * 100)}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-ocean-900 p-2 rounded-lg border border-ocean-700/50">
-                  <span className="text-[9px] text-ocean-400 uppercase font-semibold">SST Anomaly</span>
-                  <div className="text-sm font-bold font-mono text-white mt-0.5">
-                    +{selectedSite.sst_anomaly.toFixed(1)} °C
-                  </div>
-                  <span className="text-[9px] text-ocean-400">Above baseline</span>
-                </div>
-
-                <div className="bg-ocean-900 p-2 rounded-lg border border-ocean-700/50">
-                  <span className="text-[9px] text-ocean-400 uppercase font-semibold">Live Coral Cover</span>
-                  <div className="text-sm font-bold font-mono text-emerald-400 mt-0.5">
-                    {selectedSite.live_coral_cover}%
-                  </div>
-                  <span className="text-[9px] text-ocean-400">Nursery cover</span>
-                </div>
-              </div>
-
-              {/* Compact Management Action & Nursery Impact */}
-              <div className="bg-ocean-900/90 p-2 rounded-lg border border-ocean-700/50 text-[10.5px] leading-tight space-y-1">
-                <div className="flex items-center space-x-1.5 text-rose-300 font-semibold text-[10px]">
-                  <ShieldAlert className="w-3 h-3 text-rose-400 shrink-0" />
-                  <span>Est. Mortality: {selectedSite.mortality_rate}% • Demersal Nursery Risk</span>
-                </div>
-                <div className="text-cyan-300 text-[10px] truncate">
-                  Action: {selectedSite.management_action}
-                </div>
-              </div>
-
-              {/* Direct Simulator Link Button */}
-              {onOpenSimulator && (
-                <button
-                  onClick={onOpenSimulator}
-                  className="w-full flex items-center justify-center space-x-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-ocean-950 font-bold py-1.5 px-3 rounded-lg text-[11px] transition-all shadow-cyan-glow"
-                >
-                  <Sliders className="w-3 h-3 text-ocean-950" />
-                  <span>Simulate Quota for {selectedSite.short_name}</span>
-                </button>
-              )}
-            </div>
-          ) : (
-            <div className="flex flex-col items-center justify-center flex-1 py-16 text-center text-ocean-400">
-              <div className="w-11 h-11 rounded-full bg-ocean-900/90 border border-ocean-700/60 flex items-center justify-center mb-2.5 text-cyan-400 shadow-inner">
-                <Eye className="w-5 h-5 animate-pulse" />
-              </div>
-              <p className="text-xs font-semibold text-ocean-200">Reef Telemetry Standby</p>
-              <p className="text-[10.5px] text-ocean-400 mt-1 max-w-[210px] leading-relaxed">
-                Click any reef node on the map to inspect live satellite telemetry, SST anomaly, and quota impact.
-              </p>
-            </div>
-          )}
-
-          {/* Research Attribution Footer */}
-          <div className="pt-2 border-t border-ocean-700/50 text-[9.5px] text-ocean-400 flex items-center justify-between">
-            <span>Source: 2024CoralBleachingImpactReportMalaysia.pdf</span>
-            <span className="text-cyan-400 font-mono">Reef Check / DoF</span>
-          </div>
-        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 

@@ -99,7 +99,7 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
   }
 
   return (
-    <div className="bg-ocean-850 border border-ocean-700/60 rounded-lg p-5 flex flex-col justify-between relative shadow-ocean-glow overflow-hidden h-full">
+    <div className="bg-ocean-850 border border-ocean-700/60 rounded-xl p-5 flex flex-col justify-between relative shadow-ocean-glow overflow-hidden h-full">
       {/* Header & Interactive Metric Switcher */}
       <div>
         <div className="flex items-center justify-between">
@@ -134,7 +134,7 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
       </div>
 
       {/* Embedded Glowing Area Chart */}
-      <div className="h-44 w-full mt-3">
+      <div className="h-48 w-full mt-3">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
             <defs>

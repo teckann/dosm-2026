@@ -77,7 +77,7 @@ export const MaritimeLeaderboardCard: React.FC<MaritimeLeaderboardCardProps> = (
   };
 
   return (
-    <div className="bg-ocean-850 border border-ocean-700/60 rounded-lg p-5 flex flex-col justify-between shadow-ocean-glow h-full">
+    <div className="bg-ocean-850 border border-ocean-700/60 rounded-xl p-5 flex flex-col justify-between shadow-ocean-glow h-full">
       {/* Header with Search & Sort */}
       <div className="pb-3 border-b border-ocean-700/40 space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -132,7 +132,7 @@ export const MaritimeLeaderboardCard: React.FC<MaritimeLeaderboardCardProps> = (
       </div>
 
       {/* Leaderboard Table */}
-      <div className="overflow-x-auto py-2 flex-1 max-h-72 overflow-y-auto">
+      <div className="overflow-x-auto py-2 flex-1 max-h-[340px] overflow-y-auto">
         <table className="w-full text-left text-xs">
           <thead className="sticky top-0 bg-ocean-850">
             <tr className="text-ocean-400 font-semibold uppercase tracking-wider text-[10px] border-b border-ocean-700/40">
