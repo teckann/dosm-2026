@@ -9,6 +9,7 @@
     "start": "npm run start --prefix frontend",
     "lint": "npm run lint --prefix frontend",
     "ml:train": "python ml/src/train.py",
-    "ml:export": "python ml/src/export_insights.py"
+    "ml:export": "python ml/src/export_insights.py",
+    "ml:coral": "python ml/src/extract_coral_bleaching.py"
   }
 }

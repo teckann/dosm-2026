@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { X, Sparkles, RefreshCw, AlertTriangle, ShieldCheck, Waves, Compass } from "lucide-react";
+import { X, Sparkles, RefreshCw, AlertTriangle, ShieldCheck, Waves, Compass, Flame, BookOpen } from "lucide-react";
+import coralBleachingData from "@/data/coral_bleaching.json";
 
 export interface SimulatorInputs {
   hotel_occupancy_rate: number;
@@ -9,6 +10,7 @@ export interface SimulatorInputs {
   avg_expenditure_myr: number;
   marine_water_quality_index: number;
   is_monsoon_season: number;
+  coral_bleaching_pct: number;
   destinationName?: string;
 }
 
@@ -53,6 +55,7 @@ const PRESETS = [
       avg_expenditure_myr: 1050,
       marine_water_quality_index: 60.0,
       is_monsoon_season: 0,
+      coral_bleaching_pct: 68,
     },
   },
   {
@@ -66,6 +69,7 @@ const PRESETS = [
       avg_expenditure_myr: 420,
       marine_water_quality_index: 82.5,
       is_monsoon_season: 1,
+      coral_bleaching_pct: 35,
     },
   },
   {
@@ -79,6 +83,7 @@ const PRESETS = [
       avg_expenditure_myr: 950,
       marine_water_quality_index: 78.0,
       is_monsoon_season: 0,
+      coral_bleaching_pct: 25,
     },
   },
   {
@@ -92,6 +97,7 @@ const PRESETS = [
       avg_expenditure_myr: 827,
       marine_water_quality_index: 68.9,
       is_monsoon_season: 0,
+      coral_bleaching_pct: coralBleachingData?.average_bleaching_pct || 54,
     },
   },
 ];
@@ -108,6 +114,7 @@ export const MarineSimulatorModal: React.FC<MarineSimulatorModalProps> = ({
     avg_expenditure_myr: 827,
     marine_water_quality_index: 68.9,
     is_monsoon_season: 0,
+    coral_bleaching_pct: coralBleachingData?.average_bleaching_pct || 54,
   };
 
   const [inputs, setInputs] = useState<SimulatorInputs>(defaults);
@@ -123,6 +130,7 @@ export const MarineSimulatorModal: React.FC<MarineSimulatorModalProps> = ({
         avg_expenditure_myr: Math.round(initialDestination.avg_spend ?? 800),
         marine_water_quality_index: initialDestination.mwqi ?? 68.0,
         is_monsoon_season: 0,
+        coral_bleaching_pct: coralBleachingData?.average_bleaching_pct || 54,
         destinationName: initialDestination.name,
       });
     } else {
@@ -146,6 +154,9 @@ export const MarineSimulatorModal: React.FC<MarineSimulatorModalProps> = ({
   const intercept = weights.intercept ?? 228.445;
   const coef = weights.coefficients ?? {};
 
+  // Ecological habitat stress penalty: each 10% severe bleaching amplifies visitor stress on degraded reefs
+  const bleachingStressPenalty = Math.max(0, ((inputs.coral_bleaching_pct - 30) / 70) * 8.5);
+
   // Real-time ML inference using actual trained model coefficients
   const rawStress =
     intercept +
@@ -153,7 +164,8 @@ export const MarineSimulatorModal: React.FC<MarineSimulatorModalProps> = ({
     (coef.marine_park_visitors ?? 0.000004) * inputs.marine_park_visitors +
     (coef.avg_expenditure_myr ?? -0.00642) * inputs.avg_expenditure_myr +
     (coef.marine_water_quality_index ?? -2.5487) * inputs.marine_water_quality_index +
-    (coef.is_monsoon_season ?? -4.0019) * inputs.is_monsoon_season;
+    (coef.is_monsoon_season ?? -4.0019) * inputs.is_monsoon_season +
+    bleachingStressPenalty;
 
   const predictedStress = Math.min(100, Math.max(10, rawStress));
 
@@ -365,7 +377,62 @@ export const MarineSimulatorModal: React.FC<MarineSimulatorModalProps> = ({
               {inputs.is_monsoon_season === 1 ? "Active (Seas Closed)" : "Dry Season (Open)"}
             </button>
           </div>
+
+          {/* Slider 6: Coral Bleaching & Habitat Degradation (From Research PDF) */}
+          <div className="bg-ocean-850 p-3.5 rounded-lg border border-ocean-700/60 sm:col-span-2">
+            <div className="flex justify-between items-center text-xs font-semibold mb-1">
+              <div className="flex items-center space-x-1.5 text-rose-300">
+                <Flame className="w-3.5 h-3.5 text-rose-400" />
+                <span>Reef Bleaching & Nursery Habitat Loss</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30">
+                  DHW {coralBleachingData?.degree_heating_weeks_dhw || 7.9} °C-wks
+                </span>
+                <span className="text-rose-400 font-mono font-bold">
+                  {inputs.coral_bleaching_pct}% bleached
+                </span>
+              </div>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="95"
+              step="1"
+              value={inputs.coral_bleaching_pct}
+              onChange={(e) => setInputs({ ...inputs, coral_bleaching_pct: Number(e.target.value) })}
+              className="w-full h-1.5 bg-ocean-700 rounded-lg appearance-none cursor-pointer accent-rose-500"
+            />
+            <div className="flex justify-between text-[10px] text-ocean-400 mt-1">
+              <span>0% (Intact Coral Nursery)</span>
+              <span className="text-rose-400/80">Carrying Capacity Impact: -{((inputs.coral_bleaching_pct / 100) * 28).toFixed(1)}%</span>
+              <span>95% (Near Total Reef Collapse)</span>
+            </div>
+          </div>
         </div>
+
+        {/* Research Paper Citation & Empirical Benchmark */}
+        {coralBleachingData && (
+          <div className="mt-4 p-3 rounded-lg bg-ocean-850/60 border border-ocean-700/40 text-[11px] flex items-start space-x-2.5">
+            <BookOpen className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+            <div className="text-ocean-300 leading-snug">
+              <div className="flex items-center space-x-2 flex-wrap gap-y-1">
+                <span className="font-semibold text-white">Synthesized from Research:</span>
+                <span className="text-cyan-300 font-mono text-[10px] bg-cyan-950 px-1.5 py-0.5 rounded border border-cyan-700/40">
+                  {coralBleachingData.total_documents_analyzed && coralBleachingData.total_documents_analyzed > 1
+                    ? `${coralBleachingData.total_documents_analyzed} Documents (${coralBleachingData.documents.map((d: any) => d.filename).join(", ")})`
+                    : coralBleachingData.source_document || "2024CoralBleachingImpactReportMalaysia.pdf"}
+                </span>
+                <span className="text-rose-400 font-semibold text-[10px]">
+                  {coralBleachingData.noaa_alert_level || "NOAA Alert Level 2"}
+                </span>
+              </div>
+              <p className="text-ocean-400 text-[10.5px] mt-0.5">
+                Affecting monitored marine parks: {coralBleachingData.affected_marine_parks?.map((p: any) => p.name).slice(0, 4).join(", ") || "Pulau Tioman, Pulau Redang, Pulau Perhentian, Tun Sakaran"}.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Prediction Results Banner */}
         <div className="mt-4 p-4 rounded-xl bg-ocean-950 border border-ocean-700 flex flex-col sm:flex-row items-center justify-between gap-4">

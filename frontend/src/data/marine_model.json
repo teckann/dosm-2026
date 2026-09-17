@@ -57,5 +57,12 @@
       "is_monsoon_season": -4.001934,
       "marine_water_quality_index": -2.548739
     }
+  },
+  "coral_bleaching_stressor": {
+    "average_bleaching_pct": 66.0,
+    "dhw": 8.4,
+    "carrying_capacity_shock_pct": -20.9,
+    "noaa_alert_level": "Alert Level 2 (Severe Bleaching & Significant Mortality Risk)",
+    "total_documents_analyzed": 1
   }
 }

@@ -1,0 +1,105 @@
+{
+  "total_documents_analyzed": 1,
+  "source_document": "2024CoralBleachingImpactReportMalaysia.pdf",
+  "documents": [
+    {
+      "filename": "2024CoralBleachingImpactReportMalaysia.pdf",
+      "num_pages": 26,
+      "sst_anomaly": 1.76,
+      "dhw": 8.4,
+      "bleaching_pct": 66.0,
+      "mortality_pct": 24.4
+    }
+  ],
+  "sea_surface_temperature_anomaly_c": 1.76,
+  "degree_heating_weeks_dhw": 8.4,
+  "noaa_alert_level": "Alert Level 2 (Severe Bleaching & Significant Mortality Risk)",
+  "alert_color": "#f43f5e",
+  "average_bleaching_pct": 66.0,
+  "projected_mortality_pct": 24.4,
+  "ecological_status": "Severe Thermal Bleaching Event",
+  "bioeconomic_impact": {
+    "carrying_capacity_shock_pct": -20.9,
+    "impact_on_pelagic_biomass": "Moderate (Displaced offshore)",
+    "impact_on_demersal_biomass": "Severe (Demersal reef habitats degraded)",
+    "recommended_quota_adjustment_pct": -15.0
+  },
+  "affected_marine_parks": [
+    {
+      "name": "Pulau Tioman",
+      "state": "Pahang",
+      "zone": "East Coast Marine Park",
+      "lat": 2.79,
+      "lng": 104.17,
+      "status": "Severe Bleaching",
+      "bleached_percentage": 66.0,
+      "peak_dhw": 8.4
+    },
+    {
+      "name": "Pulau Redang",
+      "state": "Terengganu",
+      "zone": "East Coast Marine Park",
+      "lat": 5.78,
+      "lng": 103.01,
+      "status": "Severe Bleaching",
+      "bleached_percentage": 66.0,
+      "peak_dhw": 8.4
+    },
+    {
+      "name": "Pulau Perhentian",
+      "state": "Terengganu",
+      "zone": "East Coast Marine Park",
+      "lat": 5.91,
+      "lng": 102.74,
+      "status": "Severe Bleaching",
+      "bleached_percentage": 66.0,
+      "peak_dhw": 8.4
+    },
+    {
+      "name": "Pulau Tinggi / Sibu",
+      "state": "Johor",
+      "zone": "Sultan Iskandar Marine Park",
+      "lat": 2.3,
+      "lng": 104.12,
+      "status": "Severe Bleaching",
+      "bleached_percentage": 66.0,
+      "peak_dhw": 8.4
+    },
+    {
+      "name": "Tun Sakaran Marine Park",
+      "state": "Sabah",
+      "zone": "Coral Triangle (Semporna)",
+      "lat": 4.6,
+      "lng": 118.78,
+      "status": "Severe Bleaching",
+      "bleached_percentage": 66.0,
+      "peak_dhw": 8.4
+    },
+    {
+      "name": "Tun Mustapha Park",
+      "state": "Sabah",
+      "zone": "Kudat - Northern Borneo",
+      "lat": 7.08,
+      "lng": 117.1,
+      "status": "Severe Bleaching",
+      "bleached_percentage": 66.0,
+      "peak_dhw": 8.4
+    },
+    {
+      "name": "Miri-Sibuti Coral Reefs",
+      "state": "Sarawak",
+      "zone": "South China Sea Offshore",
+      "lat": 4.33,
+      "lng": 113.83,
+      "status": "Severe Bleaching",
+      "bleached_percentage": 66.0,
+      "peak_dhw": 8.4
+    }
+  ],
+  "extracted_key_findings": [
+    "Synthesized evidence across 1 research report(s)/paper(s).",
+    "Peak thermal stress registered Degree Heating Weeks (DHW) up to 8.4 \u00b0C-weeks (Alert Level 2 (Severe Bleaching & Significant Mortality Risk)).",
+    "Consolidated mean coral bleaching incidence: 66.0% across surveyed transects.",
+    "Projected demersal nursery carrying capacity shock: -20.9% for Malaysian waters."
+  ]
+}

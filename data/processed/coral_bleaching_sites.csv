@@ -1,0 +1,8 @@
+name,state,zone,lat,lng,status,bleached_percentage,peak_dhw
+Pulau Tioman,Pahang,East Coast Marine Park,2.79,104.17,Severe Bleaching,66.0,8.4
+Pulau Redang,Terengganu,East Coast Marine Park,5.78,103.01,Severe Bleaching,66.0,8.4
+Pulau Perhentian,Terengganu,East Coast Marine Park,5.91,102.74,Severe Bleaching,66.0,8.4
+Pulau Tinggi / Sibu,Johor,Sultan Iskandar Marine Park,2.3,104.12,Severe Bleaching,66.0,8.4
+Tun Sakaran Marine Park,Sabah,Coral Triangle (Semporna),4.6,118.78,Severe Bleaching,66.0,8.4
+Tun Mustapha Park,Sabah,Kudat - Northern Borneo,7.08,117.1,Severe Bleaching,66.0,8.4
+Miri-Sibuti Coral Reefs,Sarawak,South China Sea Offshore,4.33,113.83,Severe Bleaching,66.0,8.4
