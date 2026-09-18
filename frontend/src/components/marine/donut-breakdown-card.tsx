@@ -49,7 +49,7 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
 
   return (
     <div
-      className={`bg-ocean-850 border border-ocean-700/60 rounded-xl p-5 flex flex-col justify-between shadow-ocean-glow relative h-full ${className}`}
+      className={`bg-ocean-850 border border-ocean-700/60 rounded-xl p-3 flex flex-col shadow-ocean-glow relative h-full overflow-hidden panel ${className}`}
     >
       {/* Header with Interactive Dropdown */}
       <div className="flex items-center justify-between pb-2">
@@ -218,21 +218,21 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
           </div>
         </div>
       ) : (
-        /* Compact Standard Layout (for Marine Park Allocation) */
-        <div className="grid grid-cols-12 items-center my-auto py-2">
+        /* Compact Standard Layout (for Marine Park Allocation in Row 3) */
+        <div className="grid grid-cols-12 items-center my-auto py-1">
           {/* Left Side Callouts */}
-          <div className="col-span-4 space-y-1.5 text-right pr-2">
+          <div className="col-span-4 space-y-1 text-right pr-1">
             {leftSegments.map((item, idx) => (
               <div
                 key={item.name}
-                className="text-[11px] leading-tight transition-colors cursor-pointer group"
+                className="text-[10px] leading-tight transition-colors cursor-pointer group"
                 onMouseEnter={() => setHoveredIndex(midPoint + idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <div className="text-ocean-300 group-hover:text-white truncate font-medium">
                   {item.name.split(" (")[0]}
                 </div>
-                <div className="text-ocean-200 font-mono text-[10px] font-semibold flex items-center justify-end space-x-1">
+                <div className="text-ocean-200 font-mono text-[9px] font-semibold flex items-center justify-end space-x-1">
                   <span>{item.percentage.toFixed(1)}%</span>
                   <span
                     className="w-1.5 h-1.5 rounded-full inline-block"
@@ -244,7 +244,7 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
           </div>
 
           {/* Center Donut Chart with Centered Total */}
-          <div className="col-span-4 relative flex items-center justify-center h-48">
+          <div className="col-span-4 relative flex items-center justify-center h-28 sm:h-32">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
@@ -253,8 +253,8 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
                   nameKey="name"
                   cx="50%"
                   cy="50%"
-                  innerRadius={50}
-                  outerRadius={74}
+                  innerRadius={36}
+                  outerRadius={54}
                   paddingAngle={2}
                   startAngle={90}
                   endAngle={-270}
@@ -276,7 +276,7 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
                     backgroundColor: "#081d33",
                     borderRadius: "6px",
                     border: "1px solid #164775",
-                    fontSize: "12px",
+                    fontSize: "11px",
                     color: "#ffffff",
                   }}
                 />
@@ -285,28 +285,28 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
 
             {/* Centered Total Text inside Donut Hole */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-              <span className="text-2xl font-extrabold text-white tracking-tight font-mono">
+              <span className="text-base sm:text-lg font-extrabold text-white tracking-tight font-mono">
                 {displayTotal}
               </span>
-              <span className="text-[10px] uppercase font-semibold text-ocean-400 tracking-wider">
+              <span className="text-[9px] uppercase font-semibold text-ocean-400 tracking-wider">
                 {data.total_label || "Total"}
               </span>
             </div>
           </div>
 
           {/* Right Side Callouts */}
-          <div className="col-span-4 space-y-1.5 text-left pl-2">
+          <div className="col-span-4 space-y-1 text-left pl-1">
             {rightSegments.map((item, idx) => (
               <div
                 key={item.name}
-                className="text-[11px] leading-tight transition-colors cursor-pointer group"
+                className="text-[10px] leading-tight transition-colors cursor-pointer group"
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <div className="text-ocean-300 group-hover:text-white truncate font-medium">
                   {item.name.split(" (")[0]}
                 </div>
-                <div className="text-ocean-200 font-mono text-[10px] font-semibold flex items-center space-x-1">
+                <div className="text-ocean-200 font-mono text-[9px] font-semibold flex items-center space-x-1">
                   <span
                     className="w-1.5 h-1.5 rounded-full inline-block"
                     style={{ backgroundColor: item.color }}

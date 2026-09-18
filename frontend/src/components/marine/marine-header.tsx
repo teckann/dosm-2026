@@ -30,75 +30,42 @@ export const MarineHeader: React.FC<MarineHeaderProps> = ({
   setActiveView,
 }) => {
   return (
-    <header className="border-b border-ocean-700/60 bg-ocean-950/90 backdrop-blur-md sticky top-0 z-40 shadow-sm">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <header className="border-b border-ocean-700/60 bg-ocean-950/90 backdrop-blur-md z-40 shadow-sm h-full flex items-center">
+      <div className="w-full px-3 sm:px-4 flex items-center justify-between gap-2 overflow-hidden">
         {/* Brand & Title */}
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-cyan-glow">
-            <Waves className="w-5 h-5 text-white animate-pulse" />
+        <div className="flex items-center space-x-2.5 min-w-0 shrink">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-cyan-glow shrink-0">
+            <Waves className="w-4 h-4 text-white animate-pulse" />
           </div>
-          <div>
-            <div className="flex items-center space-x-2 flex-wrap gap-y-1">
-              <span className="font-extrabold text-white tracking-tight text-base sm:text-lg">
-                DOSM MARINE TOURISM INTELLIGENCE
+          <div className="flex items-center space-x-2 min-w-0">
+            <span className="font-extrabold text-white tracking-tight text-xs sm:text-sm xl:text-base shrink-0">
+              MALAYSIA BLUE HARMONY
+            </span>
+            <span className="hidden md:inline text-ocean-300 text-[11px] lg:text-xs font-medium truncate">
+              — Tourism Growth and Marine Preservation Dashboard
+            </span>
+            <span className="hidden 2xl:inline-flex bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+              SDG 14 • Marine
+            </span>
+            {coralBleachingData && (
+              <span className="hidden 2xl:inline-flex items-center space-x-1 bg-rose-500/20 text-rose-300 border border-rose-500/40 text-[9px] font-semibold px-2 py-0.5 rounded-full shrink-0">
+                <Flame className="w-3 h-3 text-rose-400 animate-pulse" />
+                <span>Bleaching Alert Level 2 ({coralBleachingData.average_bleaching_pct}%)</span>
               </span>
-              <span className="bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
-                SDG 14 • Marine Tourism
-              </span>
-              {coralBleachingData && setActiveView && (
-                <button
-                  onClick={() => setActiveView("coral_map")}
-                  className="flex items-center space-x-1 bg-rose-500/20 text-rose-300 border border-rose-500/40 hover:bg-rose-500/30 text-[10px] font-semibold px-2 py-0.5 rounded-full transition-colors cursor-pointer"
-                  title="Click to switch to Coral Bleaching Heatmap"
-                >
-                  <Flame className="w-3 h-3 text-rose-400 animate-pulse" />
-                  <span>Bleaching Alert Level 2 ({coralBleachingData.average_bleaching_pct}%)</span>
-                </button>
-              )}
-            </div>
-            <p className="text-[11px] text-ocean-300">
-              Predictive Modeling of Marine Tourism Demand, Visitor Influx & Ecological Carrying Capacity
-            </p>
+            )}
           </div>
         </div>
 
         {/* Navigation Tabs & Interactive Filters Toolbar */}
-        <div className="flex flex-wrap items-center gap-2.5">
-          {/* Main View Switcher (if enabled) */}
-          {setActiveView && (
-            <div className="flex items-center bg-ocean-900 border border-ocean-700/70 p-0.5 rounded-lg text-xs">
-              <button
-                onClick={() => setActiveView("overview")}
-                className={`px-2.5 py-1 rounded text-xs font-semibold transition-all ${
-                  activeView === "overview"
-                    ? "bg-cyan-500 text-ocean-950 shadow-cyan-glow"
-                    : "text-ocean-300 hover:text-white"
-                }`}
-              >
-                Dashboard
-              </button>
-              <button
-                onClick={() => setActiveView("coral_map")}
-                className={`flex items-center space-x-1 px-2.5 py-1 rounded text-xs font-semibold transition-all ${
-                  activeView === "coral_map"
-                    ? "bg-rose-500 text-white shadow-sm"
-                    : "text-rose-300 hover:text-white"
-                }`}
-              >
-                <Flame className="w-3 h-3" />
-                <span>Coral Map</span>
-              </button>
-            </div>
-          )}
-
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 whitespace-nowrap">
           {/* Year Dropdown Selector */}
-          <div className="flex items-center space-x-1.5 bg-ocean-850 border border-ocean-700/70 px-2.5 py-1.5 rounded-lg text-xs text-ocean-200">
-            <Calendar className="w-3.5 h-3.5 text-cyan-400" />
-            <span className="text-[10px] text-ocean-400 font-semibold uppercase">Year:</span>
+          <div className="flex items-center space-x-1 bg-ocean-850 border border-ocean-700/70 px-2 py-1 rounded-lg text-xs text-ocean-200">
+            <Calendar className="w-3 h-3 text-cyan-400 shrink-0" />
+            <span className="hidden sm:inline text-[9px] text-ocean-400 font-semibold uppercase">Year:</span>
             <select
               value={selectedYear}
               onChange={(e) => onSelectYear(Number(e.target.value))}
-              className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer pr-1"
+              className="bg-transparent text-white font-bold text-[11px] sm:text-xs focus:outline-none cursor-pointer pr-0.5"
             >
               {years.map((y) => (
                 <option key={y} value={y} className="bg-ocean-900 text-white">
@@ -109,13 +76,13 @@ export const MarineHeader: React.FC<MarineHeaderProps> = ({
           </div>
 
           {/* Region Dropdown Selector */}
-          <div className="flex items-center space-x-1.5 bg-ocean-850 border border-ocean-700/70 px-2.5 py-1.5 rounded-lg text-xs text-ocean-200">
-            <MapPin className="w-3.5 h-3.5 text-cyan-400" />
-            <span className="text-[10px] text-ocean-400 font-semibold uppercase">Region:</span>
+          <div className="flex items-center space-x-1 bg-ocean-850 border border-ocean-700/70 px-2 py-1 rounded-lg text-xs text-ocean-200">
+            <MapPin className="w-3 h-3 text-cyan-400 shrink-0" />
+            <span className="hidden sm:inline text-[9px] text-ocean-400 font-semibold uppercase">Region:</span>
             <select
               value={selectedRegion}
               onChange={(e) => onSelectRegion(e.target.value)}
-              className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer pr-1"
+              className="bg-transparent text-white font-bold text-[11px] sm:text-xs focus:outline-none cursor-pointer pr-0.5"
             >
               {regions.map((r) => (
                 <option key={r} value={r} className="bg-ocean-900 text-white">
@@ -130,19 +97,19 @@ export const MarineHeader: React.FC<MarineHeaderProps> = ({
             <button
               onClick={onResetFilters}
               title="Reset to 2024 All Regions"
-              className="p-1.5 rounded-lg bg-ocean-800 hover:bg-ocean-700 text-ocean-300 hover:text-white transition-colors"
+              className="p-1 sm:p-1.5 rounded-lg bg-ocean-800 hover:bg-ocean-700 text-ocean-300 hover:text-white transition-colors"
             >
-              <RefreshCcw className="w-3.5 h-3.5" />
+              <RefreshCcw className="w-3 h-3" />
             </button>
           )}
 
           {/* Carrying Capacity Simulator Modal Trigger */}
           <button
             onClick={onOpenSimulator}
-            className="flex items-center space-x-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-ocean-950 font-bold px-3.5 py-1.5 rounded-lg text-xs transition-all shadow-cyan-glow"
+            className="flex items-center space-x-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-ocean-950 font-bold px-2.5 sm:px-3 py-1 rounded-lg text-xs transition-all shadow-cyan-glow shrink-0"
           >
-            <Sliders className="w-3.5 h-3.5 text-ocean-950" />
-            <span>AI Capacity Simulator</span>
+            <Sliders className="w-3 h-3 text-ocean-950" />
+            <span className="hidden sm:inline">AI </span><span>Simulator</span>
           </button>
         </div>
       </div>

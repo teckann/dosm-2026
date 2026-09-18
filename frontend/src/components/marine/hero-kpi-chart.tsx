@@ -99,7 +99,7 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
   }
 
   return (
-    <div className="bg-ocean-850 border border-ocean-700/60 rounded-xl p-5 flex flex-col justify-between relative shadow-ocean-glow overflow-hidden h-full">
+    <div className="bg-ocean-850 border border-ocean-700/60 rounded-xl p-3 flex flex-col shadow-ocean-glow overflow-hidden h-full panel">
       {/* Header & Interactive Metric Switcher */}
       <div>
         <div className="flex items-center justify-between">
@@ -122,19 +122,19 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
         </div>
 
         {/* Hero Value & Delta */}
-        <div className="mt-2 flex items-baseline space-x-3">
-          <span className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white font-mono">
+        <div className="mt-1 sm:mt-1.5 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
+          <span className="text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-white font-mono">
             {displayValue}
           </span>
           <div className="flex items-center space-x-1 text-xs text-emerald-400 font-semibold">
             <span>{displayChange}</span>
-            <span className="text-ocean-400 font-normal">({displayCompare})</span>
+            <span className="text-ocean-400 font-normal text-[10px] xl:text-xs">({displayCompare})</span>
           </div>
         </div>
       </div>
 
       {/* Embedded Glowing Area Chart */}
-      <div className="h-48 w-full mt-3">
+      <div className="flex-1 min-h-0 w-full mt-2">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
             <defs>
@@ -208,17 +208,6 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
         </ResponsiveContainer>
       </div>
 
-      {/* Legend Footer */}
-      <div className="flex items-center justify-between text-[11px] text-ocean-300 mt-2 pt-2 border-t border-ocean-700/40">
-        <div className="flex items-center space-x-1.5">
-          <span className="w-3 h-0.5 rounded-full" style={{ backgroundColor: activeConfig.color }} />
-          <span>{activeConfig.label} ({activeConfig.unit})</span>
-        </div>
-        <div className="flex items-center space-x-1.5 text-ocean-400">
-          <span className="w-3 h-0.5 border-t border-dashed border-[#6b9cb8]" />
-          <span>Baseline Benchmark</span>
-        </div>
-      </div>
     </div>
   );
 };

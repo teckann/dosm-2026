@@ -5,38 +5,188 @@
 :root {
   --background: #081d33;
   --foreground: #f8fafc;
+
+  /* Default (large desktops >= 1440px and height >= 850px) */
+  --header-h: 50px;
+  --kpi-strip-h: 68px;
+  --row3-h: 246px;
+  --gap: 10px;
+  --row2-h: calc(100dvh - var(--header-h) - var(--kpi-strip-h) - var(--row3-h) - (var(--gap) * 4) - 6px);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
+/* Laptops with shorter screens (<= 850px, e.g. 1366x768, 1280x800, 1440x900) */
+@media (max-height: 850px) {
+  :root {
+    --header-h: 46px;
+    --kpi-strip-h: 62px;
+    --row3-h: 218px;
+    --gap: 8px;
+    --row2-h: calc(100dvh - var(--header-h) - var(--kpi-strip-h) - var(--row3-h) - (var(--gap) * 4) - 4px);
+  }
 }
 
-/* Custom marine scrollbars */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* Very short laptop screens (<= 740px) */
+@media (max-height: 740px) {
+  :root {
+    --header-h: 44px;
+    --kpi-strip-h: 56px;
+    --row3-h: 198px;
+    --gap: 6px;
+    --row2-h: calc(100dvh - var(--header-h) - var(--kpi-strip-h) - var(--row3-h) - (var(--gap) * 4) - 4px);
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: #081d33;
+/* Smaller desktop widths (< 1280px) */
+@media (max-width: 1279px) {
+  :root {
+    --gap: 8px;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: #1a548a;
-  border-radius: 3px;
+/* Single-page SPA for desktops and laptops (>= 1024px) */
+@media (min-width: 1024px) {
+  html,
+  body {
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  .dashboard-shell {
+    display: grid;
+    grid-template-rows: var(--header-h) var(--kpi-strip-h) var(--row2-h) var(--row3-h);
+    gap: var(--gap);
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+    padding: 0 var(--gap) var(--gap);
+    box-sizing: border-box;
+  }
+
+  .row2-grid {
+    display: grid;
+    grid-template-columns: 3.2fr 5.6fr 3.2fr;
+    gap: var(--gap);
+    min-height: 0;
+  }
+
+  @media (min-width: 1440px) {
+    .row2-grid {
+      grid-template-columns: 3fr 6fr 3fr;
+    }
+  }
+
+  .row3-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap);
+    min-height: 0;
+  }
+
+  .kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--gap);
+    min-height: 0;
+  }
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
+/* Graceful responsive fallback on tablets and mobile (< 1024px) */
+@media (max-width: 1023px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .dashboard-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 10px 24px;
+    min-height: 100vh;
+  }
+
+  .kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .kpi-strip > *:last-child {
+    grid-column: span 2;
+  }
+
+  .row2-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .row2-grid > * {
+    min-height: 380px;
+  }
+
+  .row3-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .row3-grid > * {
+    min-height: 280px;
+  }
 }
 
-/* Subtle marine grid pattern */
-.marine-grid-bg {
-  background-color: #081d33;
-  background-image: radial-gradient(#164775 0.75px, transparent 0.75px);
-  background-size: 24px 24px;
+/* All dashboard panels must clip their own content */
+.panel {
+  min-height: 0;
+  overflow: hidden;
 }
+
+/* Sleek Ocean Custom Scrollbar */
+.ocean-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.ocean-scrollbar::-webkit-scrollbar-track {
+  background: rgba(8, 29, 51, 0.5);
+  border-radius: 9999px;
+}
+
+.ocean-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.3);
+  border-radius: 9999px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.ocean-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.7);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+}
+
+/* Firefox scrollbar support */
+.ocean-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 165, 233, 0.35) rgba(8, 29, 51, 0.5);
+}
+

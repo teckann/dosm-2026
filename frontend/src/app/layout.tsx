@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DOSM Datathon 2026 | Socio-Economic Intelligence Dashboard",
+  title: "MALAYSIA BLUE HARMONY — Tourism Growth and Marine Preservation Dashboard",
   description: "Next.js Socio-Economic Analytics & Predictive Modeling Dashboard for DOSM Datathon 2026",
 };
 
