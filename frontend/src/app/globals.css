@@ -8,7 +8,7 @@
 
   /* Default (large desktops >= 1440px and height >= 850px) */
   --header-h: 50px;
-  --kpi-strip-h: 68px;
+  --kpi-strip-h: 82px;
   --row3-h: 246px;
   --gap: 10px;
   --row2-h: calc(100dvh - var(--header-h) - var(--kpi-strip-h) - var(--row3-h) - (var(--gap) * 4) - 6px);
@@ -18,7 +18,7 @@
 @media (max-height: 850px) {
   :root {
     --header-h: 46px;
-    --kpi-strip-h: 62px;
+    --kpi-strip-h: 76px;
     --row3-h: 218px;
     --gap: 8px;
     --row2-h: calc(100dvh - var(--header-h) - var(--kpi-strip-h) - var(--row3-h) - (var(--gap) * 4) - 4px);
@@ -29,7 +29,7 @@
 @media (max-height: 740px) {
   :root {
     --header-h: 44px;
-    --kpi-strip-h: 56px;
+    --kpi-strip-h: 72px;
     --row3-h: 198px;
     --gap: 6px;
     --row2-h: calc(100dvh - var(--header-h) - var(--kpi-strip-h) - var(--row3-h) - (var(--gap) * 4) - 4px);

@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts";
-import { ChevronDown } from "lucide-react";
+import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 export interface DonutSegment {
   name: string;
@@ -11,6 +10,38 @@ export interface DonutSegment {
   count?: number;
   amount_b?: number;
 }
+
+const DonutHoverCard = ({ segment }: { segment: DonutSegment }) => {
+  return (
+    <div className="pointer-events-none absolute left-1/2 top-10 z-50 min-w-[170px] max-w-[85%] -translate-x-1/2 rounded-lg border border-cyan-300 bg-ocean-950 px-3 py-2 text-white shadow-2xl shadow-black">
+      <div className="text-[11px] font-bold leading-tight text-white">
+        {segment.name}
+      </div>
+      <div className="mt-1 flex items-center justify-between gap-4 text-[11px] text-white">
+        <span>Share</span>
+        <span className="font-mono font-bold text-white">
+          {segment.percentage.toFixed(1)}%
+        </span>
+      </div>
+      {segment.amount_b !== undefined && (
+        <div className="mt-0.5 flex items-center justify-between gap-4 text-[10px] text-white">
+          <span>Expenditure</span>
+          <span className="font-mono font-semibold text-white">
+            RM {segment.amount_b.toFixed(2)}B
+          </span>
+        </div>
+      )}
+      {segment.count !== undefined && (
+        <div className="mt-0.5 flex items-center justify-between gap-4 text-[10px] text-white">
+          <span>Visitors</span>
+          <span className="font-mono font-semibold text-white">
+            {segment.count.toLocaleString()}
+          </span>
+        </div>
+      )}
+    </div>
+  );
+};
 
 interface DonutBreakdownCardProps {
   data: {
@@ -21,20 +52,12 @@ interface DonutBreakdownCardProps {
     total_label?: string;
     segments: DonutSegment[];
   };
-  years?: number[];
-  selectedYear?: number;
-  onSelectYear?: (year: number) => void;
-  dropdownSuffix?: string;
   variant?: "compact" | "detailed";
   className?: string;
 }
 
 export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
   data,
-  years,
-  selectedYear,
-  onSelectYear,
-  dropdownSuffix,
   variant = "compact",
   className = "",
 }) => {
@@ -51,31 +74,17 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
     <div
       className={`bg-ocean-850 border border-ocean-700/60 rounded-xl p-3 flex flex-col shadow-ocean-glow relative h-full overflow-hidden panel ${className}`}
     >
-      {/* Header with Interactive Dropdown */}
+      {/* Header reflects the filters controlled by the dashboard header */}
       <div className="flex items-center justify-between pb-2">
         <span className="text-xs font-bold uppercase tracking-wider text-ocean-200">
           {data.title}
         </span>
-
-        {years && onSelectYear && selectedYear ? (
-          <div className="relative flex items-center">
-            <select
-              value={selectedYear}
-              onChange={(e) => onSelectYear(Number(e.target.value))}
-              className="appearance-none bg-ocean-800/90 hover:bg-ocean-750 text-cyan-300 hover:text-white font-semibold text-[11px] sm:text-xs py-1 pl-2.5 pr-6 rounded border border-ocean-700/80 hover:border-cyan-500/50 focus:outline-none cursor-pointer transition-all shadow-sm"
-            >
-              {years.map((y) => (
-                <option key={y} value={y} className="bg-ocean-900 text-white">
-                  {y} {dropdownSuffix || data.period}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="w-3 h-3 text-cyan-400 absolute right-1.5 pointer-events-none" />
-          </div>
-        ) : (
-          <span className="text-xs text-ocean-400 font-semibold">{data.period}</span>
-        )}
+        <span className="text-xs text-ocean-400 font-semibold">{data.period}</span>
       </div>
+
+      {hoveredIndex !== null && data.segments[hoveredIndex] && (
+        <DonutHoverCard segment={data.segments[hoveredIndex]} />
+      )}
 
       {variant === "detailed" ? (
         /* Detailed Layout with Donut + Spend Allocation Progress Bars */
@@ -122,6 +131,8 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
                     endAngle={-270}
                     stroke="#0e3153"
                     strokeWidth={2}
+                    onMouseEnter={(_, index) => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
                   >
                     {data.segments.map((entry, index) => (
                       <Cell
@@ -132,16 +143,6 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
                       />
                     ))}
                   </Pie>
-                  <Tooltip
-                    formatter={(val: any, name: any) => [`${val}%`, name]}
-                    contentStyle={{
-                      backgroundColor: "#081d33",
-                      borderRadius: "6px",
-                      border: "1px solid #164775",
-                      fontSize: "12px",
-                      color: "#ffffff",
-                    }}
-                  />
                 </PieChart>
               </ResponsiveContainer>
 
@@ -260,6 +261,8 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
                   endAngle={-270}
                   stroke="#0e3153"
                   strokeWidth={2}
+                  onMouseEnter={(_, index) => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
                   {data.segments.map((entry, index) => (
                     <Cell
@@ -270,16 +273,6 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
                     />
                   ))}
                 </Pie>
-                <Tooltip
-                  formatter={(val: any, name: any) => [`${val}%`, name]}
-                  contentStyle={{
-                    backgroundColor: "#081d33",
-                    borderRadius: "6px",
-                    border: "1px solid #164775",
-                    fontSize: "11px",
-                    color: "#ffffff",
-                  }}
-                />
               </PieChart>
             </ResponsiveContainer>
 

@@ -118,11 +118,15 @@
       "total_tourists_m": 86.9,
       "total_tourists_raw": 86885960,
       "growth_yoy": "+0.0%",
+      "tourist_growth_yoy": null,
+      "marine_park_growth_yoy": null,
+      "fish_landings_growth_yoy": null,
       "compare_year": 2018,
       "compare_val_m": 86.9,
       "total_spend_b": 68.1,
       "visitor_nights_m": 217.2,
       "mp_total_m": 24.5,
+      "fish_landings_kmt": 382.9,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -175,40 +179,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 22.08
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 17.5,
+          "color": "#22d3ee",
+          "amount_b": 11.95
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 16.9
+          "name": "Semporna/Sipadan",
+          "percentage": 15.0,
+          "color": "#38bdf8",
+          "amount_b": 10.22
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 14.72
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 14.4,
+          "color": "#4ade80",
+          "amount_b": 9.81
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Tioman",
+          "percentage": 9.7,
+          "color": "#a3e635",
+          "amount_b": 6.62
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.4,
           "color": "#facc15",
-          "amount_b": 7.63
+          "amount_b": 6.42
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 5.11
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 34.0,
           "color": "#f43f5e",
-          "amount_b": 1.7
+          "amount_b": 23.11
         }
       ],
       "spec_bins": [
@@ -388,11 +392,15 @@
       "total_tourists_m": 12.6,
       "total_tourists_raw": 12626144,
       "growth_yoy": "+0.0%",
+      "tourist_growth_yoy": null,
+      "marine_park_growth_yoy": null,
+      "fish_landings_growth_yoy": null,
       "compare_year": 2018,
       "compare_val_m": 12.6,
       "total_spend_b": 9.2,
       "visitor_nights_m": 31.6,
       "mp_total_m": 3.8,
+      "fish_landings_kmt": 45.2,
       "dest_slices": [
         {
           "name": "Pulau Tioman",
@@ -409,40 +417,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 2.99
+          "name": "Pulau Tioman",
+          "percentage": 71.9,
+          "color": "#22d3ee",
+          "amount_b": 6.62
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 2.28
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 1.99
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 1.03
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.69
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.23
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 28.1,
+          "color": "#38bdf8",
+          "amount_b": 2.59
         }
       ],
       "spec_bins": [
@@ -494,11 +478,15 @@
       "total_tourists_m": 20.5,
       "total_tourists_raw": 20480019,
       "growth_yoy": "+0.0%",
+      "tourist_growth_yoy": null,
+      "marine_park_growth_yoy": null,
+      "fish_landings_growth_yoy": null,
       "compare_year": 2018,
       "compare_val_m": 20.5,
       "total_spend_b": 16.4,
       "visitor_nights_m": 51.2,
       "mp_total_m": 6.6,
+      "fish_landings_kmt": 128.5,
       "dest_slices": [
         {
           "name": "Semporna/Sipadan",
@@ -515,40 +503,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 5.32
+          "name": "Semporna/Sipadan",
+          "percentage": 62.2,
+          "color": "#22d3ee",
+          "amount_b": 10.22
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 4.07
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 3.55
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 1.84
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 1.23
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.41
+          "name": "Damai/Talang-Satang",
+          "percentage": 37.8,
+          "color": "#38bdf8",
+          "amount_b": 6.2
         }
       ],
       "spec_bins": [
@@ -600,11 +564,15 @@
       "total_tourists_m": 53.8,
       "total_tourists_raw": 53779797,
       "growth_yoy": "+0.0%",
+      "tourist_growth_yoy": null,
+      "marine_park_growth_yoy": null,
+      "fish_landings_growth_yoy": null,
       "compare_year": 2018,
       "compare_val_m": 53.8,
       "total_spend_b": 42.5,
       "visitor_nights_m": 134.4,
       "mp_total_m": 14.1,
+      "fish_landings_kmt": 209.1,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -645,40 +613,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 13.77
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 28.1,
+          "color": "#22d3ee",
+          "amount_b": 11.95
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 10.54
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 23.1,
+          "color": "#38bdf8",
+          "amount_b": 9.81
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 9.18
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 15.1,
+          "color": "#4ade80",
+          "amount_b": 6.42
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 14.2,
+          "color": "#a3e635",
+          "amount_b": 6.01
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 10.0,
           "color": "#facc15",
-          "amount_b": 4.76
+          "amount_b": 4.24
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 3.19
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 9.5,
           "color": "#f43f5e",
-          "amount_b": 1.06
+          "amount_b": 4.06
         }
       ],
       "spec_bins": [
@@ -806,11 +774,15 @@
       "total_tourists_m": 28.3,
       "total_tourists_raw": 28347190,
       "growth_yoy": "-67.4%",
+      "tourist_growth_yoy": -67.4,
+      "marine_park_growth_yoy": -67.6,
+      "fish_landings_growth_yoy": 2.1,
       "compare_year": 2019,
       "compare_val_m": 86.9,
       "total_spend_b": 23.2,
       "visitor_nights_m": 70.9,
       "mp_total_m": 7.9,
+      "fish_landings_kmt": 391.0,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -863,40 +835,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 7.52
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 17.4,
+          "color": "#22d3ee",
+          "amount_b": 4.04
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 5.76
+          "name": "Semporna/Sipadan",
+          "percentage": 14.9,
+          "color": "#38bdf8",
+          "amount_b": 3.47
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 5.02
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 14.4,
+          "color": "#4ade80",
+          "amount_b": 3.34
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.7,
+          "color": "#a3e635",
+          "amount_b": 2.25
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 9.6,
           "color": "#facc15",
-          "amount_b": 2.6
+          "amount_b": 2.23
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 1.74
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 34.0,
           "color": "#f43f5e",
-          "amount_b": 0.58
+          "amount_b": 7.89
         }
       ],
       "spec_bins": [
@@ -1076,11 +1048,15 @@
       "total_tourists_m": 4.1,
       "total_tourists_raw": 4077348,
       "growth_yoy": "-67.7%",
+      "tourist_growth_yoy": -67.7,
+      "marine_park_growth_yoy": -67.3,
+      "fish_landings_growth_yoy": 3.9,
       "compare_year": 2019,
       "compare_val_m": 12.6,
       "total_spend_b": 3.1,
       "visitor_nights_m": 10.2,
       "mp_total_m": 1.2,
+      "fish_landings_kmt": 47.0,
       "dest_slices": [
         {
           "name": "Pulau Tioman",
@@ -1097,40 +1073,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 1.01
+          "name": "Pulau Tioman",
+          "percentage": 71.9,
+          "color": "#22d3ee",
+          "amount_b": 2.23
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 0.77
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 0.67
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 0.35
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.23
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.08
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 28.1,
+          "color": "#38bdf8",
+          "amount_b": 0.87
         }
       ],
       "spec_bins": [
@@ -1182,11 +1134,15 @@
       "total_tourists_m": 6.8,
       "total_tourists_raw": 6779003,
       "growth_yoy": "-66.9%",
+      "tourist_growth_yoy": -66.9,
+      "marine_park_growth_yoy": -67.9,
+      "fish_landings_growth_yoy": 1.9,
       "compare_year": 2019,
       "compare_val_m": 20.5,
       "total_spend_b": 5.6,
       "visitor_nights_m": 16.9,
       "mp_total_m": 2.1,
+      "fish_landings_kmt": 131.0,
       "dest_slices": [
         {
           "name": "Semporna/Sipadan",
@@ -1203,40 +1159,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 1.82
+          "name": "Semporna/Sipadan",
+          "percentage": 61.7,
+          "color": "#22d3ee",
+          "amount_b": 3.47
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 1.39
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 1.21
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 0.63
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.42
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.14
+          "name": "Damai/Talang-Satang",
+          "percentage": 38.3,
+          "color": "#38bdf8",
+          "amount_b": 2.15
         }
       ],
       "spec_bins": [
@@ -1288,11 +1220,15 @@
       "total_tourists_m": 17.5,
       "total_tourists_raw": 17490839,
       "growth_yoy": "-67.5%",
+      "tourist_growth_yoy": -67.5,
+      "marine_park_growth_yoy": -67.6,
+      "fish_landings_growth_yoy": 1.8,
       "compare_year": 2019,
       "compare_val_m": 53.8,
       "total_spend_b": 14.5,
       "visitor_nights_m": 43.7,
       "mp_total_m": 4.6,
+      "fish_landings_kmt": 213.0,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -1333,40 +1269,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 4.7
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 27.9,
+          "color": "#22d3ee",
+          "amount_b": 4.04
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 3.6
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 23.0,
+          "color": "#38bdf8",
+          "amount_b": 3.34
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 3.13
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 15.5,
+          "color": "#4ade80",
+          "amount_b": 2.25
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 14.2,
+          "color": "#a3e635",
+          "amount_b": 2.06
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 10.1,
           "color": "#facc15",
-          "amount_b": 1.62
+          "amount_b": 1.46
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 1.09
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 9.3,
           "color": "#f43f5e",
-          "amount_b": 0.36
+          "amount_b": 1.35
         }
       ],
       "spec_bins": [
@@ -1494,11 +1430,15 @@
       "total_tourists_m": 40.5,
       "total_tourists_raw": 40458845,
       "growth_yoy": "+42.7%",
+      "tourist_growth_yoy": 42.7,
+      "marine_park_growth_yoy": 43.6,
+      "fish_landings_growth_yoy": -1.4,
       "compare_year": 2020,
       "compare_val_m": 28.3,
       "total_spend_b": 34.4,
       "visitor_nights_m": 101.1,
       "mp_total_m": 11.4,
+      "fish_landings_kmt": 385.7,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -1551,40 +1491,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 11.14
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 17.6,
+          "color": "#22d3ee",
+          "amount_b": 6.05
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 8.53
+          "name": "Semporna/Sipadan",
+          "percentage": 15.1,
+          "color": "#38bdf8",
+          "amount_b": 5.18
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 7.43
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 14.4,
+          "color": "#4ade80",
+          "amount_b": 4.97
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.7,
+          "color": "#a3e635",
+          "amount_b": 3.32
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 9.5,
           "color": "#facc15",
-          "amount_b": 3.85
+          "amount_b": 3.28
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 2.58
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 33.7,
           "color": "#f43f5e",
-          "amount_b": 0.86
+          "amount_b": 11.59
         }
       ],
       "spec_bins": [
@@ -1764,11 +1704,15 @@
       "total_tourists_m": 5.8,
       "total_tourists_raw": 5834045,
       "growth_yoy": "+43.1%",
+      "tourist_growth_yoy": 43.1,
+      "marine_park_growth_yoy": 40.2,
+      "fish_landings_growth_yoy": -2.9,
       "compare_year": 2020,
       "compare_val_m": 4.1,
       "total_spend_b": 4.6,
       "visitor_nights_m": 14.6,
       "mp_total_m": 1.7,
+      "fish_landings_kmt": 45.7,
       "dest_slices": [
         {
           "name": "Pulau Tioman",
@@ -1785,40 +1729,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 1.5
+          "name": "Pulau Tioman",
+          "percentage": 70.9,
+          "color": "#22d3ee",
+          "amount_b": 3.28
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 1.15
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 1.0
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 0.52
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.35
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.12
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 29.1,
+          "color": "#38bdf8",
+          "amount_b": 1.35
         }
       ],
       "spec_bins": [
@@ -1870,11 +1790,15 @@
       "total_tourists_m": 9.7,
       "total_tourists_raw": 9652166,
       "growth_yoy": "+42.4%",
+      "tourist_growth_yoy": 42.4,
+      "marine_park_growth_yoy": 45.9,
+      "fish_landings_growth_yoy": -0.5,
       "compare_year": 2020,
       "compare_val_m": 6.8,
       "total_spend_b": 8.2,
       "visitor_nights_m": 24.1,
       "mp_total_m": 3.1,
+      "fish_landings_kmt": 130.4,
       "dest_slices": [
         {
           "name": "Semporna/Sipadan",
@@ -1891,40 +1815,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 2.66
+          "name": "Semporna/Sipadan",
+          "percentage": 63.1,
+          "color": "#22d3ee",
+          "amount_b": 5.18
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 2.04
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 1.77
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 0.92
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.62
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.21
+          "name": "Damai/Talang-Satang",
+          "percentage": 36.9,
+          "color": "#38bdf8",
+          "amount_b": 3.03
         }
       ],
       "spec_bins": [
@@ -1976,11 +1876,15 @@
       "total_tourists_m": 25.0,
       "total_tourists_raw": 24972634,
       "growth_yoy": "+42.8%",
+      "tourist_growth_yoy": 42.8,
+      "marine_park_growth_yoy": 43.5,
+      "fish_landings_growth_yoy": -1.6,
       "compare_year": 2020,
       "compare_val_m": 17.5,
       "total_spend_b": 21.5,
       "visitor_nights_m": 62.4,
       "mp_total_m": 6.6,
+      "fish_landings_kmt": 209.6,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -2021,40 +1925,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 6.98
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 28.1,
+          "color": "#22d3ee",
+          "amount_b": 6.05
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 5.34
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 23.1,
+          "color": "#38bdf8",
+          "amount_b": 4.97
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 4.65
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 15.4,
+          "color": "#4ade80",
+          "amount_b": 3.32
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 14.3,
+          "color": "#a3e635",
+          "amount_b": 3.09
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 9.9,
           "color": "#facc15",
-          "amount_b": 2.41
+          "amount_b": 2.12
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 1.62
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 9.2,
           "color": "#f43f5e",
-          "amount_b": 0.54
+          "amount_b": 2.0
         }
       ],
       "spec_bins": [
@@ -2182,11 +2086,15 @@
       "total_tourists_m": 68.5,
       "total_tourists_raw": 68496470,
       "growth_yoy": "+69.3%",
+      "tourist_growth_yoy": 69.3,
+      "marine_park_growth_yoy": 69.3,
+      "fish_landings_growth_yoy": 0.2,
       "compare_year": 2021,
       "compare_val_m": 40.5,
       "total_spend_b": 60.5,
       "visitor_nights_m": 171.2,
       "mp_total_m": 19.3,
+      "fish_landings_kmt": 386.6,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -2239,40 +2147,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 19.59
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 17.2,
+          "color": "#22d3ee",
+          "amount_b": 10.38
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 15.0
+          "name": "Semporna/Sipadan",
+          "percentage": 15.3,
+          "color": "#38bdf8",
+          "amount_b": 9.24
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 13.06
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 14.6,
+          "color": "#4ade80",
+          "amount_b": 8.8
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Tioman",
+          "percentage": 9.9,
+          "color": "#a3e635",
+          "amount_b": 5.96
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.6,
           "color": "#facc15",
-          "amount_b": 6.77
+          "amount_b": 5.79
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 4.54
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 33.4,
           "color": "#f43f5e",
-          "amount_b": 1.51
+          "amount_b": 20.29
         }
       ],
       "spec_bins": [
@@ -2452,11 +2360,15 @@
       "total_tourists_m": 10.0,
       "total_tourists_raw": 9962694,
       "growth_yoy": "+70.8%",
+      "tourist_growth_yoy": 70.8,
+      "marine_park_growth_yoy": 74.3,
+      "fish_landings_growth_yoy": -0.5,
       "compare_year": 2021,
       "compare_val_m": 5.8,
       "total_spend_b": 8.2,
       "visitor_nights_m": 24.9,
       "mp_total_m": 3.0,
+      "fish_landings_kmt": 45.4,
       "dest_slices": [
         {
           "name": "Pulau Tioman",
@@ -2473,40 +2385,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 2.66
+          "name": "Pulau Tioman",
+          "percentage": 72.5,
+          "color": "#22d3ee",
+          "amount_b": 5.96
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 2.04
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 1.78
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 0.92
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.62
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.21
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 27.5,
+          "color": "#38bdf8",
+          "amount_b": 2.26
         }
       ],
       "spec_bins": [
@@ -2558,11 +2446,15 @@
       "total_tourists_m": 16.5,
       "total_tourists_raw": 16489521,
       "growth_yoy": "+70.8%",
+      "tourist_growth_yoy": 70.8,
+      "marine_park_growth_yoy": 68.9,
+      "fish_landings_growth_yoy": -0.8,
       "compare_year": 2021,
       "compare_val_m": 9.7,
       "total_spend_b": 14.8,
       "visitor_nights_m": 41.2,
       "mp_total_m": 5.2,
+      "fish_landings_kmt": 129.4,
       "dest_slices": [
         {
           "name": "Semporna/Sipadan",
@@ -2579,40 +2471,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 4.79
+          "name": "Semporna/Sipadan",
+          "percentage": 62.6,
+          "color": "#22d3ee",
+          "amount_b": 9.24
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 3.66
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 3.19
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 1.65
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 1.11
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.37
+          "name": "Damai/Talang-Satang",
+          "percentage": 37.4,
+          "color": "#38bdf8",
+          "amount_b": 5.53
         }
       ],
       "spec_bins": [
@@ -2664,11 +2532,15 @@
       "total_tourists_m": 42.0,
       "total_tourists_raw": 42044255,
       "growth_yoy": "+68.4%",
+      "tourist_growth_yoy": 68.4,
+      "marine_park_growth_yoy": 68.2,
+      "fish_landings_growth_yoy": 1.1,
       "compare_year": 2021,
       "compare_val_m": 25.0,
       "total_spend_b": 37.5,
       "visitor_nights_m": 105.1,
       "mp_total_m": 11.1,
+      "fish_landings_kmt": 211.8,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -2709,40 +2581,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 12.14
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 27.7,
+          "color": "#22d3ee",
+          "amount_b": 10.38
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 9.29
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 23.5,
+          "color": "#38bdf8",
+          "amount_b": 8.8
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 8.1
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 15.5,
+          "color": "#4ade80",
+          "amount_b": 5.79
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 14.2,
+          "color": "#a3e635",
+          "amount_b": 5.34
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 10.0,
           "color": "#facc15",
-          "amount_b": 4.2
+          "amount_b": 3.74
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 2.81
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 9.1,
           "color": "#f43f5e",
-          "amount_b": 0.94
+          "amount_b": 3.43
         }
       ],
       "spec_bins": [
@@ -2870,11 +2742,15 @@
       "total_tourists_m": 80.6,
       "total_tourists_raw": 80585708,
       "growth_yoy": "+17.6%",
+      "tourist_growth_yoy": 17.6,
+      "marine_park_growth_yoy": 17.6,
+      "fish_landings_growth_yoy": -0.3,
       "compare_year": 2022,
       "compare_val_m": 68.5,
       "total_spend_b": 73.6,
       "visitor_nights_m": 201.5,
       "mp_total_m": 22.7,
+      "fish_landings_kmt": 385.4,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -2927,40 +2803,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 23.85
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 17.5,
+          "color": "#22d3ee",
+          "amount_b": 12.85
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 18.25
+          "name": "Semporna/Sipadan",
+          "percentage": 15.1,
+          "color": "#38bdf8",
+          "amount_b": 11.13
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 15.9
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 14.6,
+          "color": "#4ade80",
+          "amount_b": 10.76
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.6,
+          "color": "#a3e635",
+          "amount_b": 7.05
+        },
+        {
+          "name": "Pulau Tioman",
+          "percentage": 9.6,
           "color": "#facc15",
-          "amount_b": 8.24
+          "amount_b": 7.04
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 5.52
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 33.6,
           "color": "#f43f5e",
-          "amount_b": 1.84
+          "amount_b": 24.77
         }
       ],
       "spec_bins": [
@@ -3140,11 +3016,15 @@
       "total_tourists_m": 11.6,
       "total_tourists_raw": 11568220,
       "growth_yoy": "+16.1%",
+      "tourist_growth_yoy": 16.1,
+      "marine_park_growth_yoy": 14.8,
+      "fish_landings_growth_yoy": -0.3,
       "compare_year": 2022,
       "compare_val_m": 10.0,
       "total_spend_b": 9.8,
       "visitor_nights_m": 28.9,
       "mp_total_m": 3.5,
+      "fish_landings_kmt": 45.3,
       "dest_slices": [
         {
           "name": "Pulau Tioman",
@@ -3161,40 +3041,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 3.19
+          "name": "Pulau Tioman",
+          "percentage": 71.6,
+          "color": "#22d3ee",
+          "amount_b": 7.04
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 2.44
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 2.12
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 1.1
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.74
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.25
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 28.4,
+          "color": "#38bdf8",
+          "amount_b": 2.8
         }
       ],
       "spec_bins": [
@@ -3246,11 +3102,15 @@
       "total_tourists_m": 19.3,
       "total_tourists_raw": 19291802,
       "growth_yoy": "+17.0%",
+      "tourist_growth_yoy": 17.0,
+      "marine_park_growth_yoy": 17.7,
+      "fish_landings_growth_yoy": -0.4,
       "compare_year": 2022,
       "compare_val_m": 16.5,
       "total_spend_b": 17.7,
       "visitor_nights_m": 48.2,
       "mp_total_m": 6.2,
+      "fish_landings_kmt": 128.8,
       "dest_slices": [
         {
           "name": "Semporna/Sipadan",
@@ -3267,40 +3127,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 5.74
+          "name": "Semporna/Sipadan",
+          "percentage": 62.8,
+          "color": "#22d3ee",
+          "amount_b": 11.13
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 4.39
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 3.83
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 1.98
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 1.33
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.44
+          "name": "Damai/Talang-Satang",
+          "percentage": 37.2,
+          "color": "#38bdf8",
+          "amount_b": 6.59
         }
       ],
       "spec_bins": [
@@ -3352,11 +3188,15 @@
       "total_tourists_m": 49.7,
       "total_tourists_raw": 49725686,
       "growth_yoy": "+18.3%",
+      "tourist_growth_yoy": 18.3,
+      "marine_park_growth_yoy": 18.3,
+      "fish_landings_growth_yoy": -0.3,
       "compare_year": 2022,
       "compare_val_m": 42.0,
       "total_spend_b": 46.0,
       "visitor_nights_m": 124.3,
       "mp_total_m": 13.1,
+      "fish_landings_kmt": 211.3,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -3397,40 +3237,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 14.92
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 27.9,
+          "color": "#22d3ee",
+          "amount_b": 12.85
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 11.42
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 23.4,
+          "color": "#38bdf8",
+          "amount_b": 10.76
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 9.95
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 15.3,
+          "color": "#4ade80",
+          "amount_b": 7.05
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 14.3,
+          "color": "#a3e635",
+          "amount_b": 6.6
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 9.9,
           "color": "#facc15",
-          "amount_b": 5.16
+          "amount_b": 4.56
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 3.45
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 9.2,
           "color": "#f43f5e",
-          "amount_b": 1.15
+          "amount_b": 4.23
         }
       ],
       "spec_bins": [
@@ -3558,11 +3398,15 @@
       "total_tourists_m": 86.8,
       "total_tourists_raw": 86789572,
       "growth_yoy": "+7.7%",
+      "tourist_growth_yoy": 7.7,
+      "marine_park_growth_yoy": 7.6,
+      "fish_landings_growth_yoy": -0.8,
       "compare_year": 2023,
       "compare_val_m": 80.6,
       "total_spend_b": 82.1,
       "visitor_nights_m": 217.0,
       "mp_total_m": 24.4,
+      "fish_landings_kmt": 382.3,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -3615,40 +3459,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 26.59
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 17.7,
+          "color": "#22d3ee",
+          "amount_b": 14.54
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 20.35
+          "name": "Semporna/Sipadan",
+          "percentage": 14.7,
+          "color": "#38bdf8",
+          "amount_b": 12.04
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 17.73
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 14.3,
+          "color": "#4ade80",
+          "amount_b": 11.73
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Tioman",
+          "percentage": 9.7,
+          "color": "#a3e635",
+          "amount_b": 7.94
+        },
+        {
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 9.4,
           "color": "#facc15",
-          "amount_b": 9.19
+          "amount_b": 7.73
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 6.16
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 34.2,
           "color": "#f43f5e",
-          "amount_b": 2.05
+          "amount_b": 28.1
         }
       ],
       "spec_bins": [
@@ -3828,11 +3672,15 @@
       "total_tourists_m": 12.5,
       "total_tourists_raw": 12507952,
       "growth_yoy": "+8.1%",
+      "tourist_growth_yoy": 8.1,
+      "marine_park_growth_yoy": 8.9,
+      "fish_landings_growth_yoy": 1.9,
       "compare_year": 2023,
       "compare_val_m": 11.6,
       "total_spend_b": 11.0,
       "visitor_nights_m": 31.3,
       "mp_total_m": 3.8,
+      "fish_landings_kmt": 46.1,
       "dest_slices": [
         {
           "name": "Pulau Tioman",
@@ -3849,40 +3697,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 3.58
+          "name": "Pulau Tioman",
+          "percentage": 71.9,
+          "color": "#22d3ee",
+          "amount_b": 7.94
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 2.74
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 2.38
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 1.24
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 0.83
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.28
+          "name": "Pulau Redang/Perhentian",
+          "percentage": 28.1,
+          "color": "#38bdf8",
+          "amount_b": 3.1
         }
       ],
       "spec_bins": [
@@ -3934,11 +3758,15 @@
       "total_tourists_m": 20.4,
       "total_tourists_raw": 20438582,
       "growth_yoy": "+5.9%",
+      "tourist_growth_yoy": 5.9,
+      "marine_park_growth_yoy": 5.8,
+      "fish_landings_growth_yoy": -0.2,
       "compare_year": 2023,
       "compare_val_m": 19.3,
       "total_spend_b": 19.5,
       "visitor_nights_m": 51.1,
       "mp_total_m": 6.5,
+      "fish_landings_kmt": 128.6,
       "dest_slices": [
         {
           "name": "Semporna/Sipadan",
@@ -3955,40 +3783,16 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 6.31
+          "name": "Semporna/Sipadan",
+          "percentage": 61.8,
+          "color": "#22d3ee",
+          "amount_b": 12.04
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 4.83
-        },
-        {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 4.21
-        },
-        {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
-          "color": "#facc15",
-          "amount_b": 2.18
-        },
-        {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 1.46
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
-          "color": "#f43f5e",
-          "amount_b": 0.49
+          "name": "Damai/Talang-Satang",
+          "percentage": 38.2,
+          "color": "#38bdf8",
+          "amount_b": 7.44
         }
       ],
       "spec_bins": [
@@ -4040,11 +3844,15 @@
       "total_tourists_m": 53.8,
       "total_tourists_raw": 53843038,
       "growth_yoy": "+8.3%",
+      "tourist_growth_yoy": 8.3,
+      "marine_park_growth_yoy": 8.1,
+      "fish_landings_growth_yoy": -1.8,
       "compare_year": 2023,
       "compare_val_m": 49.7,
       "total_spend_b": 51.6,
       "visitor_nights_m": 134.6,
       "mp_total_m": 14.1,
+      "fish_landings_kmt": 207.5,
       "dest_slices": [
         {
           "name": "Mersing (Rawa/Aur)",
@@ -4085,40 +3893,40 @@
       ],
       "spend_cats": [
         {
-          "name": "Eco-Resort Accommodation",
-          "percentage": 32.4,
-          "color": "#00d2ff",
-          "amount_b": 16.7
+          "name": "Mersing (Rawa/Aur)",
+          "percentage": 28.2,
+          "color": "#22d3ee",
+          "amount_b": 14.54
         },
         {
-          "name": "Seafood Dining & Restaurants",
-          "percentage": 24.8,
-          "color": "#00a8ff",
-          "amount_b": 12.79
+          "name": "Pulau Pangkor/Sembilan",
+          "percentage": 22.8,
+          "color": "#38bdf8",
+          "amount_b": 11.73
         },
         {
-          "name": "Water Sports & Boat Tours",
-          "percentage": 21.6,
-          "color": "#34d399",
-          "amount_b": 11.14
+          "name": "Batu Ferringhi/Teluk Bahang",
+          "percentage": 15.0,
+          "color": "#4ade80",
+          "amount_b": 7.73
         },
         {
-          "name": "Local Island Shopping",
-          "percentage": 11.2,
+          "name": "Pulau Langkawi/Payar",
+          "percentage": 14.7,
+          "color": "#a3e635",
+          "amount_b": 7.56
+        },
+        {
+          "name": "Pulau Besar",
+          "percentage": 10.0,
           "color": "#facc15",
-          "amount_b": 5.77
+          "amount_b": 5.17
         },
         {
-          "name": "Ferry & Island Transport",
-          "percentage": 7.5,
-          "color": "#fb923c",
-          "amount_b": 3.87
-        },
-        {
-          "name": "Marine Conservation Fees",
-          "percentage": 2.5,
+          "name": "Other Destinations",
+          "percentage": 9.3,
           "color": "#f43f5e",
-          "amount_b": 1.29
+          "amount_b": 4.83
         }
       ],
       "spec_bins": [

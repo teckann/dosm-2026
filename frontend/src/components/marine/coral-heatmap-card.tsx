@@ -8,8 +8,6 @@ import {
   MapPin,
   ChevronDown,
   Info,
-  Maximize2,
-  Minimize2,
   AlertTriangle,
   Compass,
   Thermometer,
@@ -296,7 +294,6 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
   const [selectedSite, setSelectedSite] = useState<ReefSite | null>(null);
   const [hoveredSite, setHoveredSite] = useState<ReefSite | null>(null);
   const [hoveredState, setHoveredState] = useState<string | null>(null);
-  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   // Click on a reef node to zoom into it and show fixed telemetry card
   const handleSiteClick = (site: ReefSite, e: React.MouseEvent) => {
@@ -393,11 +390,7 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
   }, [zoomFactor]);
 
   return (
-    <div
-      className={`bg-ocean-850 border border-ocean-700/60 rounded-xl shadow-ocean-glow relative h-full overflow-hidden panel flex flex-col p-0 ${
-        isExpanded ? "fixed inset-4 z-50 overflow-y-auto bg-ocean-900" : ""
-      }`}
-    >
+    <div className="bg-ocean-850 border border-ocean-700/60 rounded-xl shadow-ocean-glow relative h-full overflow-hidden panel flex flex-col p-0">
       {/* Interactive Map Canvas Filling Full Panel Area */}
       <div className="relative w-full h-full flex-1 overflow-hidden bg-ocean-950">
         <svg
@@ -784,14 +777,6 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
               <span className="hidden xl:inline">Halo</span>
             </button>
 
-            {/* Fullscreen Expand Toggle */}
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="p-1 bg-ocean-900 border border-ocean-700/60 text-ocean-300 hover:text-white rounded-lg transition-colors"
-              title={isExpanded ? "Collapse View" : "Fullscreen View"}
-            >
-              {isExpanded ? <Minimize2 className="w-3 h-3" /> : <Maximize2 className="w-3 h-3" />}
-            </button>
           </div>
         </div>
 

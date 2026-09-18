@@ -149,6 +149,9 @@ interface KpiStripProps {
   marineParkM: number;
   mwqi: number;
   fishLandingsKmt: number;
+  touristGrowthYoY: number | null;
+  marineParkGrowthYoY: number | null;
+  fishLandingsGrowthYoY: number | null;
   stressScore: number;
   riskLabel: string;
   touristSpark: number[];
@@ -161,6 +164,9 @@ export const KpiStrip: React.FC<KpiStripProps> = ({
   marineParkM,
   mwqi,
   fishLandingsKmt,
+  touristGrowthYoY,
+  marineParkGrowthYoY,
+  fishLandingsGrowthYoY,
   stressScore,
   riskLabel,
   touristSpark,
@@ -172,26 +178,26 @@ export const KpiStrip: React.FC<KpiStripProps> = ({
   const mwqiColor = mwqi >= 75 ? "#34d399" : mwqi >= 65 ? "#facc15" : "#f43f5e";
   const mwqiLabel = mwqi >= 75 ? "Good" : mwqi >= 65 ? "Moderate" : "Poor";
 
-  // YoY deltas hardcoded from data (2023→2024)
-  const touristDelta = "+7.7%";
-  const parkDelta = "+7.5%";
-  const fishDelta = "-0.8%";
+  const formatYoY = (value: number | null) =>
+    value === null ? "No prior year" : `${value > 0 ? "+" : ""}${value.toFixed(1)}% YoY`;
 
   return (
     <div className="kpi-strip">
       <SparklineKpiCard
         title="Total Arrivals"
         value={`${totalTouristsM}M`}
-        delta={touristDelta}
-        isPositive
+        delta={formatYoY(touristGrowthYoY)}
+        isPositive={touristGrowthYoY !== null && touristGrowthYoY > 0}
+        isNeutral={touristGrowthYoY === null || touristGrowthYoY === 0}
         sparkData={toSpark(touristSpark)}
         sparkColor="#00d2ff"
       />
       <SparklineKpiCard
         title="Marine Park Visitors"
         value={`${marineParkM}M`}
-        delta={parkDelta}
-        isPositive
+        delta={formatYoY(marineParkGrowthYoY)}
+        isPositive={marineParkGrowthYoY !== null && marineParkGrowthYoY > 0}
+        isNeutral={marineParkGrowthYoY === null || marineParkGrowthYoY === 0}
         sparkData={toSpark(parkSpark)}
         sparkColor="#34d399"
       />
@@ -235,8 +241,9 @@ export const KpiStrip: React.FC<KpiStripProps> = ({
         title="Fish Landings"
         value={`${fishLandingsKmt}k`}
         unit="MT"
-        delta={fishDelta}
-        isPositive={false}
+        delta={formatYoY(fishLandingsGrowthYoY)}
+        isPositive={fishLandingsGrowthYoY !== null && fishLandingsGrowthYoY > 0}
+        isNeutral={fishLandingsGrowthYoY === null || fishLandingsGrowthYoY === 0}
         sparkData={toSpark(fishSpark)}
         sparkColor="#38bdf8"
       />
