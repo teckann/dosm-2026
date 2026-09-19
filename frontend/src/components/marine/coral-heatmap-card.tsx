@@ -40,248 +40,43 @@ export interface ReefSite {
   textAnchor: "start" | "middle" | "end";
 }
 
-const DEFAULT_SITES: ReefSite[] = [
-  {
-    id: "payar",
-    name: "Pulau Payar Marine Park",
-    short_name: "P. Payar",
-    state: "Kedah",
-    region: "peninsular_west",
-    lat: 6.06,
-    lng: 100.04,
-    bleached_pct: 48.5,
-    dhw: 6.2,
-    sst_anomaly: 1.4,
-    alert_level: "Alert Level 1",
-    live_coral_cover: 38.2,
-    mortality_rate: 16.5,
-    status: "Moderate Bleaching",
-    management_action: "Temporary dive visitor quota cap (-40%)",
-    dx: -12,
-    dy: 1,
-    textAnchor: "end",
-  },
-  {
-    id: "perhentian",
-    name: "Pulau Perhentian",
-    short_name: "Perhentian",
-    state: "Terengganu",
-    region: "peninsular_east",
-    lat: 5.91,
-    lng: 102.74,
-    bleached_pct: 68.4,
-    dhw: 8.7,
-    sst_anomaly: 1.85,
-    alert_level: "Alert Level 2",
-    live_coral_cover: 42.0,
-    mortality_rate: 26.0,
-    status: "Severe Bleaching",
-    management_action: "Selective site closure at Teluk Keke & Shark Point",
-    dx: -14,
-    dy: -12,
-    textAnchor: "end",
-  },
-  {
-    id: "redang",
-    name: "Pulau Redang Marine Park",
-    short_name: "Redang",
-    state: "Terengganu",
-    region: "peninsular_east",
-    lat: 5.78,
-    lng: 103.01,
-    bleached_pct: 71.2,
-    dhw: 9.1,
-    sst_anomaly: 1.9,
-    alert_level: "Alert Level 2",
-    live_coral_cover: 45.8,
-    mortality_rate: 28.5,
-    status: "Severe Bleaching",
-    management_action: "Mandatory anchoring ban; mooring buoys enforced",
-    dx: 14,
-    dy: -8,
-    textAnchor: "start",
-  },
-  {
-    id: "bidong",
-    name: "Pulau Bidong Heritage Reef",
-    short_name: "Bidong",
-    state: "Terengganu",
-    region: "peninsular_east",
-    lat: 5.62,
-    lng: 103.05,
-    bleached_pct: 59.0,
-    dhw: 7.8,
-    sst_anomaly: 1.65,
-    alert_level: "Alert Level 1",
-    live_coral_cover: 39.5,
-    mortality_rate: 21.0,
-    status: "Significant Bleaching",
-    management_action: "University research nursery monitoring active",
-    dx: 14,
-    dy: 12,
-    textAnchor: "start",
-  },
-  {
-    id: "tioman",
-    name: "Pulau Tioman Marine Park",
-    short_name: "P. Tioman",
-    state: "Pahang",
-    region: "peninsular_east",
-    lat: 2.79,
-    lng: 104.17,
-    bleached_pct: 66.0,
-    dhw: 8.4,
-    sst_anomaly: 1.76,
-    alert_level: "Alert Level 2",
-    live_coral_cover: 44.1,
-    mortality_rate: 24.4,
-    status: "Severe Bleaching",
-    management_action: "Full temporary closure of Renggis Island & Marine Park Center",
-    dx: 14,
-    dy: -8,
-    textAnchor: "start",
-  },
-  {
-    id: "sibu_tinggi",
-    name: "Pulau Tinggi & Sibu Archipelago",
-    short_name: "Tinggi & Sibu",
-    state: "Johor",
-    region: "peninsular_east",
-    lat: 2.3,
-    lng: 104.12,
-    bleached_pct: 61.5,
-    dhw: 8.1,
-    sst_anomaly: 1.7,
-    alert_level: "Alert Level 2",
-    live_coral_cover: 36.4,
-    mortality_rate: 22.8,
-    status: "Severe Bleaching",
-    management_action: "Demersal fishing gear buffer extended to 3 nautical miles",
-    dx: 14,
-    dy: 12,
-    textAnchor: "start",
-  },
-  {
-    id: "miri_sibuti",
-    name: "Miri-Sibuti Coral Reefs National Park",
-    short_name: "Miri-Sibuti",
-    state: "Sarawak",
-    region: "sarawak",
-    lat: 4.33,
-    lng: 113.83,
-    bleached_pct: 44.0,
-    dhw: 5.4,
-    sst_anomaly: 1.25,
-    alert_level: "Alert Level 1",
-    live_coral_cover: 48.0,
-    mortality_rate: 14.0,
-    status: "Moderate Bleaching",
-    management_action: "Commercial trawling exclusion zone patrols intensified",
-    dx: -14,
-    dy: -10,
-    textAnchor: "end",
-  },
-  {
-    id: "talang_satang",
-    name: "Talang-Satang Marine Reserve",
-    short_name: "Talang-Satang",
-    state: "Sarawak",
-    region: "sarawak",
-    lat: 1.91,
-    lng: 110.15,
-    bleached_pct: 35.0,
-    dhw: 4.2,
-    sst_anomaly: 1.1,
-    alert_level: "Watch",
-    live_coral_cover: 33.5,
-    mortality_rate: 9.5,
-    status: "Mild Bleaching",
-    management_action: "Green turtle nesting habitat surveillance active",
-    dx: -14,
-    dy: 12,
-    textAnchor: "end",
-  },
-  {
-    id: "tunku_abdul_rahman",
-    name: "Tunku Abdul Rahman Park",
-    short_name: "TAR Park (KK)",
-    state: "Sabah",
-    region: "sabah",
-    lat: 5.98,
-    lng: 115.99,
-    bleached_pct: 52.0,
-    dhw: 6.9,
-    sst_anomaly: 1.5,
-    alert_level: "Alert Level 1",
-    live_coral_cover: 41.2,
-    mortality_rate: 18.0,
-    status: "Moderate Bleaching",
-    management_action: "Tourist reef walking restricted at Sapi & Manukan",
-    dx: -14,
-    dy: 0,
-    textAnchor: "end",
-  },
-  {
-    id: "tun_mustapha",
-    name: "Tun Mustapha Marine Park (Kudat)",
-    short_name: "Tun Mustapha (Kudat)",
-    state: "Sabah",
-    region: "sabah",
-    lat: 7.08,
-    lng: 117.1,
-    bleached_pct: 64.0,
-    dhw: 8.2,
-    sst_anomaly: 1.72,
-    alert_level: "Alert Level 2",
-    live_coral_cover: 43.5,
-    mortality_rate: 23.5,
-    status: "Severe Bleaching",
-    management_action: "Community managed no-take zones (LMMA) fortified",
-    dx: 0,
-    dy: -16,
-    textAnchor: "middle",
-  },
-  {
-    id: "tun_sakaran",
-    name: "Tun Sakaran Marine Park (Semporna)",
-    short_name: "Tun Sakaran",
-    state: "Sabah",
-    region: "sabah",
-    lat: 4.6,
-    lng: 118.78,
-    bleached_pct: 67.5,
-    dhw: 8.6,
-    sst_anomaly: 1.8,
-    alert_level: "Alert Level 2",
-    live_coral_cover: 51.0,
-    mortality_rate: 25.0,
-    status: "Severe Bleaching",
-    management_action: "Bohey Dulang lagoon visitor access regulated",
-    dx: -14,
-    dy: -8,
-    textAnchor: "end",
-  },
-  {
-    id: "sipadan",
-    name: "Sipadan Oceanic Oceanic Reserve",
-    short_name: "Sipadan / Mabul",
-    state: "Sabah",
-    region: "sabah",
-    lat: 4.11,
-    lng: 118.63,
-    bleached_pct: 39.5,
-    dhw: 5.1,
-    sst_anomaly: 1.2,
-    alert_level: "Alert Level 1",
-    live_coral_cover: 62.0,
-    mortality_rate: 11.2,
-    status: "Deep Water Refuge / Resilient",
-    management_action: "Strict daily permit limit (176 divers/day) maintained",
-    dx: -14,
-    dy: 14,
-    textAnchor: "end",
-  },
-];
+// Dynamically parse authentic reef telemetry from coral_bleaching.json contract
+const getSitesFromContract = (): ReefSite[] => {
+  const rawSites = (coralBleachingData as any)?.affected_marine_parks || [];
+  return rawSites.map((site: any) => {
+    const dhwVal = Number(site.dhw ?? site.peak_dhw ?? 0);
+    const alertLevel: ReefSite["alert_level"] =
+      site.alert_level || (dhwVal >= 8.0 ? "Alert Level 2" : dhwVal >= 4.0 ? "Alert Level 1" : "Watch");
+
+    return {
+      id: site.id || site.name.toLowerCase().replace(/[^a-z0-9]/g, "_"),
+      name: site.name,
+      short_name: site.short_name || site.name.replace("Pulau ", "P. "),
+      state: site.state,
+      region: (site.region ||
+        (site.state === "Sabah"
+          ? "sabah"
+          : site.state === "Sarawak"
+          ? "sarawak"
+          : site.state === "Kedah"
+          ? "peninsular_west"
+          : "peninsular_east")) as ReefSite["region"],
+      lat: Number(site.lat),
+      lng: Number(site.lng),
+      bleached_pct: Number(site.bleached_pct ?? site.bleached_percentage ?? 0),
+      dhw: dhwVal,
+      sst_anomaly: Number(site.sst_anomaly ?? (coralBleachingData as any)?.sea_surface_temperature_anomaly_c ?? 1.5),
+      alert_level: alertLevel,
+      live_coral_cover: Number(site.live_coral_cover ?? 40.0),
+      mortality_rate: Number(site.mortality_rate ?? 20.0),
+      status: site.status || (dhwVal >= 8.0 ? "Severe Bleaching" : "Moderate Bleaching"),
+      management_action: site.management_action || "Continuous monitoring active",
+      dx: Number(site.dx ?? 14),
+      dy: Number(site.dy ?? 0),
+      textAnchor: (site.textAnchor || "start") as ReefSite["textAnchor"],
+    };
+  });
+};
 
 interface CoralHeatmapCardProps {
   onOpenSimulator?: () => void;
@@ -352,8 +147,10 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
     }
   }, [selectedSite, selectedRegion]);
 
+  const sites = useMemo<ReefSite[]>(() => getSitesFromContract(), []);
+
   const filteredSites = useMemo(() => {
-    return DEFAULT_SITES.filter((site) => {
+    return sites.filter((site) => {
       const matchRegion =
         selectedRegion === "all" ||
         (selectedRegion === "peninsular" &&
@@ -368,15 +165,18 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
 
       return matchRegion && matchSeverity;
     });
-  }, [selectedRegion, severityFilter]);
+  }, [sites, selectedRegion, severityFilter]);
 
-  // Key Aggregates
-  const totalSites = DEFAULT_SITES.length;
-  const severeSitesCount = DEFAULT_SITES.filter((s) => s.dhw >= 8.0).length;
+  // Key Aggregates derived dynamically from authentic coral data contract
+  const totalSites = sites.length;
+  const severeSitesCount = sites.filter((s) => s.dhw >= 8.0).length;
   const nationalBleachAvg = (
-    DEFAULT_SITES.reduce((acc, s) => acc + s.bleached_pct, 0) / totalSites
+    (coralBleachingData as any)?.average_bleaching_pct ??
+    (sites.reduce((acc, s) => acc + s.bleached_pct, 0) / (totalSites || 1))
   ).toFixed(1);
-  const peakDHW = Math.max(...DEFAULT_SITES.map((s) => s.dhw));
+  const peakDHW = (coralBleachingData as any)?.degree_heating_weeks_dhw ?? Math.max(...sites.map((s) => s.dhw), 0);
+  const alertLevelLabel = (coralBleachingData as any)?.noaa_alert_level?.includes("Alert Level 2") ? "Alert 2" : "Alert 1";
+  const sourceDocName = (coralBleachingData as any)?.source_document || "Reef Check Malaysia 2024";
 
   // Dynamic scaling factor based on camera zoom:
   const zoomFactor = useMemo(() => {
@@ -716,7 +516,11 @@ export const CoralHeatmapCard: React.FC<CoralHeatmapCardProps> = ({ onOpenSimula
               REEF SURVEILLANCE
             </span>
             <span className="bg-rose-500/20 text-rose-300 border border-rose-500/40 text-[8.5px] font-bold px-1.5 py-0.2 rounded-full uppercase tracking-wider animate-pulse shrink-0">
-              Alert 2
+              {alertLevelLabel}
+            </span>
+            <span className="text-ocean-700 hidden sm:inline">•</span>
+            <span className="hidden xl:inline text-[9px] text-cyan-400/90 font-mono tracking-tight truncate max-w-[170px]" title={sourceDocName}>
+              {sourceDocName.replace(".pdf", "")}
             </span>
             <span className="text-ocean-700 hidden lg:inline">•</span>
             <div className="hidden lg:flex items-center gap-2 text-[9.5px] text-ocean-300 font-mono whitespace-nowrap">
