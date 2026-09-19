@@ -198,6 +198,7 @@ date,index,state,division
 2026-05-01,141.9,Johor,overall
 2026-06-01,141.9,Johor,overall
 2026-07-01,141.8,Johor,overall
+2026-08-01,142.4,Johor,overall
 2010-01-01,99.6,Kedah,overall
 2010-02-01,99.5,Kedah,overall
 2010-03-01,99.3,Kedah,overall
@@ -397,6 +398,7 @@ date,index,state,division
 2026-05-01,130.8,Kedah,overall
 2026-06-01,130.8,Kedah,overall
 2026-07-01,130.9,Kedah,overall
+2026-08-01,131.2,Kedah,overall
 2010-01-01,99.1,Kelantan,overall
 2010-02-01,99.0,Kelantan,overall
 2010-03-01,99.0,Kelantan,overall
@@ -596,6 +598,7 @@ date,index,state,division
 2026-05-01,130.9,Kelantan,overall
 2026-06-01,130.9,Kelantan,overall
 2026-07-01,130.7,Kelantan,overall
+2026-08-01,130.9,Kelantan,overall
 2010-01-01,99.5,Melaka,overall
 2010-02-01,99.5,Melaka,overall
 2010-03-01,99.4,Melaka,overall
@@ -795,6 +798,7 @@ date,index,state,division
 2026-05-01,133.3,Melaka,overall
 2026-06-01,133.1,Melaka,overall
 2026-07-01,133.1,Melaka,overall
+2026-08-01,133.5,Melaka,overall
 2010-01-01,99.3,Negeri Sembilan,overall
 2010-02-01,99.3,Negeri Sembilan,overall
 2010-03-01,99.2,Negeri Sembilan,overall
@@ -994,6 +998,7 @@ date,index,state,division
 2026-05-01,136.4,Negeri Sembilan,overall
 2026-06-01,136.5,Negeri Sembilan,overall
 2026-07-01,136.4,Negeri Sembilan,overall
+2026-08-01,136.9,Negeri Sembilan,overall
 2010-01-01,99.4,Pahang,overall
 2010-02-01,99.3,Pahang,overall
 2010-03-01,99.3,Pahang,overall
@@ -1193,6 +1198,7 @@ date,index,state,division
 2026-05-01,135.7,Pahang,overall
 2026-06-01,135.9,Pahang,overall
 2026-07-01,135.8,Pahang,overall
+2026-08-01,136.2,Pahang,overall
 2010-01-01,99.4,Perak,overall
 2010-02-01,99.4,Perak,overall
 2010-03-01,99.4,Perak,overall
@@ -1392,6 +1398,7 @@ date,index,state,division
 2026-05-01,130.4,Perak,overall
 2026-06-01,130.5,Perak,overall
 2026-07-01,130.3,Perak,overall
+2026-08-01,130.5,Perak,overall
 2010-01-01,99.0,Perlis,overall
 2010-02-01,98.9,Perlis,overall
 2010-03-01,98.9,Perlis,overall
@@ -1591,6 +1598,7 @@ date,index,state,division
 2026-05-01,127.8,Perlis,overall
 2026-06-01,127.8,Perlis,overall
 2026-07-01,127.5,Perlis,overall
+2026-08-01,127.6,Perlis,overall
 2010-01-01,99.4,Pulau Pinang,overall
 2010-02-01,99.5,Pulau Pinang,overall
 2010-03-01,99.3,Pulau Pinang,overall
@@ -1790,6 +1798,7 @@ date,index,state,division
 2026-05-01,139.6,Pulau Pinang,overall
 2026-06-01,139.5,Pulau Pinang,overall
 2026-07-01,139.8,Pulau Pinang,overall
+2026-08-01,140.1,Pulau Pinang,overall
 2010-01-01,99.4,Sabah,overall
 2010-02-01,99.7,Sabah,overall
 2010-03-01,99.7,Sabah,overall
@@ -1989,6 +1998,7 @@ date,index,state,division
 2026-05-01,126.1,Sabah,overall
 2026-06-01,126.0,Sabah,overall
 2026-07-01,126.0,Sabah,overall
+2026-08-01,126.3,Sabah,overall
 2010-01-01,99.2,Sarawak,overall
 2010-02-01,99.4,Sarawak,overall
 2010-03-01,99.4,Sarawak,overall
@@ -2188,6 +2198,7 @@ date,index,state,division
 2026-05-01,129.2,Sarawak,overall
 2026-06-01,129.1,Sarawak,overall
 2026-07-01,129.0,Sarawak,overall
+2026-08-01,129.4,Sarawak,overall
 2010-01-01,99.3,Selangor,overall
 2010-02-01,99.3,Selangor,overall
 2010-03-01,99.4,Selangor,overall
@@ -2387,6 +2398,7 @@ date,index,state,division
 2026-05-01,143.7,Selangor,overall
 2026-06-01,143.8,Selangor,overall
 2026-07-01,143.8,Selangor,overall
+2026-08-01,144.3,Selangor,overall
 2010-01-01,99.2,Terengganu,overall
 2010-02-01,99.1,Terengganu,overall
 2010-03-01,99.1,Terengganu,overall
@@ -2586,6 +2598,7 @@ date,index,state,division
 2026-05-01,131.1,Terengganu,overall
 2026-06-01,131.1,Terengganu,overall
 2026-07-01,130.9,Terengganu,overall
+2026-08-01,131.1,Terengganu,overall
 2010-01-01,99.4,W.P. Kuala Lumpur,overall
 2010-02-01,99.4,W.P. Kuala Lumpur,overall
 2010-03-01,99.4,W.P. Kuala Lumpur,overall
@@ -2785,6 +2798,7 @@ date,index,state,division
 2026-05-01,137.6,W.P. Kuala Lumpur,overall
 2026-06-01,137.4,W.P. Kuala Lumpur,overall
 2026-07-01,137.6,W.P. Kuala Lumpur,overall
+2026-08-01,137.9,W.P. Kuala Lumpur,overall
 2010-01-01,99.4,W.P. Labuan,overall
 2010-02-01,99.6,W.P. Labuan,overall
 2010-03-01,99.6,W.P. Labuan,overall
@@ -2984,6 +2998,7 @@ date,index,state,division
 2026-05-01,127.2,W.P. Labuan,overall
 2026-06-01,127.0,W.P. Labuan,overall
 2026-07-01,126.8,W.P. Labuan,overall
+2026-08-01,127.3,W.P. Labuan,overall
 2010-01-01,99.7,W.P. Putrajaya,overall
 2010-02-01,99.6,W.P. Putrajaya,overall
 2010-03-01,99.6,W.P. Putrajaya,overall
@@ -3183,6 +3198,7 @@ date,index,state,division
 2026-05-01,144.1,W.P. Putrajaya,overall
 2026-06-01,143.9,W.P. Putrajaya,overall
 2026-07-01,144.0,W.P. Putrajaya,overall
+2026-08-01,144.4,W.P. Putrajaya,overall
 2010-01-01,98.9,Johor,01
 2010-02-01,98.9,Johor,01
 2010-03-01,99.0,Johor,01
@@ -3382,6 +3398,7 @@ date,index,state,division
 2026-05-01,169.3,Johor,01
 2026-06-01,169.9,Johor,01
 2026-07-01,170.4,Johor,01
+2026-08-01,171.2,Johor,01
 2010-01-01,99.8,Kedah,01
 2010-02-01,99.3,Kedah,01
 2010-03-01,99.0,Kedah,01
@@ -3581,6 +3598,7 @@ date,index,state,division
 2026-05-01,144.1,Kedah,01
 2026-06-01,144.3,Kedah,01
 2026-07-01,144.3,Kedah,01
+2026-08-01,144.7,Kedah,01
 2010-01-01,98.9,Kelantan,01
 2010-02-01,98.5,Kelantan,01
 2010-03-01,98.6,Kelantan,01
@@ -3780,6 +3798,7 @@ date,index,state,division
 2026-05-01,145.1,Kelantan,01
 2026-06-01,145.6,Kelantan,01
 2026-07-01,146.0,Kelantan,01
+2026-08-01,145.9,Kelantan,01
 2010-01-01,99.0,Melaka,01
 2010-02-01,98.9,Melaka,01
 2010-03-01,98.9,Melaka,01
@@ -3979,6 +3998,7 @@ date,index,state,division
 2026-05-01,160.0,Melaka,01
 2026-06-01,160.1,Melaka,01
 2026-07-01,160.7,Melaka,01
+2026-08-01,161.2,Melaka,01
 2010-01-01,98.9,Negeri Sembilan,01
 2010-02-01,98.6,Negeri Sembilan,01
 2010-03-01,98.6,Negeri Sembilan,01
@@ -4178,6 +4198,7 @@ date,index,state,division
 2026-05-01,158.7,Negeri Sembilan,01
 2026-06-01,159.4,Negeri Sembilan,01
 2026-07-01,160.0,Negeri Sembilan,01
+2026-08-01,160.8,Negeri Sembilan,01
 2010-01-01,99.1,Pahang,01
 2010-02-01,98.9,Pahang,01
 2010-03-01,98.9,Pahang,01
@@ -4377,6 +4398,7 @@ date,index,state,division
 2026-05-01,158.7,Pahang,01
 2026-06-01,159.4,Pahang,01
 2026-07-01,160.2,Pahang,01
+2026-08-01,161.0,Pahang,01
 2010-01-01,99.1,Perak,01
 2010-02-01,99.2,Perak,01
 2010-03-01,99.1,Perak,01
@@ -4576,6 +4598,7 @@ date,index,state,division
 2026-05-01,147.7,Perak,01
 2026-06-01,148.1,Perak,01
 2026-07-01,148.2,Perak,01
+2026-08-01,148.4,Perak,01
 2010-01-01,99.4,Perlis,01
 2010-02-01,99.2,Perlis,01
 2010-03-01,99.2,Perlis,01
@@ -4775,6 +4798,7 @@ date,index,state,division
 2026-05-01,140.0,Perlis,01
 2026-06-01,140.3,Perlis,01
 2026-07-01,140.7,Perlis,01
+2026-08-01,140.5,Perlis,01
 2010-01-01,98.7,Pulau Pinang,01
 2010-02-01,98.9,Pulau Pinang,01
 2010-03-01,98.6,Pulau Pinang,01
@@ -4974,28 +4998,4 @@ date,index,state,division
 2026-05-01,166.4,Pulau Pinang,01
 2026-06-01,166.4,Pulau Pinang,01
 2026-07-01,167.0,Pulau Pinang,01
-2010-01-01,99.2,Sabah,01
-2010-02-01,99.8,Sabah,01
-2010-03-01,99.8,Sabah,01
-2010-04-01,99.7,Sabah,01
-2010-05-01,99.4,Sabah,01
-2010-06-01,99.2,Sabah,01
-2010-07-01,99.4,Sabah,01
-2010-08-01,100.0,Sabah,01
-2010-09-01,100.3,Sabah,01
-2010-10-01,100.6,Sabah,01
-2010-11-01,100.8,Sabah,01
-2010-12-01,101.9,Sabah,01
-2011-01-01,103.6,Sabah,01
-2011-02-01,104.1,Sabah,01
-2011-03-01,104.3,Sabah,01
-2011-04-01,104.6,Sabah,01
-2011-05-01,104.3,Sabah,01
-2011-06-01,104.4,Sabah,01
-2011-07-01,104.4,Sabah,01
-2011-08-01,104.9,Sabah,01
-2011-09-01,105.2,Sabah,01
-2011-10-01,105.6,Sabah,01
-2011-11-01,105.8,Sabah,01
-2011-12-01,106.2,Sabah,01
-2012-01-01,107.1,Sabah,01
+2026-08-01,167.3,Pulau Pinang,01
