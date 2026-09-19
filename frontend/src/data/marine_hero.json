@@ -1,41 +1,36 @@
 {
-  "title": "TOTAL COASTAL TOURIST ARRIVALS",
-  "period": "Annual Benchmark (2024 vs 2023)",
-  "value": "86.8M",
-  "value_formatted": "86.8M",
+  "title": "TOTAL INBOUND VISITOR ARRIVALS",
+  "period": "Annual Immigration & Tourism Malaysia Actuals",
+  "value": "30.5M",
+  "value_formatted": "30.5M",
   "unit": "Million Visitors",
-  "change_percentage": "\u25b2 +7.7%",
-  "compare_text": "2023: 80.6M",
+  "change_percentage": "\u25b2 +100.7%",
+  "compare_text": "2022: 15.2M",
   "time_series": [
     {
-      "date": "2019",
-      "current": 86.9,
-      "compare": 73.9
-    },
-    {
       "date": "2020",
-      "current": 28.3,
-      "compare": 73.9
+      "current": 6.17,
+      "compare": 5.9
     },
     {
       "date": "2021",
-      "current": 40.5,
-      "compare": 73.9
+      "current": 0.47,
+      "compare": 3.1
     },
     {
       "date": "2022",
-      "current": 68.5,
-      "compare": 82.6
+      "current": 15.15,
+      "compare": 14.0
     },
     {
       "date": "2023",
-      "current": 80.6,
-      "compare": 82.6
+      "current": 30.52,
+      "compare": 28.0
     },
     {
       "date": "2024",
-      "current": 86.8,
-      "compare": 82.6
+      "current": 38.28,
+      "compare": 35.0
     }
   ]
 }

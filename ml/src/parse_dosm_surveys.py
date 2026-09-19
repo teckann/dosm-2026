@@ -19,6 +19,7 @@ def parse_all_state_surveys():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     summary_rows = []
     destinations_rows = []
+    expenditure_rows = []
 
     excel_files = sorted(SURVEYS_DIR.glob("tourism_domestic_2023_*.xlsx"))
     print(f"Parsing {len(excel_files)} official DOSM state survey workbooks...")
@@ -91,6 +92,33 @@ def parse_all_state_surveys():
                         })
                         rank_counter += 1
 
+        # ── 3. Jadual 7: Komponen Perbelanjaan Pelawat (2022 & 2023) ───────────
+        if "Jadual 7" in wb.sheetnames:
+            ws7 = wb["Jadual 7"]
+            expenditure_rows.append({
+                "state": clean_state,
+                "shopping_2022_k": float(ws7.cell(row=8, column=2).value or 0),
+                "shopping_2023_k": float(ws7.cell(row=8, column=3).value or 0),
+                "fuel_2022_k": float(ws7.cell(row=9, column=2).value or 0),
+                "fuel_2023_k": float(ws7.cell(row=9, column=3).value or 0),
+                "transport_2022_k": float(ws7.cell(row=10, column=2).value or 0),
+                "transport_2023_k": float(ws7.cell(row=10, column=3).value or 0),
+                "fnb_2022_k": float(ws7.cell(row=11, column=2).value or 0),
+                "fnb_2023_k": float(ws7.cell(row=11, column=3).value or 0),
+                "accom_2022_k": float(ws7.cell(row=12, column=2).value or 0),
+                "accom_2023_k": float(ws7.cell(row=12, column=3).value or 0),
+                "packages_2022_k": float(ws7.cell(row=13, column=2).value or 0),
+                "packages_2023_k": float(ws7.cell(row=13, column=3).value or 0),
+                "other_2022_k": float(ws7.cell(row=14, column=2).value or 0),
+                "other_2023_k": float(ws7.cell(row=14, column=3).value or 0),
+                "total_visitor_spend_2022_k": float(ws7.cell(row=7, column=2).value or 0),
+                "total_visitor_spend_2023_k": float(ws7.cell(row=7, column=3).value or 0),
+                "household_spend_2022_k": float(ws7.cell(row=15, column=2).value or 0),
+                "household_spend_2023_k": float(ws7.cell(row=15, column=3).value or 0),
+                "total_receipts_2022_k": float(ws7.cell(row=16, column=2).value or 0),
+                "total_receipts_2023_k": float(ws7.cell(row=16, column=3).value or 0),
+            })
+
         summary_rows.append({
             "state": clean_state,
             "total_visitors_2023_thousands": total_visitors_2023,
@@ -104,13 +132,50 @@ def parse_all_state_surveys():
 
     df_summary = pd.DataFrame(summary_rows)
     df_dest = pd.DataFrame(destinations_rows)
+    df_exp = pd.DataFrame(expenditure_rows)
 
     df_summary.to_csv(OUTPUT_DIR / "dosm_state_tourism_summary.csv", index=False)
     df_dest.to_csv(OUTPUT_DIR / "dosm_state_destinations.csv", index=False)
+    df_exp.to_csv(OUTPUT_DIR / "dosm_state_expenditure_components.csv", index=False)
 
     print(f" Successfully parsed {len(df_summary)} state summaries.")
     print(f" Extracted {len(df_dest)} authentic state destinations from Jadual 9.")
-    return df_summary, df_dest
+    print(f" Extracted {len(df_exp)} state expenditure component profiles from Jadual 7.")
+
+    # ── 4. National 2023 & 2024 DTS Expenditure Bulletin ───────────────────────
+    national_file = BASE_DIR / "data" / "raw" / "tourism" / "quarterly_bulletins" / "tourism_domestic_2024.xlsx"
+    if national_file.exists():
+        wb_nat = openpyxl.load_workbook(national_file, data_only=True)
+        if "6" in wb_nat.sheetnames:
+            ws_nat = wb_nat["6"]
+            nat_row = {
+                "metric": "national_domestic_expenditure",
+                "shopping_2023_k": float(ws_nat.cell(row=9, column=2).value or 0),
+                "shopping_2024_k": float(ws_nat.cell(row=9, column=3).value or 0),
+                "fuel_2023_k": float(ws_nat.cell(row=10, column=2).value or 0),
+                "fuel_2024_k": float(ws_nat.cell(row=10, column=3).value or 0),
+                "transport_2023_k": float(ws_nat.cell(row=11, column=2).value or 0),
+                "transport_2024_k": float(ws_nat.cell(row=11, column=3).value or 0),
+                "fnb_2023_k": float(ws_nat.cell(row=12, column=2).value or 0),
+                "fnb_2024_k": float(ws_nat.cell(row=12, column=3).value or 0),
+                "accom_2023_k": float(ws_nat.cell(row=13, column=2).value or 0),
+                "accom_2024_k": float(ws_nat.cell(row=13, column=3).value or 0),
+                "packages_2023_k": float(ws_nat.cell(row=14, column=2).value or 0),
+                "packages_2024_k": float(ws_nat.cell(row=14, column=3).value or 0),
+                "other_2023_k": float(ws_nat.cell(row=15, column=2).value or 0),
+                "other_2024_k": float(ws_nat.cell(row=15, column=3).value or 0),
+                "total_visitor_spend_2023_k": float(ws_nat.cell(row=8, column=2).value or 0),
+                "total_visitor_spend_2024_k": float(ws_nat.cell(row=8, column=3).value or 0),
+                "household_spend_2023_k": float(ws_nat.cell(row=16, column=2).value or 0),
+                "household_spend_2024_k": float(ws_nat.cell(row=16, column=3).value or 0),
+                "total_receipts_2023_k": float(ws_nat.cell(row=19, column=2).value or 0),
+                "total_receipts_2024_k": float(ws_nat.cell(row=19, column=3).value or 0),
+            }
+            wb_nat.close()
+            pd.DataFrame([nat_row]).to_csv(OUTPUT_DIR / "dosm_national_expenditure_2023_2024.csv", index=False)
+            print(" Extracted official national 2023-2024 DTS expenditure components from Bulletin Jadual 6.")
+
+    return df_summary, df_dest, df_exp
 
 if __name__ == "__main__":
     parse_all_state_surveys()

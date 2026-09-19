@@ -52,11 +52,11 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
 
   const metricConfigs = {
     total_tourists: {
-      label: "Total Tourist Arrivals",
+      label: "Total Inbound Arrivals",
       unit: "M Visitors",
       color: "#00d2ff",
       gradientId: "cyanOceanGlow",
-      ticks: [0, 25, 50, 75, 100],
+      ticks: [0, 10, 20, 30, 40],
       formatter: (v: number) => `${v}M`,
     },
     marine_park_visitors: {
@@ -64,7 +64,7 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
       unit: "M Visitors",
       color: "#34d399",
       gradientId: "emeraldGlow",
-      ticks: [0, 8, 16, 24, 32],
+      ticks: [0, 0.5, 1.0, 1.5, 2.0, 2.5],
       formatter: (v: number) => `${v}M`,
     },
     seafood_landings: {
@@ -72,7 +72,7 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
       unit: "k Metric Tonnes",
       color: "#38bdf8",
       gradientId: "blueGlow",
-      ticks: [0, 100, 200, 300, 400, 500],
+      ticks: [0, 350, 700, 1050, 1400],
       formatter: (v: number) => `${v}k`,
     },
   };
@@ -87,13 +87,13 @@ export const HeroKPIChart: React.FC<HeroKPIChartProps> = ({
   let displayTitle = data.title;
 
   if (selectedMetric === "marine_park_visitors") {
-    displayValue = marineParkVal || "24.4M";
-    displayChange = "▲ +7.5%";
+    displayValue = marineParkVal || "1.85M";
+    displayChange = "▲ +24.2%";
     displayCompare = "Marine Protected Parks";
     displayTitle = "MARINE PARK ECO-FOOTFALL";
   } else if (selectedMetric === "seafood_landings") {
-    displayValue = seafoodVal || "382.3k MT";
-    displayChange = "▶ -0.8%";
+    displayValue = seafoodVal || "1270.3k MT";
+    displayChange = "▼ -2.9%";
     displayCompare = "DOF Landing Registry";
     displayTitle = "COASTAL SEAFOOD LANDINGS";
   }

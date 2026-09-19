@@ -20,18 +20,25 @@ interface MarineSimulatorModalProps {
   modelData: {
     model_name: string;
     metrics?: {
-      r2_score: number;
-      mae: number;
+      r2_score?: number;
+      mae?: number;
+      holdout_r2?: number;
+      holdout_mae_mt?: number;
+      cv_r2_mean?: number;
+      cv_mae_mean?: number;
       sample_size?: number;
+      [key: string]: any;
     };
     r2_score?: number;
     mae?: number;
     features?: Array<string>;
-    feature_importances?: Array<{ feature: string; percentage: number }>;
+    feature_importances?: Array<{ feature: string; percentage?: number; importance?: number }>;
     simulator_weights: {
       intercept: number;
       coefficients: Record<string, number>;
+      [key: string]: any;
     };
+    [key: string]: any;
   };
   initialDestination?: {
     name: string;
@@ -189,8 +196,8 @@ export const MarineSimulatorModal: React.FC<MarineSimulatorModalProps> = ({
     ? "text-cyan-400"
     : "text-emerald-400";
 
-  const r2Display = modelData.metrics?.r2_score ?? modelData.r2_score ?? 0.9994;
-  const maeDisplay = modelData.metrics?.mae ?? modelData.mae ?? 0.42;
+  const r2Display = (modelData.metrics as any)?.holdout_r2 ?? (modelData.metrics as any)?.r2_score ?? modelData.r2_score ?? 0.9711;
+  const maeDisplay = (modelData.metrics as any)?.holdout_mae_mt ?? (modelData.metrics as any)?.mae ?? modelData.mae ?? 780.9;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ocean-950/85 backdrop-blur-md animate-fadeIn overflow-y-auto">
@@ -210,10 +217,10 @@ export const MarineSimulatorModal: React.FC<MarineSimulatorModalProps> = ({
             <span>Trained Machine Learning Model (Random Forest & Ridge Weights)</span>
           </div>
           <h2 className="text-xl font-extrabold text-white">
-            Marine Carrying Capacity & Overtourism Simulator
+            Marine Carrying Capacity & Coastal Bioeconomic Simulator
           </h2>
           <p className="text-xs text-ocean-300 mt-0.5">
-            Predicting ecological stress on coral reefs and coastal waters based on DOSM tourism indicators (R² = {r2Display.toFixed(4)}, MAE = ±{maeDisplay.toFixed(2)} pts)
+            Predicting coastal resource yields and fisheries capacity based on verified DOSM indicators (Holdout R² = {r2Display.toFixed(4)}, MAE = ±{maeDisplay.toFixed(1)} MT)
           </p>
         </div>
 

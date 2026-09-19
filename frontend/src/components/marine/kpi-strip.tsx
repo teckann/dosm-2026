@@ -184,7 +184,7 @@ export const KpiStrip: React.FC<KpiStripProps> = ({
   return (
     <div className="kpi-strip">
       <SparklineKpiCard
-        title="Total Arrivals"
+        title="Inbound Arrivals"
         value={`${totalTouristsM}M`}
         delta={formatYoY(touristGrowthYoY)}
         isPositive={touristGrowthYoY !== null && touristGrowthYoY > 0}

@@ -1,50 +1,42 @@
 [
   {
-    "year": "2019",
-    "domestic_m": 76.9,
-    "international_m": 10.0,
-    "total_m": 86.9,
-    "domestic_pct": 88.5,
-    "international_pct": 11.5
-  },
-  {
     "year": "2020",
-    "domestic_m": 25.1,
-    "international_m": 3.3,
-    "total_m": 28.3,
-    "domestic_pct": 88.5,
-    "international_pct": 11.5
+    "domestic_m": 131.7,
+    "international_m": 6.2,
+    "total_m": 137.9,
+    "domestic_pct": 95.5,
+    "international_pct": 4.5
   },
   {
     "year": "2021",
-    "domestic_m": 35.8,
-    "international_m": 4.7,
-    "total_m": 40.5,
-    "domestic_pct": 88.4,
-    "international_pct": 11.6
+    "domestic_m": 66.0,
+    "international_m": 0.5,
+    "total_m": 66.5,
+    "domestic_pct": 99.2,
+    "international_pct": 0.8
   },
   {
     "year": "2022",
-    "domestic_m": 60.6,
-    "international_m": 7.9,
-    "total_m": 68.5,
-    "domestic_pct": 88.4,
-    "international_pct": 11.6
+    "domestic_m": 171.6,
+    "international_m": 15.2,
+    "total_m": 186.8,
+    "domestic_pct": 91.9,
+    "international_pct": 8.1
   },
   {
     "year": "2023",
-    "domestic_m": 71.2,
-    "international_m": 9.4,
-    "total_m": 80.6,
-    "domestic_pct": 88.3,
-    "international_pct": 11.7
+    "domestic_m": 213.7,
+    "international_m": 30.5,
+    "total_m": 244.2,
+    "domestic_pct": 87.5,
+    "international_pct": 12.5
   },
   {
     "year": "2024",
-    "domestic_m": 76.8,
-    "international_m": 10.0,
-    "total_m": 86.8,
-    "domestic_pct": 88.5,
-    "international_pct": 11.5
+    "domestic_m": 239.4,
+    "international_m": 38.3,
+    "total_m": 277.7,
+    "domestic_pct": 86.2,
+    "international_pct": 13.8
   }
 ]

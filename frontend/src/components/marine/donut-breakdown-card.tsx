@@ -86,231 +86,97 @@ export const DonutBreakdownCard: React.FC<DonutBreakdownCardProps> = ({
         <DonutHoverCard segment={data.segments[hoveredIndex]} />
       )}
 
-      {variant === "detailed" ? (
-        /* Detailed Layout with Donut + Spend Allocation Progress Bars */
-        <div className="flex flex-col gap-3 my-auto py-1">
-          {/* Top Section: Donut with Callouts */}
-          <div className="grid grid-cols-12 items-center gap-1">
-            {/* Left Side Callouts */}
-            <div className="col-span-4 space-y-1 text-right pr-1">
-              {leftSegments.map((item, idx) => (
-                <div
-                  key={item.name}
-                  className="text-[11px] leading-tight transition-colors cursor-pointer group"
-                  onMouseEnter={() => setHoveredIndex(midPoint + idx)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <div className="text-ocean-300 group-hover:text-white truncate font-medium">
-                    {item.name.split(" (")[0]}
-                  </div>
-                  <div className="text-ocean-200 font-mono text-[10px] font-semibold flex items-center justify-end space-x-1">
-                    <span>{item.percentage.toFixed(1)}%</span>
-                    <span
-                      className="w-1.5 h-1.5 rounded-full inline-block"
-                      style={{ backgroundColor: item.color }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Center Donut Chart */}
-            <div className="col-span-4 relative flex items-center justify-center h-36">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={data.segments}
-                    dataKey="percentage"
-                    nameKey="name"
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={40}
-                    outerRadius={60}
-                    paddingAngle={2}
-                    startAngle={90}
-                    endAngle={-270}
-                    stroke="#0e3153"
-                    strokeWidth={2}
-                    onMouseEnter={(_, index) => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                  >
-                    {data.segments.map((entry, index) => (
-                      <Cell
-                        key={`cell-${index}`}
-                        fill={entry.color}
-                        opacity={hoveredIndex === null || hoveredIndex === index ? 1 : 0.4}
-                        className="transition-opacity duration-200"
-                      />
-                    ))}
-                  </Pie>
-                </PieChart>
-              </ResponsiveContainer>
-
-              {/* Centered Total Text inside Donut Hole */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <span className="text-base sm:text-lg font-extrabold text-white tracking-tight font-mono">
-                  {displayTotal}
-                </span>
-                <span className="text-[9px] uppercase font-semibold text-ocean-400 tracking-wider">
-                  {data.total_label || "Total"}
-                </span>
+      {/* Main Donut Layout with Callouts */}
+      <div className="grid grid-cols-12 items-center my-auto py-1">
+        {/* Left Side Callouts */}
+        <div className="col-span-4 space-y-1 text-right pr-1">
+          {leftSegments.map((item, idx) => (
+            <div
+              key={item.name}
+              className="text-[10px] leading-tight transition-colors cursor-pointer group"
+              onMouseEnter={() => setHoveredIndex(midPoint + idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="text-ocean-300 group-hover:text-white truncate font-medium">
+                {item.name.split(" (")[0]}
+              </div>
+              <div className="text-ocean-200 font-mono text-[9px] font-semibold flex items-center justify-end space-x-1">
+                <span>{item.percentage.toFixed(1)}%</span>
+                <span
+                  className="w-1.5 h-1.5 rounded-full inline-block"
+                  style={{ backgroundColor: item.color }}
+                />
               </div>
             </div>
-
-            {/* Right Side Callouts */}
-            <div className="col-span-4 space-y-1 text-left pl-1">
-              {rightSegments.map((item, idx) => (
-                <div
-                  key={item.name}
-                  className="text-[11px] leading-tight transition-colors cursor-pointer group"
-                  onMouseEnter={() => setHoveredIndex(idx)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <div className="text-ocean-300 group-hover:text-white truncate font-medium">
-                    {item.name.split(" (")[0]}
-                  </div>
-                  <div className="text-ocean-200 font-mono text-[10px] font-semibold flex items-center space-x-1">
-                    <span
-                      className="w-1.5 h-1.5 rounded-full inline-block"
-                      style={{ backgroundColor: item.color }}
-                    />
-                    <span>{item.percentage.toFixed(1)}%</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom Section: Detailed Category Progress Bars */}
-          <div className="space-y-2 pt-2 border-t border-ocean-700/40">
-            {data.segments.slice(0, 4).map((item) => (
-              <div key={item.name} className="space-y-1">
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="text-ocean-300 font-medium truncate flex items-center gap-1.5">
-                    <span
-                      className="w-2 h-2 rounded-full shrink-0"
-                      style={{ backgroundColor: item.color }}
-                    />
-                    {item.name}
-                  </span>
-                  <div className="flex items-center space-x-2 shrink-0">
-                    {item.amount_b ? (
-                      <span className="font-mono text-cyan-300 font-semibold">
-                        RM {item.amount_b.toFixed(1)}B
-                      </span>
-                    ) : item.count ? (
-                      <span className="font-mono text-cyan-300 font-semibold">
-                        {(item.count / 1000000).toFixed(1)}M
-                      </span>
-                    ) : null}
-                    <span className="text-ocean-400 font-mono text-[10px]">
-                      {item.percentage.toFixed(1)}%
-                    </span>
-                  </div>
-                </div>
-                <div className="h-1.5 bg-ocean-900 rounded-full overflow-hidden">
-                  <div
-                    className="h-full rounded-full transition-all duration-500"
-                    style={{ width: `${item.percentage}%`, backgroundColor: item.color }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
-      ) : (
-        /* Compact Standard Layout (for Marine Park Allocation in Row 3) */
-        <div className="grid grid-cols-12 items-center my-auto py-1">
-          {/* Left Side Callouts */}
-          <div className="col-span-4 space-y-1 text-right pr-1">
-            {leftSegments.map((item, idx) => (
-              <div
-                key={item.name}
-                className="text-[10px] leading-tight transition-colors cursor-pointer group"
-                onMouseEnter={() => setHoveredIndex(midPoint + idx)}
+
+        {/* Center Donut Chart with Centered Total */}
+        <div className="col-span-4 relative flex items-center justify-center h-28 sm:h-32">
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={data.segments}
+                dataKey="percentage"
+                nameKey="name"
+                cx="50%"
+                cy="50%"
+                innerRadius={36}
+                outerRadius={54}
+                paddingAngle={2}
+                startAngle={90}
+                endAngle={-270}
+                stroke="#0e3153"
+                strokeWidth={2}
+                onMouseEnter={(_, index) => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div className="text-ocean-300 group-hover:text-white truncate font-medium">
-                  {item.name.split(" (")[0]}
-                </div>
-                <div className="text-ocean-200 font-mono text-[9px] font-semibold flex items-center justify-end space-x-1">
-                  <span>{item.percentage.toFixed(1)}%</span>
-                  <span
-                    className="w-1.5 h-1.5 rounded-full inline-block"
-                    style={{ backgroundColor: item.color }}
+                {data.segments.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={entry.color}
+                    opacity={hoveredIndex === null || hoveredIndex === index ? 1 : 0.4}
+                    className="transition-opacity duration-200"
                   />
-                </div>
-              </div>
-            ))}
-          </div>
+                ))}
+              </Pie>
+            </PieChart>
+          </ResponsiveContainer>
 
-          {/* Center Donut Chart with Centered Total */}
-          <div className="col-span-4 relative flex items-center justify-center h-28 sm:h-32">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={data.segments}
-                  dataKey="percentage"
-                  nameKey="name"
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={36}
-                  outerRadius={54}
-                  paddingAngle={2}
-                  startAngle={90}
-                  endAngle={-270}
-                  stroke="#0e3153"
-                  strokeWidth={2}
-                  onMouseEnter={(_, index) => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  {data.segments.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={entry.color}
-                      opacity={hoveredIndex === null || hoveredIndex === index ? 1 : 0.4}
-                      className="transition-opacity duration-200"
-                    />
-                  ))}
-                </Pie>
-              </PieChart>
-            </ResponsiveContainer>
-
-            {/* Centered Total Text inside Donut Hole */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-              <span className="text-base sm:text-lg font-extrabold text-white tracking-tight font-mono">
-                {displayTotal}
-              </span>
-              <span className="text-[9px] uppercase font-semibold text-ocean-400 tracking-wider">
-                {data.total_label || "Total"}
-              </span>
-            </div>
-          </div>
-
-          {/* Right Side Callouts */}
-          <div className="col-span-4 space-y-1 text-left pl-1">
-            {rightSegments.map((item, idx) => (
-              <div
-                key={item.name}
-                className="text-[10px] leading-tight transition-colors cursor-pointer group"
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <div className="text-ocean-300 group-hover:text-white truncate font-medium">
-                  {item.name.split(" (")[0]}
-                </div>
-                <div className="text-ocean-200 font-mono text-[9px] font-semibold flex items-center space-x-1">
-                  <span
-                    className="w-1.5 h-1.5 rounded-full inline-block"
-                    style={{ backgroundColor: item.color }}
-                  />
-                  <span>{item.percentage.toFixed(1)}%</span>
-                </div>
-              </div>
-            ))}
+          {/* Centered Total Text inside Donut Hole */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+            <span className="text-base sm:text-lg font-extrabold text-white tracking-tight font-mono">
+              {displayTotal}
+            </span>
+            <span className="text-[9px] uppercase font-semibold text-ocean-400 tracking-wider">
+              {data.total_label || "Total"}
+            </span>
           </div>
         </div>
-      )}
+
+        {/* Right Side Callouts */}
+        <div className="col-span-4 space-y-1 text-left pl-1">
+          {rightSegments.map((item, idx) => (
+            <div
+              key={item.name}
+              className="text-[10px] leading-tight transition-colors cursor-pointer group"
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="text-ocean-300 group-hover:text-white truncate font-medium">
+                {item.name.split(" (")[0]}
+              </div>
+              <div className="text-ocean-200 font-mono text-[9px] font-semibold flex items-center space-x-1">
+                <span
+                  className="w-1.5 h-1.5 rounded-full inline-block"
+                  style={{ backgroundColor: item.color }}
+                />
+                <span>{item.percentage.toFixed(1)}%</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Footer Status */}
       <div className="flex items-center justify-between text-[11px] text-ocean-400 pt-2 border-t border-ocean-700/40">

@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { Sliders, Calendar, MapPin, Waves, RefreshCcw, Flame } from "lucide-react";
-import coralBleachingData from "@/data/coral_bleaching.json";
+import { Calendar, MapPin, Waves, RefreshCcw } from "lucide-react";
 
 interface MarineHeaderProps {
   years: number[];
@@ -11,7 +10,7 @@ interface MarineHeaderProps {
   regions: string[];
   selectedRegion: string;
   onSelectRegion: (region: string) => void;
-  onOpenSimulator: () => void;
+  onOpenSimulator?: () => void;
   onResetFilters: () => void;
   activeView?: "overview" | "coral_map";
   setActiveView?: (view: "overview" | "coral_map") => void;
@@ -47,12 +46,6 @@ export const MarineHeader: React.FC<MarineHeaderProps> = ({
             <span className="hidden 2xl:inline-flex bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider shrink-0">
               SDG 14 • Marine
             </span>
-            {coralBleachingData && (
-              <span className="hidden 2xl:inline-flex items-center space-x-1 bg-rose-500/20 text-rose-300 border border-rose-500/40 text-[9px] font-semibold px-2 py-0.5 rounded-full shrink-0">
-                <Flame className="w-3 h-3 text-rose-400 animate-pulse" />
-                <span>Bleaching Alert Level 2 ({coralBleachingData.average_bleaching_pct}%)</span>
-              </span>
-            )}
           </div>
         </div>
 
@@ -102,15 +95,6 @@ export const MarineHeader: React.FC<MarineHeaderProps> = ({
               <RefreshCcw className="w-3 h-3" />
             </button>
           )}
-
-          {/* Carrying Capacity Simulator Modal Trigger */}
-          <button
-            onClick={onOpenSimulator}
-            className="flex items-center space-x-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-ocean-950 font-bold px-2.5 sm:px-3 py-1 rounded-lg text-xs transition-all shadow-cyan-glow shrink-0"
-          >
-            <Sliders className="w-3 h-3 text-ocean-950" />
-            <span className="hidden sm:inline">AI </span><span>Simulator</span>
-          </button>
         </div>
       </div>
     </header>

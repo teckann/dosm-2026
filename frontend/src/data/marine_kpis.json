@@ -1,16 +1,16 @@
 {
   "total_volume": {
-    "title": "TOTAL TOURIST EXPENDITURE",
-    "period": "Annual Marine Economy",
-    "value": "RM 82.1B",
-    "change": "\u25b2 +7.7%",
-    "compare_value": "RM 80.6B",
+    "title": "TOTAL INBOUND ARRIVALS",
+    "period": "Immigration / MOTAC 2023",
+    "value": "30.5M",
+    "change": "\u25b2 +100.7%",
+    "compare_value": "15.2M",
     "is_positive": true
   },
-  "active_fleet": {
-    "title": "TOTAL COASTAL VISITOR NIGHTS",
-    "period": "Cumulative Stays (2024)",
-    "value": "217.0M",
-    "unit": "Nights"
+  "marine_parks": {
+    "title": "MARINE PROTECTED PARK FOOTFALL",
+    "period": "DOF Marine Parks Division 2023",
+    "value": "1.85M",
+    "unit": "Visitors"
   }
 }

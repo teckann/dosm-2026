@@ -16,22 +16,24 @@ import modelData from "@/data/marine_model.json";
 import visitorSplitData from "@/data/visitor_split.json";
 
 export default function MarineDashboardPage() {
-  const [selectedYear, setSelectedYear] = useState<number>(2024);
+  const years = fullDashboardData.years;
+  const regions = fullDashboardData.regions;
+  const latestYear = years[years.length - 1];
+
+  const [selectedYear, setSelectedYear] = useState<number>(latestYear);
   const [selectedRegion, setSelectedRegion] = useState<string>("All Regions");
   const [isSimulatorOpen, setIsSimulatorOpen] = useState(false);
   const [selectedDestination, setSelectedDestination] = useState<DestinationRow | null>(null);
 
-  const years = fullDashboardData.years;
-  const regions = fullDashboardData.regions;
-
   // Active matrix slice
   const sliceKey = `${selectedYear}_${selectedRegion}`;
+  const defaultKey = `${latestYear}_All Regions`;
   const slice =
     (fullDashboardData.matrix as any)[sliceKey] ||
-    (fullDashboardData.matrix as any)["2024_All Regions"];
+    (fullDashboardData.matrix as any)[defaultKey];
 
   const handleResetFilters = () => {
-    setSelectedYear(2024);
+    setSelectedYear(latestYear);
     setSelectedRegion("All Regions");
   };
 
@@ -123,8 +125,8 @@ export default function MarineDashboardPage() {
           data={{
             title:
               selectedRegion === "All Regions"
-                ? "TOTAL COASTAL TOURIST ARRIVALS"
-                : `${selectedRegion.toUpperCase()} COASTAL ARRIVALS`,
+                ? "TOTAL INBOUND VISITOR ARRIVALS"
+                : `${selectedRegion.toUpperCase()} INBOUND ARRIVALS`,
             period: `Annual Benchmark (${selectedYear} vs ${slice.compare_year})`,
             value: `${slice.total_tourists_m}M`,
             change_percentage: slice.growth_yoy,
@@ -148,7 +150,7 @@ export default function MarineDashboardPage() {
           data={{
             title:
               selectedRegion === "All Regions"
-                ? "MARINE DESTINATIONS"
+                ? "COASTAL DESTINATIONS"
                 : `${selectedRegion.toUpperCase()} DESTINATIONS`,
             period: `${selectedYear} • Carrying Capacity`,
             headers: {
@@ -160,7 +162,7 @@ export default function MarineDashboardPage() {
             rows: slice.leaderboard.map((item: any) => ({
               ...item,
               open_ops: item.arrivals_formatted,
-              closed_ops: `${item.stress_score}/100`,
+              closed_ops: `${item.stress_score}%`,
             })),
           }}
           onSimulateDestination={handleSimulateDestination}
@@ -190,7 +192,6 @@ export default function MarineDashboardPage() {
 
         {/* Right: Coastal Expenditure Breakdown */}
         <DonutBreakdownCard
-          variant="detailed"
           data={{
             title: "COASTAL EXPENDITURE BY DESTINATION",
             period: `${selectedYear} ${selectedRegion} • DTS Survey`,
