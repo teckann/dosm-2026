@@ -56,7 +56,8 @@ def export_marine_dashboard_data():
     for y in years:
         y_df = df[df["year"] == y].copy()
         prev_year = y - 1
-        prev_df = df[df["year"] == prev_year].copy() if prev_year in years else y_df
+        has_previous_year = prev_year in years
+        prev_df = df[df["year"] == prev_year].copy() if has_previous_year else y_df
 
         for r in regions:
             sub = y_df if r == 'All Regions' else y_df[y_df['region'] == r]
@@ -71,10 +72,27 @@ def export_marine_dashboard_data():
             spend_total = float(sub["total_spend"].sum())
 
             mp_total = float(sub["marine_park_visitors"].sum())
+            mp_prev = float(sub_prev["marine_park_visitors"].sum()) if not sub_prev.empty else mp_total
+            fish_total = float(sub["fish_landings_mt"].sum())
+            fish_prev = float(sub_prev["fish_landings_mt"].sum()) if not sub_prev.empty else fish_total
+
+            tourist_growth_yoy = (
+                round(((t_cur - t_prev) / t_prev) * 100, 1)
+                if has_previous_year and t_prev > 0 else None
+            )
+            marine_park_growth_yoy = (
+                round(((mp_total - mp_prev) / mp_prev) * 100, 1)
+                if has_previous_year and mp_prev > 0 else None
+            )
+            fish_landings_growth_yoy = (
+                round(((fish_total - fish_prev) / fish_prev) * 100, 1)
+                if has_previous_year and fish_prev > 0 else None
+            )
 
             # Destinations table
             dest_grp = sub.groupby(['state', 'island_destination']).agg({
                 'total_tourists': 'sum',
+                'total_spend': 'sum',
                 'marine_park_visitors': 'sum',
                 'carrying_capacity_stress': 'mean',
                 'hotel_occupancy_rate': 'mean',
@@ -109,15 +127,36 @@ def export_marine_dashboard_data():
                     'count': int(row['marine_park_visitors'])
                 })
 
-            # Donut 2: Spend categories
-            spend_cats = [
-                {'name': 'Eco-Resort Accommodation', 'percentage': 32.4, 'color': '#00d2ff', 'amount_b': round(spend_total * 0.324 / 1e9, 2)},
-                {'name': 'Seafood Dining & Restaurants', 'percentage': 24.8, 'color': '#00a8ff', 'amount_b': round(spend_total * 0.248 / 1e9, 2)},
-                {'name': 'Water Sports & Boat Tours', 'percentage': 21.6, 'color': '#34d399', 'amount_b': round(spend_total * 0.216 / 1e9, 2)},
-                {'name': 'Local Island Shopping', 'percentage': 11.2, 'color': '#facc15', 'amount_b': round(spend_total * 0.112 / 1e9, 2)},
-                {'name': 'Ferry & Island Transport', 'percentage': 7.5, 'color': '#fb923c', 'amount_b': round(spend_total * 0.075 / 1e9, 2)},
-                {'name': 'Marine Conservation Fees', 'percentage': 2.5, 'color': '#f43f5e', 'amount_b': round(spend_total * 0.025 / 1e9, 2)}
-            ]
+            # Donut 2: destination share of expenditure. The source dataset has
+            # total visitors and average spend by destination, but no defensible
+            # category-level expenditure split.
+            spend_cats = []
+            spend_grp = dest_grp.sort_values(by='total_spend', ascending=False)
+            visible_spend = spend_grp.head(5)
+            for color_idx, (_, row) in enumerate(visible_spend.iterrows()):
+                destination_spend = float(row['total_spend'])
+                pct = round((destination_spend / spend_total) * 100, 1) if spend_total > 0 else 0
+                spend_cats.append({
+                    'name': row['island_destination'].replace(' & ', '/').replace(' Islands', ''),
+                    'percentage': pct,
+                    'color': palette[color_idx % len(palette)],
+                    'amount_b': round(destination_spend / 1e9, 2)
+                })
+
+            if len(spend_grp) > len(visible_spend):
+                other_spend = float(spend_grp.iloc[len(visible_spend):]['total_spend'].sum())
+                spend_cats.append({
+                    'name': 'Other Destinations',
+                    'percentage': round((other_spend / spend_total) * 100, 1) if spend_total > 0 else 0,
+                    'color': '#f43f5e',
+                    'amount_b': round(other_spend / 1e9, 2)
+                })
+
+            # Keep the displayed shares at exactly 100.0 after one-decimal rounding.
+            if spend_cats and spend_total > 0:
+                spend_cats[-1]['percentage'] = round(
+                    100.0 - sum(item['percentage'] for item in spend_cats[:-1]), 1
+                )
 
             # Spectrum bins
             colors_spec = ['#cbf1f5', '#9be3ed', '#63d1e3', '#30b6d4', '#168eae', '#0d5578']
@@ -139,11 +178,15 @@ def export_marine_dashboard_data():
                 'total_tourists_m': round(t_cur / 1e6, 1),
                 'total_tourists_raw': int(t_cur),
                 'growth_yoy': f"{growth:+0.1f}%",
+                'tourist_growth_yoy': tourist_growth_yoy,
+                'marine_park_growth_yoy': marine_park_growth_yoy,
+                'fish_landings_growth_yoy': fish_landings_growth_yoy,
                 'compare_year': prev_year,
                 'compare_val_m': round(t_prev / 1e6, 1),
                 'total_spend_b': round(spend_total / 1e9, 1),
                 'visitor_nights_m': round(t_cur * 2.5 / 1e6, 1),
                 'mp_total_m': round(mp_total / 1e6, 1),
+                'fish_landings_kmt': round(fish_total / 1e3, 1),
                 'dest_slices': dest_slices,
                 'spend_cats': spend_cats,
                 'spec_bins': spec_bins,
@@ -210,7 +253,7 @@ def export_marine_dashboard_data():
             "segments": default_data['dest_slices'],
         },
         "species_donut": {
-            "title": "COASTAL TOURIST EXPENDITURE (RM)",
+            "title": "COASTAL TOURIST EXPENDITURE BY DESTINATION",
             "period": "2024 Economic Yield",
             "total": f"RM{default_data['total_spend_b']}B",
             "total_formatted": f"RM {default_data['total_spend_b']}B",

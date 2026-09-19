@@ -81,11 +81,8 @@ export default function MarineDashboardPage() {
         )
       : 85;
 
-  // Fish landings in k MT (from spec_bins sum × 10)
-  const specBinValues = slice.spec_bins?.map((b: any) => b.value) || [];
-  const fishLandingsKmt = parseFloat(
-    (specBinValues.reduce((acc: number, val: number) => acc + val, 0) * 10).toFixed(1)
-  );
+  // Actual fish-landings total exported for the active year and region.
+  const fishLandingsKmt = slice.fish_landings_kmt;
 
   return (
     <div className="dashboard-shell bg-ocean-900 text-white selection:bg-cyan-500 selection:text-ocean-950 font-sans marine-grid-bg">
@@ -108,6 +105,9 @@ export default function MarineDashboardPage() {
         marineParkM={slice.mp_total_m}
         mwqi={avgMwqi}
         fishLandingsKmt={fishLandingsKmt}
+        touristGrowthYoY={slice.tourist_growth_yoy}
+        marineParkGrowthYoY={slice.marine_park_growth_yoy}
+        fishLandingsGrowthYoY={slice.fish_landings_growth_yoy}
         stressScore={avgStress}
         riskLabel={dominantRisk}
         touristSpark={touristSpark}
@@ -180,10 +180,6 @@ export default function MarineDashboardPage() {
             total_label: "Park Footfall",
             segments: slice.dest_slices,
           }}
-          years={years}
-          selectedYear={selectedYear}
-          onSelectYear={setSelectedYear}
-          dropdownSuffix={selectedRegion}
         />
 
         {/* Center: Domestic vs International Visitor Split */}
@@ -196,17 +192,13 @@ export default function MarineDashboardPage() {
         <DonutBreakdownCard
           variant="detailed"
           data={{
-            title: "COASTAL EXPENDITURE",
-            period: `${selectedYear} DTS Survey`,
+            title: "COASTAL EXPENDITURE BY DESTINATION",
+            period: `${selectedYear} ${selectedRegion} • DTS Survey`,
             total: `RM ${slice.total_spend_b}B`,
             total_formatted: `RM ${slice.total_spend_b}B`,
             total_label: "Total Spend",
             segments: slice.spend_cats,
           }}
-          years={years}
-          selectedYear={selectedYear}
-          onSelectYear={setSelectedYear}
-          dropdownSuffix="DTS Survey"
         />
       </div>
 
